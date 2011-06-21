@@ -1,5 +1,2 @@
-$ cat .gitignore
-
-# Can ignore specific files
 .DS_Store
-.sublime-project
+SimpleUI.sublime-project

@@ -75,7 +75,7 @@ button {  width: auto; overflow: visible; }
 
 body, select, input, textarea {  color: #444; }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-a, a:active, a:visited { color: #607890; }
+a, a:active, a:visited { color: #607890; text-decoration:none;}
 a:hover { color: #036; }
 
 /*
@@ -87,11 +87,31 @@ a:hover { color: #036; }
 */
 
 
+body {background:url(../images/noise.png);}
+
+#container { width:1030px; margin:0 auto;}
+
+.example {margin:15px 0 0 0;}
+
+.example a {display:block; line-height: 32px; color: white; display: block; text-align:center; background: #666; height: 33px; padding: 0 5px 0 0; margin: 0 10px 0 0; font-size: 14px; font-weight: bold; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65);}
+
+.source {background:#ccc; margin:20px;}
 
 
 
-
-
+pre {font-size: 12px; padding: 0; margin: 0; background: #f0f0f0;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  line-height: 20px;
+  width: auto;
+  overflow: auto;
+  overflow-Y: hidden;
+}
+code {
+  margin: 0;
+  padding: 18px;
+  display: block;
+}
 
 
 

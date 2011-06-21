@@ -8,10 +8,34 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/Jason/Desktop/simpleUI/js/simpleUI.js",
+			"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/example.html",
 			"settings":
 			{
-				"buffer_size": 3367,
+				"buffer_size": 4051,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/js/simpleUI.js",
+			"settings":
+			{
+				"buffer_size": 3855,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/css/simpleUI.css",
+			"settings":
+			{
+				"buffer_size": 5349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/css/style.css",
+			"settings":
+			{
+				"buffer_size": 5694,
 				"line_ending": "Unix"
 			}
 		}
@@ -19,8 +43,8 @@
 	"build_system": "",
 	"file_history":
 	[
-		"/Users/Jason/Desktop/simpleUI/js/simpleUI.js",
-		"/Users/Jason/Desktop/boilerplate-initializr-1.1/example.html"
+		"/Volumes/thomson/mainline/LAFI_ADMIN/LAFI_ADMIN.sublime-project",
+		"/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/example.html"
 	],
 	"find_in_files":
 	{
@@ -36,6 +60,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"closeDialog",
+			"../Images/",
+			"uiModal"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -43,6 +70,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"../images/"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -54,36 +82,120 @@
 	{
 		"mount_points":
 		[
-			"/Users/Jason/Desktop/simpleUI"
+			"/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI"
 		]
 	},
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/Jason/Desktop/simpleUI/js/simpleUI.js",
+					"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/example.html",
 					"settings":
 					{
-						"buffer_size": 3367,
+						"buffer_size": 4051,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1967,
-								1967
+								1776,
+								1776
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
 						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/js/simpleUI.js",
+					"settings":
+					{
+						"buffer_size": 3855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/css/simpleUI.css",
+					"settings":
+					{
+						"buffer_size": 5349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4088,
+								4375
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/Jason/Dropbox/ASSETS/PERSONAL ASSETS/DESIGN ASSETS/PERSONAL SITES & DESIGNS/PERSONAL/simpleUI/css/style.css",
+					"settings":
+					{
+						"buffer_size": 5694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3899,
+								3899
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 1254,
 						"zoom_level": 1
 					},
 					"type": "text"
