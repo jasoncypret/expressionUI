@@ -115,6 +115,24 @@ code {
 
 
 
+.section { display: block; overflow: hidden; margin: 0 0 15px; }
+
+.section .combo { display: block; float: left; margin: 0 5px; width: 175px; }
+
+.section .combo select p:last-child { margin: 0 }
+
+.section .combo p label { font-size: 14px; font-weight: bold; margin: 0 0 5px; display: block; }
+
+.section .combo .text input { -moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(255, 255, 255, 0.2); -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(255, 255, 255, 0.2); box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(255, 255, 255, 0.2); border: 1px solid #CCCCCC; color: #444; display: block; font-size: 15px; display: block; width: 100%; padding: 5px; line-height: 37px; }
+
+.section .combo select { border: none; padding: 0; display: block; height: 100px; overflow-y: auto; width: 100%; border: #8F8F8F 1px solid; }
+
+.section .combo select option { padding: 5px 0 5px 10px; display: block; }
+.section .combo select option:nth-child(even) { background: #F3F3F3; }
+.section .combo select option:hover { cursor: pointer; background: #5E5E5E; background: -moz-linear-gradient(top, #5E5E5E 0%, #191919 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5E5E5E), color-stop(100%,#191919)); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5E5E5E', endColorstr='#191919',GradientType=0 ); text-shadow: none; color: #fff!important; }
+
+
+
 
 
 
