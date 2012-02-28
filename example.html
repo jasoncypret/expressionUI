@@ -12,22 +12,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/simpleUI.css">
-
-	<script src="js/modernizr-1.7.min.js"></script>
+	<script src="js/libs/modernizr-1.7.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-	<script src="js/simpleUI.js"></script>
+	<script src="js/jquery.simpleModal.js"></script>
+	<script src="js/jquery.simpleToggle.js"></script>
+	<script src="js/jquery.simpleFilter.js"></script>
+	<script src="js/jquery.simpleTip.js"></script>
+	<script src="js/jquery.simpleHTMLDrop.js"></script>
+	<script src="js/jquery.simpleDrop.js"></script>
+	<script src="js/jquery.simpleLoading.js"></script>
+	<script src="js/jquery.simpleNotifications.js"></script>
 
 </head>
 <body>
 	<div id="container">
-
-
 		<div class="example">
 			<a id="default" href="javascript:;">Default</a>
 			<div class="source"></div>
 			<script class="script">
 				$('#default').click(function(){
-					$().uiModal();
+					$().simpleModal();
 				});
 			</script>
 		</div>
@@ -37,14 +41,29 @@
 			<div class="source"></div>
 			<script class="script">
 				$('#overlay').click(function(){
-					$().uiModal({
-						type: 'alert',
-						body: 'You should do somthing here!',
-						title: 'Woah there Pard-nah',
-						overlay: true,
-						buttons: [
-							{buttonText: 'Ok, I will', callback: closeDialog, defaultButton: true},
-							{buttonText: 'Nahh, You Crazy', callback: closeDialog}
+					$(this).prev().simpleModal({
+						title: 'Alert',
+						width: '370',
+						id: 'simpleModal',
+						overlay: false,
+						overlayMrk: '<img class="pageOverlay" style="display:none;" src="/Content/Images/overlay.png" />',
+						appendTo: 'body',
+						closeClass: '',
+						animate: false,
+						closeID: 'closeDialog',
+						width: 'auto',
+						transitionSpeed: 'fast',
+						removeContent: false,
+						buttons:
+						[
+							{
+								buttonText: 'Save Condition',
+								callback: function(){
+									alert('Saved');
+								},
+								defaultButton: true,
+								className: 'saveExpr'
+							}
 						]
 					});
 				});
@@ -56,7 +75,7 @@
 			<div class="source"></div>
 			<script class="script">
 				$('#embed').click(function(){
-					$().uiModal({
+					$().simpleModal({
 						type: 'form',
 						body: '#formEmbed', // EXPECTS AN ID SELECTOR
 						title: 'The Lone Star State',
