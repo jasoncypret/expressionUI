@@ -4,22 +4,20 @@
 
         defaults : {
             title: 'Alert',
-            width: '370',
-            id: 'simpleModal',
+            id: 'modal',
             overlay: false,
-            overlayMrk: '<img class="pageOverlay" style="display:none;" src="/Content/Images/overlay.png" />',
+            overlayMrk: '<div class="pageOverlay" style="display:none;"></div>',
             appendTo: 'body',
             closeClass: '',
             animate: false,
             closeID: 'closeDialog',
             width: 'auto',
+            mobile: false,
             transitionSpeed: 'fast',
             removeContent: false,
-            /*
             buttons: [
-                { buttonText: 'Ok', callback: options.closeCallback(), defaultButton: true }
+                { buttonText: 'Ok', callback: function(){ return; }, defaultButton: true }
             ],
-            */
             beforeOpen: $.noop,
             afterOpen: $.noop,
             beforeClose: $.noop,
@@ -29,17 +27,17 @@
         init : function (options) {
             
             options = $.extend({}, methods.defaults, options);
-            $(this).simpleModal('_open', options);
+            $(this).modal('_open', options);
             
             // ONCE ALL THE FUNCTIONS ARE DEFINED WE CAN CALL EACH HERE
 
         },
 
         _open : function (options) {
-
             options.beforeOpen();
             //  BUILD
             var overlay = '',
+                isMobile = '',
                 buildModal,
                 buttons = ''
                 $.each(options.buttons, function (i, btn) {
@@ -56,13 +54,16 @@
 
             if (options.overlay)
                 overlay = options.overlayMrk;
+
+            if (options.mobile)
+                isMobile = 'mobile'
     
             // NEED TO FIGURE OUT HOW TO ADD A CLASS TO THE OVERLAY
             buildModal =
-                '<div id="' + options.id + '" class="simpleModal">' + overlay + '<div style="visibility:hidden; width:' + options.width + 'px;" class="modal">' +
-                '<h1><span class="wrap">' + options.title + '<a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">Close</a></span></h1>' +
-                '<div class="modalBody"><div class="wrap"><div class="content"></div></div></div>' +
-                '<div class="dialogFooter"><span class="wrap">' + buttons + '</span></div>' +
+                '<div id="' + options.id + '" class="modal ' + isMobile + '">' + overlay + '<div style="visibility:hidden; width:' + options.width + 'px;" class="modal">' +
+                '<h1><span class="container">' + options.title + '<a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">x</a></span></h1>' +
+                '<div class="modalBody"><div class="container"><div class="content"></div></div></div>' +
+                '<div class="dialogFooter"><span class="container">' + buttons + '</span></div>' +
                 '</div></div>';
 
             // APPEND
@@ -71,7 +72,7 @@
 
 
             // DISPLAY
-            $('#' + options.id + ' .modal').simpleModal('_position');
+            $('#' + options.id + ' .modal').modal('_position');
             $('#' + options.id + ' .modal').css({ 'display': 'none', 'visibility': 'visible' });
             if (options.animate) {
                 $('#' + options.id + ' .modal, #' + options.id + ' .pageOverlay').fadeIn(options.transitionSpeed);
@@ -80,7 +81,7 @@
             }
             
             // SET EVENTS
-            $('#' + options.id).simpleModal('_setupEvents', options);
+            $('#' + options.id).modal('_setupEvents', options);
 
             options.afterOpen.call();
 
@@ -97,10 +98,10 @@
 
             if (options.animate) {
                 $(this).fadeOut(options.transitionSpeed, function () {
-                    $(this).remove();
+                    $(this).parent().remove();
                 });
             } else {
-                $(this).remove();
+                $(this).parent().remove();
             }
 
             // Should possibly kill all events?
@@ -115,11 +116,11 @@
             });
             
             $(this).find('.closeDialog').click( function () {
-                (typeof options.closeCallback === 'undefined') ? $(this).closest('.simpleModal').simpleModal('close', options) : options.closeCallback() ;
+                (typeof options.closeCallback === 'undefined') ? $(this).closest('.modal').modal('close', options) : options.closeCallback() ;
             });
 
             // Needs to be specific to this ID
-            $(document).bind('keyup.simpleModal', function (e) {
+            $(document).bind('keyup.modal', function (e) {
                 //console.log('keyed');
                 /* ENTER
                 if defaults is true roll each options.buttons[0].defaultButton === true {}
@@ -130,8 +131,7 @@
                     });
                 }
                 if (e.keyCode == 27) {
-                    
-                    $(this).simpleModal('close', options.closeCallback);
+                    $(this).modal('close', options.closeCallback);
                 }
                 */
             });
@@ -148,10 +148,9 @@
             }
             modal.css({ 'margin-top': -modal.outerHeight() / 2, 'margin-left': -modal.outerWidth() / 2 });         
         }
-
     };
 
-    $.fn.simpleModal = function ( method ) {
+    $.fn.modal = function ( method ) {
         if ( methods[method] ) {
             return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
         } else if ( typeof method === 'object' || ! method ) {
