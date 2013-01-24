@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/animations/flippers
+END
+_flipInX.scss
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/animations/flippers/_flipInX.scss
+END
+_flip.scss
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/animations/flippers/_flip.scss
+END
+_flipInY.scss
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/animations/flippers/_flipInY.scss
+END
+_flipOutX.scss
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/animations/flippers/_flipOutX.scss
+END
+_flipOutY.scss
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/animations/flippers/_flipOutY.scss
+END

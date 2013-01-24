@@ -1,0 +1,40 @@
+html, body, .container
+  height: 100%
+  margin: 0
+
+$header_size: 30px
+
+.container
+  +group
+  position: relative
+  +desktop-large
+    +max_width($large_desktop)
+    margin: 0 auto
+  .header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 50
+    +desktop-large
+      +max_width($large_desktop)
+      margin: 0 auto
+  $result_summary: 83px
+  .results
+    margin-top: $header_size + $pad
+    width: 25%
+    float: right
+    header.summary
+      +min-height($result_summary)
+  .content
+    margin-top: $header_size + $pad
+    width: 75%
+    float: left
+    +group
+    .filter
+      +min-height(($result_summary - $pad)+ -1px)
+      margin: 0 $pad - 5 $pad $pad
+      +desktop-large
+        margin: 0 $pad $pad 0
+    .timeline
+      border-top: 1px solid $border

@@ -1,0 +1,18 @@
+#
+# For use with Serve export to flat HTML.
+#
+
+# Route extension-less URLs to the equivalent *.html file.
+# For instance: example.com/about == example.com/about.html
+
+Options +MultiViews
+
+#
+# If MultiViews doesn't work, try a regex instead...
+#
+
+# <IfModule mod_rewrite.c>
+#  RewriteEngine On
+#  RewriteCond %{REQUEST_FILENAME} !-f
+#  RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# </IfModule>

@@ -1,0 +1,233 @@
+=amp
+  font-family: Baskerville, "Goudy Old Style", serif
+  font-weight: normal
+  font-style: italic
+
+=offscreen
+  position: absolute
+  left:  -9999px
+  top: -9999px
+  display: block
+
+=font_stack
+  //font-family: "source-sans-pro"
+  font-family: sans-serif
+
+=serif
+  //font-family: "ff-meta-serif-web-pro"
+  font-family: serif
+
+=logo_serif
+  //font-family: "rooney-web"
+  font-family: serif
+
+=inline_block
+  display: -moz-inline-stack
+  display: inline-block
+  vertical-align: top
+  zoom: 1
+  *display: inline
+
+=group
+  &:before, &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  *zoom: 1
+
+=transition($time:0.5)
+  +transition-property(all)
+  +transition-duration($time + s)
+  +transition-timing-function(ease-in)
+
+=min_height($size)
+  min-height: $size
+  height: auto !important
+  height: $size
+
+=min_width($size)
+  min-width: $size
+  width: auto !important
+  width: $size
+
+=max_height($size)
+  max-height: $size
+  height: auto !important
+  height: $size
+
+=max_width($size)
+  max-width: $size
+  width: auto !important
+  width: $size
+
+=text_color($base_color)
+  @if lightness($base_color) > 75%
+    color: shade($base_color, 60%)
+    text-shadow: rgba(white, .2 + lightness($base_color) * .8 / 100) 0 1px 0
+  @else
+    color: tint($base_color, 95%)
+    text-shadow: rgba(black, .4) 0 -1px 1px
+
+=smart_gradient($base_color, $direction: both)
+  +text_color($base_color)
+  @if $direction == both
+    //$experimental-support-for-svg: true
+    +background(linear_gradient(tint($base_color, 30%), shade($base_color, 10%)))
+  @else if $direction == top
+    +background(linear_gradient(tint($base_color, 50%), $base_color 85%))
+  @else if $direction == bottom
+    +background(linear_gradient($base_color, shade($base_color, 30%)))
+
+=smart_border($base_color, $direction: both)
+  @if $direction == both
+    border: 1px solid shade($base_color, 20%)
+    border-top: 1px solid shade($base_color, 10%)
+    border-bottom: 1px solid shade($base_color, 40%)
+  @else if $direction == top
+    border: 1px solid shade($base_color, 20%)
+    border-top: 1px solid $base_color
+  @else if $direction == bottom
+    border: 1px solid shade($base_color, 30%)
+    border-top: 1px solid shade($base_color, 15%)
+    border-bottom: 1px solid shade($base_color, 50%)
+
+=btn_color($base_color, $behind: null)
+  +smart_gradient($base_color)
+  @if $behind == null
+    +smart_border($base_color)
+  @else
+    +smart_border($behind)
+
+=btn($base_color, $behind: null)
+  outline: 0
+  text-align: center
+  text-transform: capitalize
+  text-decoration: none
+  font-weight: 600
+  line-height: 1em
+  +font_stack
+  width: auto
+  +inline-block
+  padding: 8px 11px
+  font-size: 1em
+  +border-radius(2px)
+  +box-shadow(rgba(white, 0.3) 0 1px 0 inset, rgba(white, 0.1) 0 1px 0 0)
+  cursor: pointer
+  +btn_color($base_color, $behind)
+  &:hover
+    +box-shadow(rgba(white, 0.6) 0 1px 3px inset, rgba(white, 0.1) 0 1px 0 0)
+    +btn_color(tint($base_color, 10%), $behind)
+  &:active
+    +box-shadow(rgba(black, 0.6) 0 2px 4px inset, rgba(white, 0.1) 0 1px 0 0)
+    +btn_color(shade($base_color, 10%), $behind)
+  &.icon
+    +icon_font
+
+=btn_flat($base_color, $behind: null)
+  outline: 0
+  text-align: center
+  text-transform: capitalize
+  text-decoration: none
+  font-weight: 600
+  line-height: 1em
+  +font_stack
+  width: auto
+  +inline-block
+  padding: 8px 11px
+  font-size: 1em
+  +border-radius(2px)
+  cursor: pointer
+  background-color: $base_color
+  +text_color($base_color)
+  &:hover, &:active
+    background-color: shade($base_color, 10%)
+    +box-shadow(rgba(black, 0.4) 0 1px 2px inset)
+    +text_color($base_color)
+
+=text_replace
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+  display: block
+
+=complement($color)
+  adjust-hue($color, 180deg)
+
+=text_truncate
+  position: relative
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  -o-text-overflow: ellipsis
+  -ms-text-overflow: ellipsis
+
+=retina
+  @media (-webkit-min-device-pixel-ratio: 2)
+    @content
+
+=at-landscape
+  @media screen and (orientation:landscape)
+    @content
+
+=supports-transform
+  @media all and (-webkit-transform-3d)
+    @content
+
+=at-retina($asset, $width, $height)
+  @media (-webkit-min-device-pixel-ratio: 2)
+    background-image: url($asset)
+    background-size: $width, $height
+
+=mobile-only($include_portrait_tablet: false)
+  @if $include_portrait_tablet == true
+    @media screen and (max-width: $mobile), (orientation: portrait)
+      @content
+  @else
+    @media screen and (max-width: $mobile)
+      @content
+
+=tablet-only
+  @media screen and (min-device-width: $tablet) and (max-device-width: $desktop)
+    @content
+
+=tablet-and-above
+  @media screen and (min-width: $tablet)
+    @content
+
+=desktop-only
+  @media screen and (min-width: $desktop)
+    @content
+
+=desktop-large
+  @media screen and (min-width: $large_desktop)
+    @content
+
+=icon_font
+  font-family: 'snaregular'
+  font-weight: normal !important
+  -webkit-font-smoothing: antialiased
+
+=icon_inline
+  +icon_font
+  position: relative
+  content: attr(data-icon)
+  text-transform: none
+  // new
+  vertical-align: baseline
+  line-height: 0
+  font-size: 1.4em
+  top: 0.1em
+
+=shadow_base
+  +box-shadow(rgba(#000, .3) 0 1px 4px, rgba(#000, .1) 0 0 40px 0 true)
+  &:before, &:after
+    content: ""
+    position: absolute
+    z-index: -2
+
+=shadow_raised
+  +shadow-base
+  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05) inset
+  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05) inset
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05) inset

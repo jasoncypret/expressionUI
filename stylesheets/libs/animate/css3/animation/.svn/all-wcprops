@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation
+END
+_animation-timing-function.scss
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-timing-function.scss
+END
+_animation-delay.scss
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-delay.scss
+END
+_animation-direction.scss
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-direction.scss
+END
+_animation-name.scss
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-name.scss
+END
+_animation-play-state.scss
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-play-state.scss
+END
+_animation-iteration-count.scss
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-iteration-count.scss
+END
+_animation-duration.scss
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-duration.scss
+END
+_animation-fill-mode.scss
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/self-service-web/!svn/ver/146/trunk/src/main/webapp/sass/lib/animate/css3/animation/_animation-fill-mode.scss
+END

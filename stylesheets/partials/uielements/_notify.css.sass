@@ -1,0 +1,560 @@
+// Spinner
+$spinner_height: 58px
+@-webkit-keyframes spin
+  from 
+    -webkit-transform: rotate(0deg)
+  to 
+    -webkit-transform: rotate(360deg)
+@-moz-keyframes spin
+  from 
+    -moz-transform: rotate(0deg)
+  to 
+    -moz-transform: rotate(360deg)
+@-o-keyframes spin
+  from 
+    -o-transform: rotate(0deg)
+  to 
+    -o-transform: rotate(360deg)
+@-ms-keyframes spin
+  from 
+    -ms-transform: rotate(0deg)
+  to 
+    -ms-transform: rotate(360deg)
+
+// Dots Round
+$dot_deg: 45
+$dot_offset: -25px
+$dot_color: #041E31
+=dot_end
+  background-color: $dot_color
+=dot_begin
+  background-color: tint($dot_color, 50%)
+  //+box-shadow($dot_color, 0 0 5px)
+@-webkit-keyframes fade
+  0%
+    +dot_end
+  100%
+    +dot_begin
+@-moz-keyframes
+  0%
+    +dot_end
+  100%
+    +dot_begin
+@-o-keyframes rotate
+  0%
+    +dot_end
+  100%
+    +dot_begin
+@-ms-keyframes rotate
+  0%
+    +dot_end
+  100%
+    +dot_begin
+
+
+// 3 Dots
+$circle_color: #041E31
+@-webkit-keyframes circle_fade
+  0%
+    +opacity(0.3)
+  50%
+    +opacity(1)
+    background-color: $circle_color
+  100%
+    +opacity(0.3)
+@-moz-keyframes
+  0%
+    +opacity(0.3)
+  50%
+    +opacity(1)
+    background-color: $circle_color
+  100%
+    +opacity(0.3)
+@-o-keyframes rotate
+  0%
+    +opacity(0.3)
+  50%
+    +opacity(1)
+    background-color: $circle_color
+  100%
+    opacity: 0.3
+@-ms-keyframes rotate
+  0%
+    +opacity(0.3)
+  50%
+    +opacity(1)
+    background-color: $circle_color
+  100%
+    +opacity(0.3)
+
+// Progress Bars
+@-webkit-keyframes bars
+  0%
+    background-position: 24px
+  100%
+    background-position: 0
+@-moz-keyframes
+  0%
+    background-position: 24px
+  100%
+    background-position: 0
+@-o-keyframes rotate
+  0%
+    background-position: 24px
+  100%
+    background-position: 0
+@-ms-keyframes rotate
+  0%
+    background-position: 24px
+  100%
+    background-position: 0
+        
+
+.content_visible
+  position: relative
+  +group
+.content_hidden
+  visibility: hidden
+  position: relative
+  +group
+.content_overlay
+  position: relative
+  +group
+  &:before
+    position: absolute
+    content: '' !important
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: rgba(black, 0.45)
+    display: block !important
+    z-index: 2999
+.notify
+  display: block
+  width: auto
+  height: auto
+  +box-shadow(rgba(white, 0.30) 0 1px 0 inset)
+  font-size: 13px
+  position: relative
+  z-index: 3000
+  visibility: visible !important
+  .notify_wrap
+    width: auto
+    padding: $pad/2 58px $pad/2 $pad
+    p, ul, li
+      margin: 0 !important
+      padding: 0 !important
+      width: auto !important
+      height: auto !important
+      float: none !important
+      border: none !important
+      box-shadow: none !important
+      -webkit-box-shadow: none !important
+      -moz-box-shadow: none !important
+    &:before
+      +icon_inline
+      padding-right: $pad/3
+    .notify_close
+      display: block
+      position: absolute
+      overflow: hidden
+      font-size: 18px
+      line-height: 18px
+      text-align: center
+      top: 0
+      bottom: 0
+      right: 0
+      width: 44px
+      height: 100%
+      padding-bottom: initial
+      border-bottom: initial
+      +border-radius(0 0 5px 0)
+      +icon_font
+      span
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 0
+        right: 0
+        width: 100%
+        margin-top: -9px
+  &.style_error
+    +smart_gradient(#FEC7C9, top)
+    +smart_border(#FEC7C9)
+    border-top: 1px solid shade(#FEC7C9, 40%)
+    .notify_wrap .notify_close
+      +smart_gradient(#FEC7C9, top)
+      +smart_border(#FEC7C9)
+      border-width: 0 0 0 1px
+  &.style_success
+    +smart_gradient(#BCE0AC, top)
+    +smart_border(#BCE0AC)
+    border-top: 1px solid shade(#BCE0AC, 40%)
+    .notify_wrap .notify_close
+      +smart_gradient(#BCE0AC, top)
+      +smart_border(#BCE0AC)
+      border-width: 0 0 0 1px
+  &.style_tip
+    +smart_gradient(#219cdf, top)
+    +smart_border(#219cdf)
+    border-top: 1px solid shade(#219cdf, 40%)
+    .notify_wrap .notify_close
+      +smart_gradient(#219cdf, top)
+      +smart_border(#219cdf)
+      border-width: 0 0 0 1px
+  &.invert_false
+  &.invert_true
+  &.position_cover
+    position: absolute
+    +box-shadow(rgba(black, 0.20) 0 1px 2px)
+    &.width_whitespace
+      +border-bottom-radius(5px)
+      margin: 0
+      left: $pad/2
+      right: $pad/2
+      margin-top: -1px
+    &.width_full
+      margin-left: -1px
+      margin-top: -1px
+  &.position_push
+    margin-bottom: $pad/2
+    position: relative
+    margin-top: -1px
+    &.width_whitespace
+      +border-bottom-radius(5px)
+      margin: -1px $pad/2 $pad/2 $pad/2
+    &.width_full
+      margin-left: -1px
+  &.position_middle
+    position: absolute !important
+    top: 50%
+    margin-top: -19px
+    &.width_full
+      margin-left: -1px
+  &.width_full
+    +box-sizing(content-box)
+    width: 100%
+    position: relative
+  &.width_whitespace
+  &.width_auto
+  &.loading_spinner
+    .notify_wrap
+      margin: 0 auto
+      &:before
+        display: none
+      .indicator
+        overflow: hidden
+        text-indent: -2000em
+        margin: 0 auto
+        background: url('/assets/spinner.svg') no-repeat
+        background-size: 100% !important
+        width: 40px
+        height: 40px
+        display: block
+        -webkit-animation-name: spin
+        -webkit-animation-duration: .9s
+        -webkit-animation-iteration-count: infinite
+        -webkit-animation-timing-function: linear
+        -moz-animation-name: spin
+        -moz-animation-duration: .9s
+        -moz-animation-iteration-count: infinite
+        -moz-animation-timing-function: linear
+        -o-animation-name: spin
+        -o-animation-duration: .9s
+        -o-animation-iteration-count: infinite
+        -o-animation-timing-function: linear
+        -ms-animation-name: spin
+        -ms-animation-duration: .9s
+        -ms-animation-iteration-count: infinite
+        -ms-animation-timing-function: linear
+      .msg
+        display: block !important
+        color: #555 !important
+        text-align: center !important
+        margin: 5px 0 0 0 !important
+        font-size: 14px !important
+        font-weight: normal !important
+    &.style_none
+      overflow: visible !important
+      +box-shadow(none)
+      height: $spinner_height
+      margin-top: -$spinner_height/2
+      background: none
+      top: 50%
+      position: absolute
+      .notify_wrap
+        position: absolute
+        width: 200px
+        left: 50%
+        height: $spinner_height
+        margin-left: -100px
+        display: block
+        padding: 0
+      &.position_push
+        margin-top: 0
+        position: static
+        .notify_wrap
+          margin: 0 auto
+          position: static
+      &.position_cover
+        margin-top: 0
+        top: $pad*2
+        .notify_wrap
+  &.loading_dots
+    .notify_wrap
+      margin: 0 auto
+      &:before
+        display: none
+      .indicator
+        width: 70px
+        height: 70px
+        display: block
+        margin: 0 auto
+        //+scale(5)
+        .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8
+          +border-radius(100px)
+          width: 7px
+          height: 7px
+          display: block
+          background: rgba($dot_color, 0.2)
+          position: absolute
+          left: 50%
+          margin-left: -5px
+          bottom: 25%
+          -webkit-animation-name: fade
+          -webkit-animation-duration: 1s
+          -webkit-animation-iteration-count: infinite
+          -webkit-animation-timing-function: linear
+          -moz-animation-name: fade
+          -moz-animation-duration: 1s
+          -moz-animation-iteration-count: infinite
+          -moz-animation-timing-function: linear
+          -o-animation-name: fade
+          -o-animation-duration: 1s
+          -o-animation-iteration-count: infinite
+          -o-animation-timing-function: linear
+          -ms-animation-name: fade
+          -ms-animation-duration: 1s
+          -ms-animation-iteration-count: infinite
+          -ms-animation-timing-function: linear
+        .dot1
+          +transform( rotate( $dot_deg -$dot_deg + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.3s
+          -moz-animation-delay: 0.3s
+          -o-animation-delay: 0.3s
+          -ms-animation-delay: 0.3s
+        .dot2
+          +transform( rotate( $dot_deg + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.4s
+          -moz-animation-delay: 0.4s
+          -o-animation-delay: 0.4s
+          -ms-animation-delay: 0.4s
+        .dot3
+          +transform( rotate( $dot_deg * 2 + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.5s
+          -moz-animation-delay: 0.5s
+          -o-animation-delay: 0.5s
+          -ms-animation-delay: 0.5s
+        .dot4
+          +transform( rotate( $dot_deg * 3 + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.6s
+          -moz-animation-delay: 0.6s
+          -o-animation-delay: 0.6s
+          -ms-animation-delay: 0.6s
+        .dot5
+          +transform( rotate( $dot_deg * 4 + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.7s
+          -moz-animation-delay: 0.7s
+          -o-animation-delay: 0.7s
+          -ms-animation-delay: 0.7s
+        .dot6
+          +transform( rotate( $dot_deg * 5 + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.8s
+          -moz-animation-delay: 0.8s
+          -o-animation-delay: 0.8s
+          -ms-animation-delay: 0.8s
+        .dot7
+          +transform( rotate( $dot_deg * 6 + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 0.9s
+          -moz-animation-delay: 0.9s
+          -o-animation-delay: 0.9s
+          -ms-animation-delay: 0.9s
+        .dot8
+          +transform( rotate( $dot_deg * 7 + deg) translate(0, $dot_offset) )
+          -webkit-animation-delay: 1s
+          -moz-animation-delay: 1s
+          -o-animation-delay: 1s
+          -ms-animation-delay: 1s
+      .msg
+        display: block !important
+        color: #555 !important
+        text-align: center !important
+        margin: 5px 0 0 0 !important
+        font-size: 14px !important
+        font-weight: normal !important
+    &.style_none
+      overflow: visible !important
+      +box-shadow(none)
+      height: $spinner_height
+      margin-top: -round($spinner_height/2)
+      background: none
+      top: 50%
+      position: absolute
+      .notify_wrap
+        position: absolute
+        width: 200px
+        left: 50%
+        height: $spinner_height
+        margin-left: -100px
+        display: block
+        padding: 0
+      &.position_push
+        margin-top: 0
+        position: static
+        .notify_wrap
+          margin: 0 auto
+          position: static
+      &.position_cover
+        margin-top: 0
+        top: $pad*2
+        .notify_wrap
+  &.loading_circles
+    .notify_wrap
+      margin: 0 auto
+      &:before
+        display: none
+      .indicator
+        width: 76px
+        height: 20px
+        display: block
+        margin: 0 auto
+        //+scale(5)
+        .circle1, .circle2, .circle3
+          $circle_size: 15px
+          background-color: $circle_color
+          float: left
+          margin: 0 round($circle_size/3)
+          height: $circle_size
+          width: $circle_size
+          +border-radius(100px)
+          +opacity(0.3)
+          -webkit-animation-name: circle_fade
+          -webkit-animation-duration: 1.5s
+          -webkit-animation-iteration-count: infinite
+          -webkit-animation-direction: linear
+        .circle1
+          -webkit-animation-delay: .3s
+        .circle2
+          -webkit-animation-delay: .7s
+        .circle3
+          -webkit-animation-delay: .9s
+      .msg
+        display: block !important
+        color: #555 !important
+        text-align: center !important
+        margin: 5px 0 0 0 !important
+        font-size: 14px !important
+        font-weight: normal !important
+    &.style_none
+      overflow: visible !important
+      +box-shadow(none)
+      height: $spinner_height
+      margin-top: -$spinner_height/2
+      background: none
+      top: 50%
+      position: absolute
+      .notify_wrap
+        position: absolute
+        width: 200px
+        left: 50%
+        height: $spinner_height
+        margin-left: -100px
+        display: block
+        padding: 0
+      &.position_push
+        margin-top: 0
+        position: static
+        .notify_wrap
+          margin: 0 auto
+          position: static
+      &.position_cover
+        margin-top: 0
+        top: $pad*2
+        .notify_wrap
+  &.loading_bars
+    .notify_wrap
+      margin: 0 auto
+      &:before
+        display: none
+      .indicator
+        overflow: hidden
+        text-indent: -2000em
+        margin: 0 auto
+        border: 1px solid shade(#1C60AA, 50%)
+        +border-radius(5px)
+        +background-image(linear_gradient(#6796C6 30%, #1C60AA)  )
+        width: 200px
+        height: 10px
+        display: block
+        position: relative
+        .progress
+          content: ' '
+          +border-radius(5px)
+          +opacity(0.2)
+          display: block
+          +background-image( image-url('/assets/loading_bars.svg') )
+          -webkit-animation-name: bars
+          -webkit-animation-duration: .9s
+          -webkit-animation-iteration-count: infinite
+          -webkit-animation-timing-function: linear
+          -moz-animation-name: bars
+          -moz-animation-duration: .9s
+          -moz-animation-iteration-count: infinite
+          -moz-animation-timing-function: linear
+          -o-animation-name: bars
+          -o-animation-duration: .9s
+          -o-animation-iteration-count: infinite
+          -o-animation-timing-function: linear
+          -ms-animation-name: bars
+          -ms-animation-duration: .9s
+          -ms-animation-iteration-count: infinite
+          -ms-animation-timing-function: linear
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+      .msg
+        display: block !important
+        color: #555 !important
+        text-align: center !important
+        margin: 5px 0 0 0 !important
+        font-size: 14px !important
+        font-weight: normal !important
+    &.style_none
+      overflow: visible !important
+      +box-shadow(none)
+      height: $spinner_height
+      margin-top: -$spinner_height/2
+      background: none
+      top: 50%
+      position: absolute
+      .notify_wrap
+        position: absolute
+        width: 200px
+        left: 50%
+        height: $spinner_height
+        margin-left: -100px
+        display: block
+        padding: 0
+      &.position_push
+        margin-top: 0
+        position: static
+        .notify_wrap
+          margin: 0 auto
+          position: static
+      &.position_cover
+        margin-top: 0
+        top: $pad*2
+        .notify_wrap
