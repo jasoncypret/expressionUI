@@ -1,2 +1,4 @@
 .DS_Store
 SimpleUI.sublime-project
+*.sass-cache
+*.sassc
