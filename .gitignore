@@ -1,4 +1,3 @@
 .DS_Store
-SimpleUI.sublime-project
-*.sass-cache
-*.sassc
+.sass-cache/
+/.sass-cache/
