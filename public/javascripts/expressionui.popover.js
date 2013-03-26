@@ -8,13 +8,14 @@
 (function ($) {
   $.fn.popover = function (options) {
     var defaults = {
-      content: $('.popover'),
-      padding: 20,
-      aOffset: 20
+        content: $('.popover'),
+        padding: 0,
+        aOffset: 55,
+        flush: false
     };
     options = $.extend({}, defaults, options);
-    var left = $(this).offset().left + $(this).width() / 2,
-      top = $(this).offset().top + $(this).height() / 2,
+    var left = $(this).offset().left + $(this).outerWidth() / 2,
+      top = $(this).offset().top + $(this).outerHeight() / 2,
       winTopMax = $(window).height() / 2,
       winLeftMax = $(window).width() / 2,
       pos = '',
@@ -23,12 +24,14 @@
       tooltipWidth;
     (top >= 1 && top - $(window).scrollTop() <= winTopMax) ? pos = 'top' : pos = 'bottom';
     (left >= 1 && left - $(window).scrollLeft() <= winLeftMax) ? pos += 'left' : pos += 'right';
+
     options.content.addClass('popover_container ' + pos).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
+    if(options.flush) options.content.addClass('flush');
     tooltipHeight = options.content.outerHeight();
     tooltipWidth = options.content.outerWidth();
     switch (pos) {
       case "topleft":
-        top += $(this).height() + options.padding * 2;
+        top += ($(this).height() / (options.flush ? 2 : 1)) + options.padding * 2;
         left += -$(this).width() / 2 - options.aOffset;
         break;
       case "bottomleft":
