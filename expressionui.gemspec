@@ -3,26 +3,25 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'expressionui/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "expressionui"
-  spec.version       = Expressionui::VERSION
-  spec.authors       = ["Jason Cypret"]
-  spec.email         = ["jason@jasoncypret.com"]
-  spec.description   = "JavaScript and SASS library ready to play with the Rails Asset Pipeline"
-  spec.summary       = "Some awesome SASS and JS shiz for your rails project"
-  spec.homepage      = "http://jasoncypret.github.io/expressionUI/"
-  spec.license       = "MIT"
-
-  spec.files = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "README.md"]
-  spec.require_paths = ["lib"]
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "railties", "~> 3.1"
-  spec.add_development_dependency "jquery-rails"
-  spec.add_development_dependency "sass-rails", "~> 3.2.3"
-  spec.add_development_dependency "compass-rails"
-  spec.add_development_dependency "animate.sass-rails"
-end
-
+Gem::Specification.new do |gem|
+  gem.name          = "expressionui"
+  gem.version       = Expressionui::VERSION
+  gem.authors       = ["Jason Cypret"]
+  gem.email         = ["jason@jasoncypret.com"]
+  gem.description   = %q{JavaScript and SASS library ready to play with the Rails Asset Pipeline}
+  gem.summary       = %q{Some awesome SASS and JS shiz for your rails project}
+  gem.homepage      = "http://jasoncypret.github.io/expressionUI/"
+  gem.license       = "MIT"
 
   
+  gem.add_development_dependency "bundler", "~> 1.3"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "railties", "~> 3.1"
+  gem.add_development_dependency "jquery-rails"
+  gem.add_development_dependency "sass-rails", "~> 3.2.3"
+  gem.add_development_dependency "compass-rails"
+  gem.add_development_dependency "animate.sass-rails"
+
+  gem.files         = `git ls-files`.split($/)
+  gem.require_paths = ["lib"]
+end
