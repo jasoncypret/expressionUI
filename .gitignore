@@ -2,3 +2,7 @@
 .sass-cache/
 /.sass-cache/
 *.scssc
+pkg/
+pkg/*
+
+.ruby-version
