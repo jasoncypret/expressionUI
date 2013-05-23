@@ -1,0 +1,163 @@
+@import libs/animate
+@import libs/animate/shared
+@import libs/animate/animations/bouncing-entrances/bounceInUp
+@import libs/animate/animations/bouncing-exits/bounceOutDown
+
+//Need to add this here as it is a global module
+@import partials/uielements/modals/create_collections
+
+$modal_footer_height: (68px)-$pad
+$borderColor: #cacaca
+
+.dialog_open .dialog_container
+  .pageOverlay
+    +transition
+    +opacity(0.5)
+  .dialog
+    +opacity(1)
+    +animation-name(bounceInUp)
+    +animation-duration(0.5s)
+    +animation-timing-function(ease)
+.dialog_close .dialog_container
+  .dialog
+    +animation-name(bounceOutDown)
+    +animation-duration(1s)
+    +animation-timing-function(ease)
+
+
+.dialog_container
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 5000
+  .pageOverlay
+    +transition
+    background: black
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 99
+    height: 100%
+    width: 100%
+    +opacity(0)
+  .dialog
+    width: auto
+    +opacity(0)
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 100
+    background: #fff
+    +box-shadow(rgba(black, 0.4) 0 2px 12px)
+    padding-bottom: $modal_footer_height
+    .content
+      background: #fff
+      display: block
+    > h1
+      background: #FAFAFA
+      position: absolute
+      width: 100%
+      z-index: 10
+      line-height: 55px
+      text-transform: capitalize
+      padding: 0 0 0 $pad*2
+      font-weight: 800
+      font-size: 25px
+      color: shade(#FAFAFA, 10%)
+      span.container
+        background: none !important
+        display: block
+        .closeDialog
+          color: shade(#FAFAFA, 10%)
+          position: absolute
+          border-top: 0
+          right: 0px
+          top: 0px
+          display: block
+          padding: 0 $pad*2
+          +icon_font
+          text-transform: none
+          &:hover
+            color: $accent
+    .dialogBody
+      padding: 55px $pad $pad $pad
+      height: 100%
+      overflow-y: auto
+      +group
+      .container
+        width: auto
+        height: auto
+        background: none !important
+      .field
+        input, textarea
+      .share_item
+        .card_wrapper
+          width: 260px
+          border: 1px solid #ccc
+          box-shadow: 1px 3px 4px rgba(0,0,0,0.3)
+          footer
+            a
+              visibility: hidden
+      .bottom_footer
+        display: none
+    .dialogFooter
+      padding: $pad
+      font-size: 18px
+      line-height: 36px
+      position: absolute
+      bottom: 0
+      width: 100%
+      +group
+      a
+        float: right
+        +btn(#fff)
+        margin-left: $pad
+        &.defaultButton
+          +btn($accent)
+          float: left
+          margin-left: 0
+          margin-right: $pad
+  &.full
+    .dialog
+      position: fixed
+      +media_max_width(900px)
+        width: 85% !important
+      +mobile_only
+        width: 95% !important
+      .dialogBody
+        height: 100%
+        overflow-y: auto
+
+
+
+
+
+// WRONG PLACE FOR THIS
+.colorpicker
+  .preview
+    float: left
+    width: 50px
+    height: 50px
+    margin: 0 10px 0 0
+    border: 1px solid #efefef
+  #picker
+    cursor: crosshair
+
+
+// WRONG PLACE FOR THIS
+#idea_modal
+  width: 500px
+  label
+    display: block
+    margin-bottom: 5px
+  input, textarea
+    width: 100%
+    font-size: 14px
+    padding: 5px
+    border: 1px solid $borderColor
+  input#inputTitle
+    margin-bottom: 15px
+  textarea
+    margin-bottom: 5px
+
+
