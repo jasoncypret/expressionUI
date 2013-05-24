@@ -14,13 +14,11 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
 
   
-  gem.add_development_dependency "bundler", "~> 1.3"
-  gem.add_development_dependency "rake"
-  gem.add_development_dependency "railties", "~> 3.1"
-  gem.add_development_dependency "jquery-rails"
-  gem.add_development_dependency "sass-rails", "~> 3.2.3"
-  gem.add_development_dependency "compass-rails"
-  gem.add_development_dependency "animate.sass-rails"
+  gem.add_development_dependency  "bundler", "~> 1.3"
+  gem.add_development_dependency  "rake"
+  gem.add_development_dependency  "railties", "~> 3.1"
+  gem.add_development_dependency  "compass-rails"
+  gem.add_dependency              "animate.sass-rails"
 
   gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
