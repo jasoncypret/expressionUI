@@ -61,7 +61,7 @@
             }
             buildModal = '<div id="' + options.id + '" class="dialog_container ' + isMobile + ' ' + options.height + '">' + overlay + '<div style="width:' + options.width + ';" class="dialog">';
             if (options.header) {
-                buildModal += '<h1><span class="container">' + options.title + '<a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">x</a></span></h1>';
+                buildModal += '<h1><span class="container"><span class="title">' + options.title + '</span><a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">x</a></span></h1>';
             } else {
                 buttons += '<a href="javascript:;" class="closeDialog"><span>Cancel</span></a>';
             }
@@ -81,7 +81,9 @@
             $('#' + options.id + ' .dialog').dialog('position', options);
             $('#' + options.id).dialog('_setupEvents', options);
             $(options.appendTo).addClass("dialog_open");
-            options.afterOpen.call();
+            if(!options.ajaxTarget){
+                options.afterOpen.call();
+            }
         },
         ajax: function (options) {
             var _this = $(this)
@@ -91,6 +93,7 @@
             }
             _this.load(options.ajax, function (response, status, xhr) {
                 _this.parents('.dialogBody').find('.notify').notify("close")
+                options.afterOpen.call();
                 if (status == "error") {
                     var msg = "Sorry but there was an error: ";
                     alert(msg + xhr.status + " " + xhr.statusText);
