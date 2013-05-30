@@ -246,17 +246,13 @@ select
             color: tint(black, 40%)
             &.icon
 
-
-
-
-
-
   &.inside
-    .formfield
+    .field
       margin: $pad 0
       padding: 2px 10px
       position: relative
       width: 291px
+      +form_text_input_color
       &.check
         background: none
         +box-shadow(none)
@@ -273,26 +269,6 @@ select
             &:hover
               color: white
               border-bottom: none
-        &:hover
-          +box-shadow(none)
-      &.drop
-        background: none
-        +box-shadow(none)
-        border: none
-        padding: 0
-        width: auto
-        &:hover
-          +box-shadow(none)
-      &.small
-        width: 200px
-      .hoverhelp
-        width: 27px
-        height: 20px
-        background: url("../images/content/home_sprite.png#{$ver}") 0 -269px no-repeat
-        display: block
-        position: absolute
-        right: -10px
-        top: 6px
       label
         +inline_block
         font-size: 11px
@@ -315,31 +291,15 @@ select
         font-size: 11px
         &:focus
           outline: none
-      &.errorField
-        border: 1px solid #BA2528
-        &:before, & .before
-          content: ''
-          before: ''
-          width: 27px
-          height: 20px
-          background: url("../images/content/home_sprite.png#{$ver}") 0 -249px no-repeat
-          display: block
-          position: absolute
-          right: 10px
-        .hoverhelp
-          right: 9px
-          background: none
-      &:hover, &.hover
-        +box-shadow(rgba(black, 0.12) 0 1px 2px inset, rgba(white, 0.65) 0 1px 0 0, rgba(#00A8FF, .34) 0 1px 8px 0)
   .group
     margin: $pad 0
     &.nopad
       margin: 0
       .button
         margin: 0
-    .formfield
+    .field
       margin: 0 !important
       float: left
       width: 294px
-      & + .formfield
+      & + .field
         float: right

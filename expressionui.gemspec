@@ -18,7 +18,9 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency  "rake"
   gem.add_development_dependency  "railties", "~> 3.1"
   gem.add_development_dependency  "compass-rails"
+  gem.add_dependency              "compass-normalize"
   gem.add_dependency              "animate.sass-rails"
+  
 
   gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]

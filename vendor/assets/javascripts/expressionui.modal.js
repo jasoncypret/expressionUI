@@ -1,4 +1,4 @@
-/* expressionUI modal v2.0
+/* expressionUI modal v1.0
  * https://github.com/jasoncypret/expressionUI
  *
  * Copyright (c) 2013 Jason Cypret (http://jasoncypret.com/)
