@@ -10,13 +10,10 @@
   display: block
 
 =font_stack
-  font-family: "source-sans-pro"
+  font-family: $font_stack, sans-serif
 
 =serif
-  font-family: "ff-meta-serif-web-pro"
-
-=logo_serif
-  font-family: "rooney-web"
+  font-family: $serif, serif
 
 =inline_block
   display: -moz-inline-stack
@@ -53,6 +50,11 @@
   height: auto !important
   height: $size
 
+=max_width($size)
+  max-width: $size
+  width: auto !important
+  width: $size
+
 =text_color($base_color, $shadow: true)
   @if lightness($base_color) > 75%
     color: shade($base_color, 60%)
@@ -73,18 +75,18 @@
   @else if $direction == bottom
     +background(linear_gradient($base_color, shade($base_color, 30%)))
 
-=smart_border($base_color, $direction: both)
+=smart_border($base_color, $size: 1px, $direction: both)
   @if $direction == both
-    border: 1px solid shade($base_color, 20%)
-    border-top: 1px solid shade($base_color, 10%)
-    border-bottom: 1px solid shade($base_color, 40%)
+    border: $size solid shade($base_color, 20%)
+    border-top: $size solid shade($base_color, 10%)
+    border-bottom: $size solid shade($base_color, 40%)
   @else if $direction == top
-    border: 1px solid shade($base_color, 20%)
-    border-top: 1px solid $base_color
+    border: $size solid shade($base_color, 20%)
+    border-top: $size solid $base_color
   @else if $direction == bottom
-    border: 1px solid shade($base_color, 30%)
-    border-top: 1px solid shade($base_color, 15%)
-    border-bottom: 1px solid shade($base_color, 50%)
+    border: $size solid shade($base_color, 30%)
+    border-top: $size solid shade($base_color, 15%)
+    border-bottom: $size solid shade($base_color, 50%)
 
 =btn_color($base_color, $behind: null)
   +smart_gradient($base_color)
@@ -93,58 +95,58 @@
   @else
     +smart_border($behind)
 
-=btn_flat($base_color, $behind: null)
-  outline: 0
-  text-align: center
-  text-transform: capitalize
-  text-decoration: none
-  font-weight: 600
-  line-height: 1em
-  +font_stack
-  width: auto
-  +inline-block
-  padding: 8px 11px
-  font-size: 1em
-  +border-radius(2px)
-  +box-shadow(rgba(white, 0.3) 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
-  cursor: pointer
-  +btn_color($base_color, $behind)
-  border: 0
-  &:hover
-    +box-shadow(rgba(white, 0.6) 0 1px 3px inset, rgba(black, 0.20) 0 2px 2px 0)
-    +btn_color(tint($base_color, 10%), $behind)
-  &:active
-    +box-shadow(rgba(black, 0.6) 0 2px 4px inset, rgba(black, 0.50) 0 1px 0 0)
-    +btn_color(shade($base_color, 10%), $behind)
-
-=btn($base_color, $behind: null)
-  outline: 0
-  border: 0
-  text-align: center
-  text-transform: capitalize
-  text-decoration: none
-  font-weight: 600
-  line-height: 1em
-  +font_stack
-  width: auto
-  +inline-block
-  padding: 10px 13px
-  font-size: 1em
-  +border-radius(2px)
-  cursor: pointer
-  background: $base_color
-  +text_color($base_color)
-  +text-shadow(none)
-  @if lightness($base_color) == 100%
-    border: 1px solid shade($base_color, 10%)
-    +border-radius(3px)
-  &:hover, &:active
-    @if lightness($base_color) == 100%
-      border: 1px solid shade($base_color, 20%)
-    background: shade($base_color, 10%)
-    +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
+=btn($base_color, $behind: null, $style: flat)
+  @if $style == flat
+    outline: 0
+    text-align: center
+    text-transform: capitalize
+    text-decoration: none
+    font-weight: 600
+    line-height: 1em
+    +font_stack
+    width: auto
+    +inline-block
+    padding: 8px 11px
+    font-size: 1em
+    +border-radius(2px)
+    +box-shadow(rgba(white, 0.3) 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
+    cursor: pointer
+    +btn_color($base_color, $behind)
+    border: 0
+    &:hover
+      +box-shadow(rgba(white, 0.6) 0 1px 3px inset, rgba(black, 0.20) 0 2px 2px 0)
+      +btn_color(tint($base_color, 10%), $behind)
+    &:active
+      +box-shadow(rgba(black, 0.6) 0 2px 4px inset, rgba(black, 0.50) 0 1px 0 0)
+      +btn_color(shade($base_color, 10%), $behind)
+  @else
+    outline: 0
+    border: 0
+    text-align: center
+    text-transform: capitalize
+    text-decoration: none
+    font-weight: 600
+    line-height: 1em
+    +font_stack
+    width: auto
+    +inline-block
+    padding: 10px 13px
+    font-size: 1em
+    +border-radius(2px)
+    cursor: pointer
+    background: $base_color
     +text_color($base_color)
     +text-shadow(none)
+    @if lightness($base_color) == 100%
+      border: 1px solid shade($base_color, 10%)
+      +border-radius(3px)
+    &:hover, &:active
+      @if lightness($base_color) == 100%
+        border: 1px solid shade($base_color, 20%)
+      background: shade($base_color, 10%)
+      +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
+      +text_color($base_color)
+      +text-shadow(none)
 
 =shadow_scroll($background: #E5E5E5, $top: 62px, $left: 56px, $right: 0, $height: 10px, $z-index: 1111)
   &:before
@@ -168,8 +170,6 @@
     left: 0
     width: 100%
     z-index: ($z-index)+1
-
-
 
 =text_replace
   text-indent: 100%
@@ -246,7 +246,7 @@
     @content
 
 =icon_font
-  font-family: 'grokkregular'
+  font-family: $icon_font
   font-weight: normal !important
   -webkit-font-smoothing: antialiased
 
