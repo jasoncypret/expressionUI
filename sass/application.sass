@@ -1,0 +1,40 @@
+@import compass
+@import expressionui.sass
+
+$green: #2AC7AB
+
+.inner
+  margin: 0 auto
+
+.header
+  background: $green
+  +text_color($green)
+  +text-shadow(none)
+  .inner
+    text-align: center
+    padding: $pad*5 0
+    width: 600px
+    .logo
+    h1
+      font-size: 50px
+      font-weight: 300
+    h2
+      font-weight: 100
+    a.btn
+      +btn(shade($green, 40%))
+      +inline_block
+      font-size: 150%
+      font-weight: 100
+
+.section
+  h3
+    background: #525252
+    +text_color(#525252)
+    text-align: center
+    font-weight: 100
+    margin: 0
+    padding: $pad
+  .inner
+    width: 600px
+
+footer

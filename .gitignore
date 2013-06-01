@@ -1,0 +1,14 @@
+
+.ruby-version
+
+*.gem
+
+vendor/assets/.DS_Store
+
+vendor/assets/stylesheets/.DS_Store
+
+*.sassc
+
+.sass-cache
+
+.DS_Store

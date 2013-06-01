@@ -1,0 +1,305 @@
+$field_margin: $pad
+$form_border_color: tint(#B8B8B8, 50%)
+$label_color: #999999
+$focus_color: #6BABC1
+$field_height: 35px
+
+=form_text_input_color
+  line-height: 40px
+  padding: 0 $pad/2
+  +inline_block
+  border: 1px solid $form_border_color
+  +border-radius(4px)
+  font-size: 22px
+  color: black
+  font-weight: 100
+  &:focus
+    outline: 0
+    border: 1px solid $focus_color
+    //+box-shadow(rgba($focus_color, 0.31) 0 0 4px, inset rgba(black, 0.10) 0 2px 3px 0)
+
+// GENERAL FORM ELEMETS STYLINGS
+
+
+// RADIO AND CHECKBOX (add a toggle to make it a toggle)
+input
+  &[type=checkbox], &[type=radio]
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    +inline_block
+    cursor: pointer
+  &[type=radio]
+    +border-radius(200px)
+    +background-image(linear-gradient(white, #ccc))
+  &[type=checkbox]
+    +border-radius(3px)
+    //+background-image(linear-gradient(#FEFCF8, #E7E3DA))
+    background: #D7DCDE
+    width: 25px
+    height: 25px
+    position: relative
+    +transition-property(all)
+    +transition-duration(0.2s)
+    +transition-timing-function(ease-in)
+    &:hover
+      background: shade(#D7DCDE, 5%)
+    &:checked
+      background: $accent
+      +box-shadow(rgba(black, 0.20) 0 2px 0 0 inset)
+      &:hover
+        background: shade($accent, 5%)
+      &:after
+        +icon_font
+        content: "/"
+        line-height: 27px
+        width: 100%
+        text-align: center
+        font-size: 16px
+        color: white
+        //text-shadow: rgba(white, 0.40) 0 1px 0
+        position: absolute
+        margin-top: -0.1em
+    &.toggle
+      +border-radius(30px)
+      +background-image(linear-gradient(#FEFCF8, #E2DDD3))
+      width: 60px
+      height: 27px
+      border: 1px solid #BBB9B5
+      +box-shadow(rgba(black, 0.20) 0 2px 4px 0 inset, rgba(white, 0.20) 0 1px 0 0)
+      position: relative
+      &:before
+        +icon_font
+        content: "/  x"
+        line-height: 29px
+        width: 100%
+        text-align: center
+        font-size: 16px
+        color: #85817E
+        text-shadow: rgba(white, 0.40) 0 1px 0
+        letter-spacing: 1px
+        position: absolute
+      &:after
+        +border-radius(300px)
+        content: " "
+        display: block
+        position: absolute
+        +background-image(linear-gradient(#FEFCF8, #E7E3DA))
+        width: 25px
+        height: 25px
+        border: 1px solid #BBB9B5
+        +box-shadow(white 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
+        +transition-property(all)
+        +transition-duration(5.2s)
+        +transition-timing-function(ease-in)
+        top: -1px
+        left: -1px
+        right: initial
+      &:checked
+        +background-image(linear-gradient(#F9FCF8, #C3DCAE))
+        &:before
+          color: #739953
+        &:after
+          right: -1px
+          left: initial
+          +transition-property(all)
+          +transition-duration(5.2s)
+          +transition-timing-function(ease-in)
+
+  // Radio only
+  &[type=radio]
+    +border-radius(300px)
+    +background-image(linear-gradient(#FEFCF8, #E7E3DA))
+    width: 27px
+    height: 27px
+    border: 1px solid #BBB9B5
+    +box-shadow(white 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
+    position: relative
+    +transition-property(all)
+    +transition-duration(5.2s)
+    +transition-timing-function(ease-in)
+    &:after
+      border: 1px solid #BBB9B5
+      +border-radius(300px)
+      content: " "
+      display: block
+      width: 11px
+      height: 11px
+      +background-image(linear-gradient(#E2DDD3, #E2DDD3))
+      position: absolute
+      top: 6px
+      left: 6px
+      +box-shadow(rgba(black, 0.20) 0 2px 4px 0 inset, rgba(white, 0.20) 0 1px 0 0)
+    &:checked
+      &:after
+        border: 1px solid #466923
+        +background-image(linear-gradient(#A6CC85, #4D722B))
+        +box-shadow(rgba(white, 0.20) 0 1px 0 inset, rgba(white, 0.20) 0 1px 0 0)
+
+
+  // TEXT
+  &[type="text"], &[type="password"]
+    +form_text_input_color
+
+
+// TEXTAREA
+
+textarea
+  +form_text_input_color
+  resize: none
+  line-height: 24px
+  font-size: 22px !important
+  font-weight: 100 !important
+  height: $field_height*3
+  padding: $pad/2
+
+
+
+// select
+
+select
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  +background-image( image-url('/assets/dropdown_arrow.svg'), linear_gradient(tint(#F5F5F5, 30%), shade(#F5F5F5, 10%)) )
+  background-position: 95% 53%, 0 0
+  background-repeat: no-repeat, repeat
+  background-size: 8px 8px, auto auto
+  border: 1px solid shade(#F5F5F5, 20%)
+  border-top: 1px solid shade(#F5F5F5, 10%)
+  border-bottom: 1px solid shade(#F5F5F5, 40%)
+  outline: 0
+  text-decoration: none
+  line-height: 1em
+  +font_stack
+  width: auto
+  +inline-block
+  padding: 8px 24px 8px 11px
+  font-size: 1em
+  +border-radius(2px)
+  +box-shadow(rgba(white, 0.15) 1px 1px 0 inset, rgba(white, 0.15) -1px -1px 0 0 inset, rgba(white, 0.1) 0 1px 0 0)
+  +text_color(#F5F5F5)
+  cursor: pointer
+  &:hover, &:active
+    +background-image( image-url('/assets/dropdown_arrow.svg'), linear_gradient(shade(#FFFFFF, 1%), shade(#F5F5F5, 8%)) )
+    background-position: 95% 53%, 0 0
+    background-repeat: no-repeat, repeat
+    background-size: 8px 8px, auto auto
+    +box-shadow(rgba(black, 0.6) 0 2px 4px inset, rgba(white, 0.1) 0 1px 0 0)
+    +text_color(shade(#F5F5F5, 10%))
+
+// form fields
+.form
+  .field
+    display: block
+    padding: 0
+    position: relative
+    margin-bottom: $pad
+    width: auto
+    height: auto
+    +group
+    label, span.optional
+      display: block
+      color: $label_color
+      font-size: 15px
+      line-height: 20px
+    span.optional
+      position: absolute
+      top: 2px
+      right: 0
+    input[type="text"], input[type="password"], textarea, select
+      display: block
+      width: 100%
+    &.left
+      margin: 10px 39px 3px 0
+    &.right
+      margin: 10px 0 3px 0
+    &.full
+      textarea
+        width: 98%
+        resize: none
+        height: auto
+        padding: 1%
+        display: block
+        line-height: 18px
+    &.outline
+      +inline_block
+      +btn(white)
+      padding: 5px
+      margin: 10px $pad*2 3px 0
+      input[type=checkbox]
+        ~ span
+          margin: 0 $pad/1.5 0 $pad
+          line-height: 25px
+          color: #D7DCDE
+          &.icon
+            text-transform: none !important
+            font-size: 25px
+            position: relative
+            //top: -0.1em
+      &:hover
+        input[type=checkbox]
+          background: tint(black, 40%)
+          &:checked
+            background: shade($accent, 5%)
+          ~ span
+            color: tint(black, 40%)
+            &.icon
+
+  &.inside
+    .field
+      margin: $pad 0
+      padding: 2px 10px
+      position: relative
+      width: 291px
+      +form_text_input_color
+      &.check
+        background: none
+        +box-shadow(none)
+        border: none
+        padding: 0
+        width: auto
+        label
+          line-height: 15px
+          font-weight: normal
+          color: white
+          a
+            color: #A6DFFD
+            border-bottom: 1px dashed #A6DFFD
+            &:hover
+              color: white
+              border-bottom: none
+      label
+        +inline_block
+        font-size: 11px
+        line-height: 21px
+        font-weight: bold
+        .req
+          color: #F05A4F
+          margin-right: 5px
+      input[type="text"], input[type="password"]
+        background: none
+        border: none
+        height: 18px
+        padding: 0 5px
+        +inline_block
+        line-height: 20px
+        width: auto
+        outline: none
+        font-weight: bold
+        +box-shadow(none)
+        font-size: 11px
+        &:focus
+          outline: none
+  .group
+    margin: $pad 0
+    &.nopad
+      margin: 0
+      .button
+        margin: 0
+    .field
+      margin: 0 !important
+      float: left
+      width: 294px
+      & + .field
+        float: right
