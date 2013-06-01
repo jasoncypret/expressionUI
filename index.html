@@ -39,6 +39,7 @@
     <section class="section group">
       <h3 class="icon_left" data-icon="d">Forms</h3>
       <div class="inner">
+        
         <div class="form">
           <h4>Standard</h4>
           <div class="field">
@@ -50,8 +51,8 @@
             <input id="user_password" name="user[password]" size="30" type="password" placeholder="Must use upper and lowercase">
           </div>
 
-          <h4>Split</h4>
           <div class="group">
+            <h4>Split</h4>
             <div class="field">
               <label for="user_email">Email</label>
               <input id="user_email" name="user[email]" size="30" type="text" placeholder="email@example.com">
@@ -62,74 +63,81 @@
             </div>
           </div>
         </div>
+
+
         <div class="form inside">
-          
-          <h4>Labels inside</h4>
-          
-          <div class="field">
-            <label for="user_email">Email</label>
-            <input id="user_email" name="user[email]" size="30" type="text" placeholder="email@example.com">
-          </div>
-          <div class="field">
-            <label for="user_password">Password</label>
-            <input id="user_password" name="user[password]" size="30" type="password" placeholder="Must use upper and lowercase">
+          <div class="group">
+            <h4>Labels inside</h4>
+            <div class="field">
+              <label for="user_email">Email</label>
+              <input id="user_email" name="user[email]" size="30" type="text" placeholder="email@example.com">
+            </div>
+            <div class="field">
+              <label for="user_password">Password</label>
+              <input id="user_password" name="user[password]" size="30" type="password" placeholder="Must use upper and lowercase">
+            </div>
           </div>
         </div>
 
         <div class="form">
-          <h4>Checkboxes</h4>
-          <div class="field left outline">
-            <label>
-              <input type="checkbox" value="twitter"><span class="icon">t</span>
-            </label>
+          <div class="group">
+            <h4>Checkboxes</h4>
+            <div class="field outline">
+              <label>
+                <input type="checkbox" value="twitter"><span class="icon">t</span>
+              </label>
+            </div>
+            <div class="field outline">
+              <label>
+                <input type="checkbox" value="twitter"><span>Check this really awesome checkbox</span>
+              </label>
+            </div>
+            <div class="field">
+              <label>
+                <input type="checkbox" value="twitter"><span>Check this really awesome checkbox</span>
+              </label>
+            </div>
+            <div class="field">
+              <input class="toggle" type="checkbox">
+            </div>
           </div>
-          <div class="field left outline">
-            <label>
-              <input type="checkbox" value="twitter"><span>Check this really awesome checkbox</span>
-            </label>
+
+          <div class="group">
+            <h4>Radios</h4>
+            <div class="field group">
+              <label>
+                <input name="example" type="radio" value="1">
+                One
+              </label>
+            </div>
+            <div class="field group">
+              <label>
+                <input name="example" type="radio" value="2">
+                Two
+              </label>
+            </div>
+            <div class="field group">
+              <label>
+                <input name="example" type="radio" value="3">
+                Three
+              </label>
+            </div>
           </div>
-          <div class="field">
-            <label>
-              <input type="checkbox" value="twitter"><span>Check this really awesome checkbox</span>
-            </label>
+
+          <div class="group">
+            <h4>Selects</h4>
+            <select>
+              <option value="A">Option 1</option>
+              <option value="A2">Option 2</option>
+              <option value="B1">Option 3</option>
+              <option value="B2">Option 4</option>
+              <option value="B3">Option 5</option>
+              <option value="C1">Option 6</option>
+              <option value="C2">Option 7</option>
+            </select>
           </div>
-          <div class="field">
-            <input type="checkbox" value="twitter">
-            <label>Check this really awesome checkbox</label>
-          </div>
-          <div class="field">
-            <input class="toggle" type="checkbox">
-          </div>
-          <h4>Radios</h4>
-          <div class="field left">
-            <input name="example" type="radio" value="1">
-            <label>One</label>
-          </div>
-          <div class="field left">
-            <input name="example" type="radio" value="2">
-            <label>Two</label>
-          </div>
-          <div class="field left">
-          <input name="example" type="radio" value="3">
-          <label>Three</label>
-          </div>
-          <h4>Selects</h4>
-          <select>
-            <option value="A">Option 1</option>
-            <option value="A2">Option 2</option>
-            <option value="B1">Option 3</option>
-            <option value="B2">Option 4</option>
-            <option value="B3">Option 5</option>
-            <option value="C1">Option 6</option>
-            <option value="C2">Option 7</option>
-          </select>
-        
+
         </div>
-        
-        
-
-
-
       </div>
     </section>
     <section class="section group">
