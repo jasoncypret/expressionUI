@@ -9,23 +9,23 @@
 $modal_footer_height: (68px)-$pad
 $borderColor: #cacaca
 
-.dialog_open .dialog_container
+.modal_open .modal_container
   .pageOverlay
     +transition
     +opacity(0.5)
-  .dialog
+  .modal
     +opacity(1)
     +animation-name(bounceInUp)
     +animation-duration(0.5s)
     +animation-timing-function(ease)
-.dialog_close .dialog_container
-  .dialog
+.modal_close .modal_container
+  .modal
     +animation-name(bounceOutDown)
     +animation-duration(1s)
     +animation-timing-function(ease)
 
 
-.dialog_container
+.modal_container
   position: fixed
   top: 0
   left: 0
@@ -40,7 +40,7 @@ $borderColor: #cacaca
     height: 100%
     width: 100%
     +opacity(0)
-  .dialog
+  .modal
     width: auto
     +opacity(0)
     position: fixed
@@ -79,7 +79,7 @@ $borderColor: #cacaca
           text-transform: none
           &:hover
             color: $accent
-    .dialogBody
+    .modalBody
       padding: 55px $pad $pad $pad
       height: 100%
       overflow-y: auto
@@ -100,7 +100,7 @@ $borderColor: #cacaca
               visibility: hidden
       .bottom_footer
         display: none
-    .dialogFooter
+    .modalFooter
       padding: $pad
       font-size: 18px
       line-height: 36px
@@ -118,12 +118,12 @@ $borderColor: #cacaca
           margin-left: 0
           margin-right: $pad
   &.full
-    .dialog
+    .modal
       position: fixed
       +media_max_width(900px)
         width: 85% !important
       +mobile_only
         width: 95% !important
-      .dialogBody
+      .modalBody
         height: 100%
         overflow-y: auto

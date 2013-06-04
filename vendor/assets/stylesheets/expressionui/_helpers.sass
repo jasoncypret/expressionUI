@@ -117,13 +117,30 @@
     @if lightness($base_color) == 100%
       border: 1px solid shade($base_color, 10%)
       +border-radius(3px)
-    &:hover, &:active
+    &:hover, &:active, &.active
       @if lightness($base_color) == 100%
         border: 1px solid shade($base_color, 20%)
       background: shade($base_color, 10%)
       +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
       +text_color($base_color)
       +text-shadow(none)
+    &.active:hover
+      @if lightness($base_color) == 100%
+        border: 1px solid shade($base_color, 20%)
+      background: shade($base_color, 20%)
+      +box-shadow(shade($base_color, 30%) 0 2px 0 inset)
+      +text_color(shade($base_color, 10%))
+      +text-shadow(none)
+    &.disabled, &.disabled:hover
+      cursor: not-allowed
+      +opacity(0.7)
+      @if lightness($base_color) == 100%
+        border: 1px solid shade($base_color, 10%)
+      background: $base_color
+      +box-shadow(none)
+      +text_color($base_color)
+      +text-shadow(none)
+
   @else
     outline: 0
     text-align: center
@@ -259,16 +276,20 @@
   line-height: 0
   font-size: 1.4em
   top: 0.1em
-
-=shadow_base
-  +box-shadow(rgba(#000, .3) 0 1px 4px, rgba(#000, .1) 0 0 40px 0 true)
-  &:before, &:after
-    content: ""
-    position: absolute
-    z-index: -2
-
-=shadow_raised
-  +shadow-base
-  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05) inset
-  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05) inset
-  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05) inset
+  
+=flex_me
+  +display-box
+  +box-orient(horizontal)
+  +box-align(stretch)
+  .col1
+    +box-flex(1)
+  .col2
+    +box-flex(2)
+  .col3
+    +box-flex(3)
+  .col4
+    +box-flex(4)
+  .col5
+    +box-flex(5)
+  .col6
+    +box-flex(6)

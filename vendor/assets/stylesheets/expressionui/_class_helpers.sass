@@ -1,6 +1,3 @@
-a:visited
-  //color: $link
-
 .btn
   +btn(#fff)
   &.highlight
@@ -11,6 +8,14 @@ a:visited
     +btn($main)
   &.contrast
     +btn($contrast)
+  &.error
+    +btn($error)
+  &.success
+    +btn($success)
+  &.tip
+    +btn($tip)
+  &.info
+    +btn($info)
   &.xsmall
     font-size: 70%
   &.small
@@ -20,11 +25,30 @@ a:visited
   &.xlarge
     font-size: 125%
 
-//<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-//<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-//<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
-//<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
-//<p class="text-success">Du    
+.text_tip
+  color: $tip
+.text_error
+  color: $error
+.text_info
+  color: $info
+.text_success
+  color: $success
+
+.collumns2
+  +column-count(2)
+.collumns3
+  +column-count(3)
+.collumns4
+  +column-count(4)
+
+.perc25
+  width: 25%
+.perc50
+  width: 50%
+.perc75
+  width: 75%
+.perc100
+  width: 100%
 
 .amp
   +amp

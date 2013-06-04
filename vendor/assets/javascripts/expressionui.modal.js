@@ -9,7 +9,7 @@
     var methods = {
         defaults: {
             title: 'Alert',
-            id: 'dialog',
+            id: 'modal',
             closeID: 'closeDialog',
             overlay: true,
             overlayMrk: '<div class="pageOverlay"></div>',
@@ -36,7 +36,7 @@
         },
         init: function (options) {
             options = $.extend({}, methods.defaults, options);
-            $(this).dialog('_open', options);
+            $(this).modal('_open', options);
         },
         _open: function (options) {
             options.beforeOpen();
@@ -51,7 +51,7 @@
                 var className = '';
                 if (typeof btn.className != 'undefined')
                     className = btn.className;
-                buttons += '<a href="javascript:;" id="dialogBtn' + i + '" class="' + className + defaultBtn + '"><span>' + btn.buttonText + '</span></a>';
+                buttons += '<a href="javascript:;" id="modalBtn' + i + '" class="' + className + defaultBtn + '"><span>' + btn.buttonText + '</span></a>';
             });
             if (options.width != "auto") {
                 options.width = options.width + 'px'
@@ -59,15 +59,15 @@
             if (options.overlay) {
                 overlay = options.overlayMrk;
             }
-            buildModal = '<div id="' + options.id + '" class="dialog_container ' + isMobile + ' ' + options.height + '">' + overlay + '<div style="width:' + options.width + ';" class="dialog">';
+            buildModal = '<div id="' + options.id + '" class="modal_container ' + isMobile + ' ' + options.height + '">' + overlay + '<div style="width:' + options.width + ';" class="modal">';
             if (options.header) {
                 buildModal += '<h1><span class="container"><span class="title">' + options.title + '</span><a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">x</a></span></h1>';
             } else {
                 buttons += '<a href="javascript:;" class="closeDialog"><span>Cancel</span></a>';
             }
-            buildModal += '<div class="dialogBody"><div class="container"><div class="d_content"></div></div></div>';
+            buildModal += '<div class="modalBody"><div class="container"><div class="d_content"></div></div></div>';
             if (options.footer) {
-                buildModal += '<div class="dialogFooter"><span class="container">' + buttons + '</span></div>';
+                buildModal += '<div class="modalFooter"><span class="container">' + buttons + '</span></div>';
             }
             buildModal += '</div></div>';
             $(options.appendTo).append(buildModal);
@@ -76,11 +76,11 @@
             }
             $(this).appendTo('#' + options.id + ' .d_content').css('display', 'block');
             if (options.ajax) {
-                $(this).dialog('ajax', options);
+                $(this).modal('ajax', options);
             }
-            $('#' + options.id + ' .dialog').dialog('position', options);
-            $('#' + options.id).dialog('_setupEvents', options);
-            $(options.appendTo).addClass("dialog_open");
+            $('#' + options.id + ' .modal').modal('position', options);
+            $('#' + options.id).modal('_setupEvents', options);
+            $(options.appendTo).addClass("modal_open");
             if(!options.ajaxTarget){
                 options.afterOpen.call();
             }
@@ -89,10 +89,10 @@
             var _this = $(this)
             if (options.ajaxTarget) options.ajax = options.ajax + ' ' + options.ajaxTarget
             if (options.notify) {
-                _this.parents('.dialogBody').notify({ style: "none", position: "middle", loading: "circles", sticky: true, content: "hidden" });
+                _this.parents('.modalBody').notify({ style: "none", position: "middle", loading: "circles", sticky: true, content: "hidden" });
             }
             _this.load(options.ajax, function (response, status, xhr) {
-                _this.parents('.dialogBody').find('.notify').notify("close")
+                _this.parents('.modalBody').find('.notify').notify("close")
                 options.afterOpen.call();
                 if (status == "error") {
                     var msg = "Sorry but there was an error: ";
@@ -102,20 +102,20 @@
         },
         close: function (options) {
             options = $.extend({}, methods.defaults, options);
-            if ($('.dialog')[1]) {
-                var amount = $('.dialog').length - 1
-                $.each($('.dialog'), function (i, v) {
+            if ($('.modal')[1]) {
+                var amount = $('.modal').length - 1
+                $.each($('.modal'), function (i, v) {
                     if (i === amount) {
-                        $(v).parents('.dialog_container').fadeOut('fast');
+                        $(v).parents('.modal_container').fadeOut('fast');
                     }
                 });
             } else {
-                $(options.appendTo).removeClass('dialog_open').addClass('dialog_close');
+                $(options.appendTo).removeClass('modal_open').addClass('modal_close');
             }
             options.beforeClose();
             var modal_content = $(this).find('.d_content').children(),
-                parent = $(this).parents('.dialog_container'),
-                body = $(this).find('.dialogBody'),
+                parent = $(this).parents('.modal_container'),
+                body = $(this).find('.modalBody'),
                 b_width = body.outerWidth(),
                 b_height = body.outerHeight();
             body.css({width: b_width, height: b_height});
@@ -128,8 +128,8 @@
                 modal_content.remove();
             }
             setTimeout(function () {
-                if (!$('.dialog')[1]) {
-                    $(options.appendTo).removeClass("dialog_close");
+                if (!$('.modal')[1]) {
+                    $(options.appendTo).removeClass("modal_close");
                 }
                 parent.remove();
                 $(window).unbind("resize.modal");
@@ -139,34 +139,34 @@
         _setupEvents: function (options) {
             var _this = $(this)
             $(window).bind("resize.modal", function () {
-                _this.find('.dialog').dialog('position', options)
+                _this.find('.modal').modal('position', options)
             });
-            $(this).find('.dialogFooter a:not(.closeDialog)').each(function (i) {
+            $(this).find('.modalFooter a:not(.closeDialog)').each(function (i) {
                 $(this).click(options.buttons[i].context ? function () {
                     options.buttons[i].callback.apply(options.buttons[i].context)
                 } : options.buttons[i].callback);
             });
             $(this).find('.closeDialog').click(function () {
-                (typeof options.closeCallback === 'undefined') ? $('#' + options.id + ' .dialog').dialog('close', options) : options.closeCallback();
+                (typeof options.closeCallback === 'undefined') ? $('#' + options.id + ' .modal').modal('close', options) : options.closeCallback();
             });
         },
         position: function (options) {
-            var dialog = $(this);
-            var dialogHeight = dialog.outerHeight();
-            var dialogPadding = dialogHeight - dialog.height();
+            var modal = $(this);
+            var modalHeight = modal.outerHeight();
+            var modalPadding = modalHeight - modal.height();
             var win = $(window).height();
             var threshold = options.threshold;
             if (options.height == 'auto') {
-                if ( dialogHeight > (win - (threshold * 2)) ) {
-                    dialog.css('height', (win - ((threshold * 2) - dialogPadding)) );
+                if ( modalHeight > (win - (threshold * 2)) ) {
+                    modal.css('height', (win - ((threshold * 2) - modalPadding)) );
                 }
-                dialog.css({ 'margin-top': -(dialog.outerHeight() / 2), 'margin-left': -(dialog.outerWidth() / 2) });
+                modal.css({ 'margin-top': -(modal.outerHeight() / 2), 'margin-left': -(modal.outerWidth() / 2) });
             } else {
-                dialog.css({ 'top': threshold, 'bottom': threshold, 'margin-left': -(dialog.outerWidth() / 2) });
+                modal.css({ 'top': threshold, 'bottom': threshold, 'margin-left': -(modal.outerWidth() / 2) });
             }
         }
     };
-    $.fn.dialog = function (method) {
+    $.fn.modal = function (method) {
         if (methods[method]) {
             return methods[ method ].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) {

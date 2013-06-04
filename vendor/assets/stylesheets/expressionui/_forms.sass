@@ -90,7 +90,7 @@ input
         border: 1px solid #BBB9B5
         +box-shadow(white 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
         +transition-property(all)
-        +transition-duration(5.2s)
+        +transition-duration(.2s)
         +transition-timing-function(ease-in)
         top: -1px
         left: -1px
@@ -103,7 +103,7 @@ input
           right: -1px
           left: initial
           +transition-property(all)
-          +transition-duration(5.2s)
+          +transition-duration(.2s)
           +transition-timing-function(ease-in)
 
   // Radio only
@@ -116,7 +116,7 @@ input
     +box-shadow(white 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
     position: relative
     +transition-property(all)
-    +transition-duration(5.2s)
+    +transition-duration(.2s)
     +transition-timing-function(ease-in)
     &:after
       border: 1px solid #BBB9B5
@@ -161,7 +161,7 @@ select
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  +background-image( image-url('/assets/dropdown_arrow.svg'), linear_gradient(tint(#F5F5F5, 30%), shade(#F5F5F5, 10%)) )
+  +background-image( url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=='), linear_gradient(tint(#F5F5F5, 30%), shade(#F5F5F5, 10%)) )
   background-position: 95% 53%, 0 0
   background-repeat: no-repeat, repeat
   background-size: 8px 8px, auto auto
@@ -181,7 +181,7 @@ select
   +text_color(#F5F5F5)
   cursor: pointer
   &:hover, &:active
-    +background-image( image-url('/assets/dropdown_arrow.svg'), linear_gradient(shade(#FFFFFF, 1%), shade(#F5F5F5, 8%)) )
+    +background-image( url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=='), linear_gradient(shade(#FFFFFF, 1%), shade(#F5F5F5, 8%)) )
     background-position: 95% 53%, 0 0
     background-repeat: no-repeat, repeat
     background-size: 8px 8px, auto auto
@@ -190,6 +190,9 @@ select
 
 // form fields
 .form
+  .btn
+    &.left
+      margin-right: $pad
   .field
     display: block
     padding: 0
@@ -227,6 +230,7 @@ select
       +btn(white)
       padding: 5px
       margin: 10px $pad*2 3px 0
+      text-align: left
       input[type=checkbox]
         ~ span
           margin: 0 $pad/1.5 0 $pad
