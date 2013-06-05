@@ -4,6 +4,9 @@
   +box-sizing(border-box)
   -webkit-font-smoothing: antialiased
 
+a
+  text-decoration: none
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section
   display: block
 
@@ -24,5 +27,3 @@ body
 button, input, select, textarea
   +font_stack
   font-weight: normal
-
-+font-face("#{$icon_font}", font-files("#{$icon_font}.woff#{$ver}", woff, "#{$icon_font}.otf#{$ver}", opentype, "#{$icon_font}.svg#$icon_font#{$ver}", svg), "#{$icon_font}.eot#{$ver}", "normal", "normal")

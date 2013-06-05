@@ -1,3 +1,5 @@
++font-face("#{$icon_font}", font-files("#{$icon_font}.woff#{$ver}", woff, "#{$icon_font}.otf#{$ver}", opentype, "#{$icon_font}.svg#$icon_font#{$ver}", svg), "#{$icon_font}.eot#{$ver}", "normal", "normal")
+
 =amp
   font-family: Baskerville, "Goudy Old Style", serif
   font-weight: normal
@@ -114,6 +116,9 @@
     background: $base_color
     +text_color($base_color)
     +text-shadow(none)
+    &.icon
+      +icon_font
+      text-transform: none
     @if lightness($base_color) == 100%
       border: 1px solid shade($base_color, 10%)
       +border-radius(3px)
@@ -140,7 +145,6 @@
       +box-shadow(none)
       +text_color($base_color)
       +text-shadow(none)
-
   @else
     outline: 0
     text-align: center

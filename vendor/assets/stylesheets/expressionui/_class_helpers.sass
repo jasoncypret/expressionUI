@@ -18,12 +18,20 @@
     +btn($info)
   &.xsmall
     font-size: 70%
+    &.icon
+      font-size: 100%
   &.small
     font-size: 85%
+    &.icon
+      font-size: 125%
   &.large
     font-size: 110%
+    &.icon
+      font-size: 175%
   &.xlarge
     font-size: 125%
+    &.icon
+      font-size: 250%
 
 .text_tip
   color: $tip
@@ -33,6 +41,9 @@
   color: $info
 .text_success
   color: $success
+
+.flex_me
+  +flex_me
 
 .collumns2
   +column-count(2)
