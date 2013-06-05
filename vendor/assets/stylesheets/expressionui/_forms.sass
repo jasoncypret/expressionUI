@@ -155,19 +155,22 @@ textarea
 
 
 
-// select
+// select 
+// Need to rework this for gradients and for flat
 
 select
+  $data_image: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=='
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  +background-image( url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=='), linear_gradient(tint(#F5F5F5, 30%), shade(#F5F5F5, 10%)) )
+  //+background-image( url($data_image), linear_gradient(tint(#F5F5F5, 30%), shade(#F5F5F5, 10%)) )
+  +background-image( url($data_image), $accent )
   background-position: 95% 53%, 0 0
   background-repeat: no-repeat, repeat
   background-size: 8px 8px, auto auto
-  border: 1px solid shade(#F5F5F5, 20%)
-  border-top: 1px solid shade(#F5F5F5, 10%)
-  border-bottom: 1px solid shade(#F5F5F5, 40%)
+  //border: 1px solid shade(#F5F5F5, 20%)
+  //border-top: 1px solid shade(#F5F5F5, 10%)
+  //border-bottom: 1px solid shade(#F5F5F5, 40%)
   outline: 0
   text-decoration: none
   line-height: 1em
@@ -177,11 +180,11 @@ select
   padding: 8px 24px 8px 11px
   font-size: 1em
   +border-radius(2px)
-  +box-shadow(rgba(white, 0.15) 1px 1px 0 inset, rgba(white, 0.15) -1px -1px 0 0 inset, rgba(white, 0.1) 0 1px 0 0)
+  //+box-shadow(rgba(white, 0.15) 1px 1px 0 inset, rgba(white, 0.15) -1px -1px 0 0 inset, rgba(white, 0.1) 0 1px 0 0)
   +text_color(#F5F5F5)
   cursor: pointer
   &:hover, &:active
-    +background-image( url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=='), linear_gradient(shade(#FFFFFF, 1%), shade(#F5F5F5, 8%)) )
+    //+background-image( url($data_image), linear_gradient(shade(#FFFFFF, 1%), shade(#F5F5F5, 8%)) )
     background-position: 95% 53%, 0 0
     background-repeat: no-repeat, repeat
     background-size: 8px 8px, auto auto

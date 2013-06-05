@@ -23,6 +23,13 @@ body
   line-height: 1.231
   +font_stack
   font-weight: normal
+  &:after
+    content: $font_size
+    width: 400px
+    height: 400px
+    position: absolute
+    top: 0
+    display: block
 
 button, input, select, textarea
   +font_stack

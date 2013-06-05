@@ -59,20 +59,20 @@
             if (options.overlay) {
                 overlay = options.overlayMrk;
             }
-            buildModal = '<div id="' + options.id + '" class="modal_container ' + isMobile + ' ' + options.height + '">' + overlay + '<div style="width:' + options.width + ';" class="modal">';
+            buildModal = '<div id="' + options.id + '" class="modal_wrapper ' + isMobile + ' ' + options.height + '">' + overlay + '<div style="width:' + options.width + ';" class="modal">';
             if (options.header) {
-                buildModal += '<h1><span class="container"><span class="title">' + options.title + '</span><a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">x</a></span></h1>';
+                buildModal += '<h1><span class="wrapper"><span class="title">' + options.title + '</span><a href="javascript:;" id="' + options.closeID + '" class="closeDialog ' + options.closeClass + '">x</a></span></h1>';
             } else {
                 buttons += '<a href="javascript:;" class="closeDialog"><span>Cancel</span></a>';
             }
-            buildModal += '<div class="modalBody"><div class="container"><div class="d_content"></div></div></div>';
+            buildModal += '<div class="modalBody"><div class="wrapper"><div class="d_content"></div></div></div>';
             if (options.footer) {
-                buildModal += '<div class="modalFooter"><span class="container">' + buttons + '</span></div>';
+                buildModal += '<div class="modalFooter"><span class="wrapper">' + buttons + '</span></div>';
             }
             buildModal += '</div></div>';
             $(options.appendTo).append(buildModal);
             if (options.headerContent && options.header) {
-                $(options.headerContent).appendTo('#' + options.id + ' h1 .container').css('display', 'block');
+                $(options.headerContent).appendTo('#' + options.id + ' h1 .wrapper').css('display', 'block');
             }
             $(this).appendTo('#' + options.id + ' .d_content').css('display', 'block');
             if (options.ajax) {
@@ -106,7 +106,7 @@
                 var amount = $('.modal').length - 1
                 $.each($('.modal'), function (i, v) {
                     if (i === amount) {
-                        $(v).parents('.modal_container').fadeOut('fast');
+                        $(v).parents('.modal_wrapper').fadeOut('fast');
                     }
                 });
             } else {
@@ -114,7 +114,7 @@
             }
             options.beforeClose();
             var modal_content = $(this).find('.d_content').children(),
-                parent = $(this).parents('.modal_container'),
+                parent = $(this).parents('.modal_wrapper'),
                 body = $(this).find('.modalBody'),
                 b_width = body.outerWidth(),
                 b_height = body.outerHeight();
