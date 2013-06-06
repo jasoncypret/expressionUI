@@ -12,15 +12,12 @@ gem 'expressionui'
 
 And then execute:
 
-```ruby
-$ bundle
-```
+`$ bundle`
 
 Or install it yourself as:
 
-```ruby
-$ gem install expressionui
-```
+`$ gem install expressionui`
+
 
 ## Add to your application
 
