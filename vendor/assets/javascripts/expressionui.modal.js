@@ -17,6 +17,7 @@
             threshold: 15,
             ajax: '',
             ajaxTarget: '',
+            autoresize: true,
             notify: false,
             width: 'auto',
             height: 'auto',
@@ -138,9 +139,11 @@
         },
         _setupEvents: function (options) {
             var _this = $(this)
-            $(window).bind("resize.modal", function () {
-                _this.find('.modal').modal('position', options)
-            });
+            if (options.autoresize) {
+                $(window).bind("resize.modal", function () {
+                    _this.find('.modal').modal('position', options)
+                });
+            }
             $(this).find('.modalFooter a:not(.closeDialog)').each(function (i) {
                 $(this).click(options.buttons[i].context ? function () {
                     options.buttons[i].callback.apply(options.buttons[i].context)
@@ -152,15 +155,17 @@
         },
         position: function (options) {
             var modal = $(this);
+            modal.css('bottom', 'auto')
             var modalHeight = modal.outerHeight();
             var modalPadding = modalHeight - modal.height();
             var win = $(window).height();
             var threshold = options.threshold;
             if (options.height == 'auto') {
                 if ( modalHeight > (win - (threshold * 2)) ) {
-                    modal.css('height', (win - ((threshold * 2) - modalPadding)) );
+                    modal.css({ 'top': threshold, 'bottom': threshold, 'margin-left': -(modal.outerWidth() / 2), 'margin-top': 0 });
+                } else {
+                    modal.css({'top': '50%', 'margin-top': -(modal.outerHeight() / 2), 'margin-left': -(modal.outerWidth() / 2) });
                 }
-                modal.css({ 'margin-top': -(modal.outerHeight() / 2), 'margin-left': -(modal.outerWidth() / 2) });
             } else {
                 modal.css({ 'top': threshold, 'bottom': threshold, 'margin-left': -(modal.outerWidth() / 2) });
             }

@@ -6,3 +6,7 @@ pkg/
 pkg/*
 
 .ruby-version
+
+*.lock
+
+Gemfile.lock
