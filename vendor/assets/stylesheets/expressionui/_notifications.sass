@@ -32,7 +32,7 @@
   display: block
   width: auto
   height: auto
-  font-size: ($font_size)+6
+  font-size: ($font_size)+4
   position: relative
   z-index: 3000
   visibility: visible !important
@@ -40,7 +40,6 @@
   .notify_wrap
     width: auto
     padding: $pad*2 58px $pad*2 $pad
-    
     .msg
       p, ul, li
         margin: 0 !important
@@ -77,6 +76,22 @@
         width: 100%
         margin-top: -9px
 
+  &.icon_true
+    .notify_wrap
+      padding-left: $pad*7
+    .icon
+      color: rgba(white, 0.28)
+      display: block
+      position: absolute
+      top: 50%
+      left: 15px
+      font-size: 45px
+      margin-top: -0.65em
+  &.icon_flase
+    .icon
+      display: none
+
+
   // Base Error
   &.style_error
     background: $error
@@ -105,34 +120,13 @@
       color: shade($info, 70%)
     .msg a
       color: shade($info, 70%)
+    &.icon_true
+      .icon
+        color: rgba(black, 0.04)
       
 
-  // CLEAN?
-  &.invert_false
-  &.invert_true
-
-
-  &.icon_true
-    .notify_wrap
-      padding-left: $pad*7
-    .icon
-      color: rgba(white, 0.28)
-      display: block
-      position: absolute
-      top: 50%
-      left: 15px
-      font-size: 50px
-      margin-top: -0.7em
-  &.icon_flase
-    .icon
-      display: none
-
-  // COVER AND PUSH SHOULD CONTROL THE CONTENT INTERACTIONS
-  // POSITION SHOULD BE TOP, BOTTOM, OR MIDDLE
 
   // position: top, bottom, middle, push_down
-
-  
   &.position_top
     position: absolute !important
     +box-shadow(rgba(black, 0.18) 0 2px 0)
@@ -167,6 +161,7 @@
     +border-bottom-radius(5px)
     margin: 0 $pad/2 $pad/2 $pad/2
   
+  // MAKE A PARTIAL
   // LOADING
   &.loading_spinner
     .notify_wrap
@@ -451,7 +446,7 @@
         +border-radius(5px)
         background: $loading_bars
         width: 200px
-        height: 30px
+        height: 20px
         display: block
         position: relative
         .progress
