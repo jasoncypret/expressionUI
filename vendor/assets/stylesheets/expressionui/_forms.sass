@@ -1,233 +1,282 @@
-$field_margin: $pad
+$field_margin: $pad*1.5
 $form_border_color: tint(#B8B8B8, 50%)
 $label_color: #999999
-$focus_color: #6BABC1
+$focus_color: $highlight
 $field_height: 35px
+$checkbox: 18px
 
+
+
+// CONSIDER STYLING ELEMENTS SEPARATE
+// -------------------------
+
+
+
+// MIXIN: Custom Select
+// -------------------------
+
+
+// MIXIN: Form Style
+// -------------------------
 =form_text_input_color
-  line-height: 40px
+  line-height: $field_height
   padding: 0 $pad/2
   +inline_block
   border: 1px solid $form_border_color
   +border-radius(4px)
-  font-size: 22px
-  color: black
+  font-size: ($font_size)+3px
+  color: tint(black, 10%)
   font-weight: 100
+  +placeholder
+    font-size: ($font_size)-(1px)
   &:focus
     outline: 0
     border: 1px solid $focus_color
-    //+box-shadow(rgba($focus_color, 0.31) 0 0 4px, inset rgba(black, 0.10) 0 2px 3px 0)
-
-// GENERAL FORM ELEMETS STYLINGS
 
 
-// RADIO AND CHECKBOX (add a toggle to make it a toggle)
-input
-  &[type=checkbox], &[type=radio]
-    -webkit-appearance: none
-    -moz-appearance: none
-    appearance: none
-    +inline_block
-    cursor: pointer
-  &[type=radio]
-    +border-radius(200px)
-    +background-image(linear-gradient(white, #ccc))
-  &[type=checkbox]
-    +border-radius(3px)
-    //+background-image(linear-gradient(#FEFCF8, #E7E3DA))
-    background: #D7DCDE
-    width: 25px
-    height: 25px
-    position: relative
-    +transition-property(all)
-    +transition-duration(0.2s)
-    +transition-timing-function(ease-in)
-    &:hover
-      background: shade(#D7DCDE, 5%)
-    &:checked
-      background: $accent
-      +box-shadow(rgba(black, 0.20) 0 2px 0 0 inset)
-      &:hover
-        background: shade($accent, 5%)
-      &:after
-        +icon_font
-        content: "/"
-        line-height: 27px
-        width: 100%
-        text-align: center
-        font-size: 16px
-        color: white
-        //text-shadow: rgba(white, 0.40) 0 1px 0
-        position: absolute
-        margin-top: -0.1em
-    &.toggle
-      +border-radius(30px)
-      +background-image(linear-gradient(#FEFCF8, #E2DDD3))
-      width: 60px
-      height: 27px
-      border: 1px solid #BBB9B5
-      +box-shadow(rgba(black, 0.20) 0 2px 4px 0 inset, rgba(white, 0.20) 0 1px 0 0)
-      position: relative
-      &:before
-        +icon_font
-        content: "/  x"
-        line-height: 29px
-        width: 100%
-        text-align: center
-        font-size: 16px
-        color: #85817E
-        text-shadow: rgba(white, 0.40) 0 1px 0
-        letter-spacing: 1px
-        position: absolute
-      &:after
-        +border-radius(300px)
-        content: " "
-        display: block
-        position: absolute
-        +background-image(linear-gradient(#FEFCF8, #E7E3DA))
-        width: 25px
-        height: 25px
-        border: 1px solid #BBB9B5
-        +box-shadow(white 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
-        +transition-property(all)
-        +transition-duration(.2s)
-        +transition-timing-function(ease-in)
-        top: -1px
-        left: -1px
-        right: initial
-      &:checked
-        +background-image(linear-gradient(#F9FCF8, #C3DCAE))
-        &:before
-          color: #739953
-        &:after
-          right: -1px
-          left: initial
-          +transition-property(all)
-          +transition-duration(.2s)
-          +transition-timing-function(ease-in)
 
-  // Radio only
-  &[type=radio]
-    +border-radius(300px)
-    +background-image(linear-gradient(#FEFCF8, #E7E3DA))
-    width: 27px
-    height: 27px
-    border: 1px solid #BBB9B5
-    +box-shadow(white 0 1px 0 inset, rgba(black, 0.20) 0 2px 2px 0)
-    position: relative
-    +transition-property(all)
-    +transition-duration(.2s)
-    +transition-timing-function(ease-in)
-    &:after
-      border: 1px solid #BBB9B5
-      +border-radius(300px)
-      content: " "
-      display: block
-      width: 11px
-      height: 11px
-      +background-image(linear-gradient(#E2DDD3, #E2DDD3))
-      position: absolute
-      top: 6px
-      left: 6px
-      +box-shadow(rgba(black, 0.20) 0 2px 4px 0 inset, rgba(white, 0.20) 0 1px 0 0)
-    &:checked
-      &:after
-        border: 1px solid #466923
-        +background-image(linear-gradient(#A6CC85, #4D722B))
-        +box-shadow(rgba(white, 0.20) 0 1px 0 inset, rgba(white, 0.20) 0 1px 0 0)
-
-
-  // TEXT
-  &[type="text"], &[type="password"]
-    +form_text_input_color
-
-
-// TEXTAREA
-
+// Textarea
+// -------------------------
 textarea
   +form_text_input_color
   resize: none
-  line-height: 24px
-  font-size: 22px !important
+  line-height: $field_height
+  font-size: ($font_size)+3px !important
   font-weight: 100 !important
   height: $field_height*3
   padding: $pad/2
 
 
 
-// select 
-// Need to rework this for gradients and for flat
 
+// Selects
+// -------------------------
 select
-  $data_image: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=='
+  $data_image: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=="
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-  //+background-image( url($data_image), linear_gradient(tint(#F5F5F5, 30%), shade(#F5F5F5, 10%)) )
-  +background-image( url($data_image), $accent )
+  background: url($data_image) tint(#9ea7b2, 90%)
+  +text_color(tint(#9ea7b2, 90%), false)
+  border: 1px solid tint(#9ea7b2, 90%)
   background-position: 95% 53%, 0 0
   background-repeat: no-repeat, repeat
   background-size: 8px 8px, auto auto
-  //border: 1px solid shade(#F5F5F5, 20%)
-  //border-top: 1px solid shade(#F5F5F5, 10%)
-  //border-bottom: 1px solid shade(#F5F5F5, 40%)
   outline: 0
   text-decoration: none
-  line-height: 1em
+  line-height: ($field_height)-($pad/2)
   +font_stack
   width: auto
   +inline-block
-  padding: 8px 24px 8px 11px
+  padding: $pad/2 24px $pad/2 11px
   font-size: 1em
   +border-radius(2px)
-  //+box-shadow(rgba(white, 0.15) 1px 1px 0 inset, rgba(white, 0.15) -1px -1px 0 0 inset, rgba(white, 0.1) 0 1px 0 0)
-  +text_color(#F5F5F5)
   cursor: pointer
   &:hover, &:active
-    //+background-image( url($data_image), linear_gradient(shade(#FFFFFF, 1%), shade(#F5F5F5, 8%)) )
+    background: url($data_image) tint(#9ea7b2, 70%)
+    border: 1px solid tint(#9ea7b2, 70%)
+    border-top: 1px solid shade(#9ea7b2, 20%)
+    +text_color(tint(#9ea7b2, 70%), false)
     background-position: 95% 53%, 0 0
     background-repeat: no-repeat, repeat
     background-size: 8px 8px, auto auto
-    +box-shadow(rgba(black, 0.6) 0 2px 4px inset, rgba(white, 0.1) 0 1px 0 0)
+    +box-shadow(rgba(black, 0.2) 0 2px 0 inset)
     +text_color(shade(#F5F5F5, 10%))
 
-// form fields
+
+
+
+// Inputs
+// -------------------------
+input
+  &[type=checkbox], &[type=radio]
+    +appearance(none)
+    +inline_block
+    cursor: pointer
+  
+
+  // Checkbox
+  // -------------------------
+  &[type=checkbox]
+    +border-radius(2px)
+    background: rgba(black, 0.10)
+    width: $checkbox
+    height: $checkbox
+    border: 1px solid rgba(black, 0.15)
+    position: relative
+    +transition-property(all)
+    +transition-duration(0.2s)
+    +transition-timing-function(ease-in)
+    cursor: pointer
+    +text_color(#2765A8)
+    &:checked
+      +btn($accent)
+      text-transform: none
+      padding: 0
+      width: $checkbox
+      height: $checkbox
+      &:after
+        +icon_font
+        content: "/"
+        width: 100%
+        height: 100%
+        text-align: center
+        line-height: 1.3em
+        font-size: 1em
+        position: relative
+        top: 50%
+        display: block
+        margin-top: -($checkbox/2)
+
+
+    // Checkbox Toggle
+    // -------------------------
+    &.toggle
+      +border-radius(30px)
+      width: $field_height*2
+      height: auto
+      position: relative
+      border: 2px solid rgba(black, 0.10)
+      padding-right: (($field_height*2)-($field_height)/1.5)-(4px)
+      text-align: center
+      overflow: hidden
+      &:before
+        +icon_font
+        content: "x  /"
+        line-height: ($field_height)/1.5
+        width: 200%
+        text-align: center
+        font-size: $field_height/2
+        +text-shadow(none)
+        color: rgba(black, 0.30)
+        letter-spacing: 20px
+        position: absolute
+        top: 0
+        left: 0
+        overflow: visible
+        height: ($field_height)/1.5
+        text-align: left
+        padding-left: $pad*3.5
+
+      &:after
+        +border-radius(300px)
+        content: " "
+        background: white
+        +inline_block
+        width: ($field_height)/1.5
+        height: ($field_height)/1.5
+        position: relative
+
+      &:checked
+
+
+        background: $success
+        border: 2px solid $success
+        padding-left: (($field_height*2)-($field_height)/1.5)-(4px)
+        padding-right: 0
+        +box-shadow(none)
+        
+        &:before
+          +text_color($success, false)
+          left: auto
+          right: 0
+          text-align: right
+          padding-left: 0
+          padding-right: $pad*1.5
+
+
+        &:after
+          margin: 0
+          top: auto
+          left: auto
+        
+
+
+
+  // Radios
+  // -------------------------
+  &[type=radio]
+    +border-radius(300px)
+    width: $checkbox
+    height: $checkbox
+    border: 2px solid shade(white, 30%)
+    position: relative
+    &:after
+      background: $accent
+      +border-radius(300px)
+      content: " "
+      display: none
+      width: ($checkbox)-(4px*2) // border - offset
+      height: ($checkbox)-(4px*2) // border - offset
+      position: absolute
+      top: 2px
+      left: 2px
+    &:checked
+      &:after
+        display: block
+        
+
+
+  // Input Text
+  // -------------------------
+  &[type="text"], &[type="password"]
+    +form_text_input_color
+
+
+
+// NOTES:
+
+// Need to style up placeholders
+
+// Group does nothing but contain
+
+
+// Form Styling
+// -------------------------
 .form
-  .btn
-    &.left
-      margin-right: $pad
   .field
     display: block
     padding: 0
     position: relative
-    margin-bottom: $pad
+    margin-bottom: $field_margin
     width: auto
     height: auto
     +group
-    label, span.optional
+    label
       display: block
       color: $label_color
-      font-size: 15px
-      line-height: 20px
-    span.optional
-      position: absolute
-      top: 2px
-      right: 0
-    input[type="text"], input[type="password"], textarea, select
+      font-size: $font_size
+      line-height: $font_size*2
+      cursor: pointer
+      &.inline
+        +inline_block
+    input[type="text"], input[type="textfield"], input[type="password"], textarea, select
       display: block
       width: 100%
-    &.left
-      margin: 10px 39px 3px 0
-    &.right
-      margin: 10px 0 3px 0
-    &.full
-      textarea
-        width: 98%
-        resize: none
-        height: auto
-        padding: 1%
-        display: block
-        line-height: 18px
+    input[type=checkbox], input[type=radio]
+      margin: $pad $pad 0 0
+      ~ span
+        font-size: ($font_size)+3px
+        color: tint(black, 50%)
+        line-height: $field_height
+        font-weight: 100
+      &:checked ~ span
+        color: $accent
+    span
+      font-size: ($font_size)+3px
+      color: tint(black, 50%)
+      line-height: $field_height
+      font-weight: 100
+      ~ input[type=checkbox], ~ input[type=radio]
+        margin: $pad/2
+        float: right
+
+    input[type=radio]
+      margin: ($pad)-2px $pad 0 0
+
+    
+    // Outline Forms
+    // -------------------------
     &.outline
       +inline_block
       +btn(white)
@@ -235,6 +284,7 @@ select
       margin: 10px $pad*2 3px 0
       text-align: left
       input[type=checkbox]
+        margin: 3px 0 0 
         ~ span
           margin: 0 $pad/1.5 0 $pad
           line-height: 25px
@@ -243,7 +293,8 @@ select
             text-transform: none !important
             font-size: 25px
             position: relative
-            //top: -0.1em
+        &:checked ~ span
+          color: $accent
       &:hover
         input[type=checkbox]
           background: tint(black, 40%)
@@ -253,60 +304,54 @@ select
             color: tint(black, 40%)
             &.icon
 
-  &.inside
-    .field
-      margin: $pad 0
-      padding: 2px 10px
-      position: relative
-      width: 291px
+    // Inside forms
+    // -------------------------
+    &.inside_left, &.inside_right
       +form_text_input_color
-      &.check
-        background: none
-        +box-shadow(none)
-        border: none
-        padding: 0
-        width: auto
-        label
-          line-height: 15px
-          font-weight: normal
-          color: white
-          a
-            color: #A6DFFD
-            border-bottom: 1px dashed #A6DFFD
-            &:hover
-              color: white
-              border-bottom: none
+      margin: 0 0 $field_margin
+      padding: 0
+      position: relative
+      width: auto
+      background: white
+      display: block
+      overflow: hidden
       label
-        +inline_block
-        font-size: 11px
-        line-height: 21px
-        font-weight: bold
-        .req
-          color: #F05A4F
-          margin-right: 5px
-      input[type="text"], input[type="password"]
-        background: none
-        border: none
-        height: 18px
-        padding: 0 5px
-        +inline_block
-        line-height: 20px
-        width: auto
-        outline: none
-        font-weight: bold
-        +box-shadow(none)
-        font-size: 11px
-        &:focus
-          outline: none
-  .group
-    margin: $pad 0
-    &.nopad
-      margin: 0
-      .button
         margin: 0
+        float: left
+        +form_text_input_color
+        border: none
+        +inline_block        
+        +box-shadow(none)
+        text-indent: 0
+        +border-right-radius(0)
+        color: tint(black, 40%)
+        font-size: $font_size
+        font-weight: bold
+        &.icon
+          font-size: ($font_size)+8px
+      .full
+        overflow: hidden
+        input[type="text"], input[type="password"]
+          +form_text_input_color
+          text-indent: 0
+          width: 100%
+          display: block
+          border: 1px solid transparent
+          +border-left-radius(0)
+          &:focus
+    &.inside_right label
+      float: right
+
+    &.hover
+    // Add Hover for all text
+        
+            
+
+  // Split Forms
+  // -------------------------
+  .split
     .field
-      margin: 0 !important
+      width: 48%
       float: left
-      width: 294px
       & + .field
         float: right

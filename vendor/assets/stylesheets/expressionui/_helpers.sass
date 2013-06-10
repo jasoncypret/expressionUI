@@ -1,4 +1,5 @@
-+font-face("#{$icon_font}", font-files("#{$icon_font}.woff#{$ver}", woff, "#{$icon_font}.otf", opentype, "#{$icon_font}.svg##{$icon_font}", svg), "#{$icon_font}.eot", "normal", "normal")
++font-face("#{$icon_font}", font-files("#{$icon_font}.woff", "#{$icon_font}.otf", "#{$icon_font}.svg##{$icon_font}"), "#{$icon_font}.eot")
+//woff, opentype/truetype, svg
 
 =amp
   font-family: Baskerville, "Goudy Old Style", serif
@@ -297,3 +298,15 @@
     +box-flex(5)
   .col6
     +box-flex(6)
+
+// Depricated with compass Version: 0.13.alpha.0
+=placeholder
+  @if $experimental-support-for-webkit
+    &::-webkit-input-placeholder
+      @content
+  @if $experimental-support-for-mozilla
+    &:-moz-placeholder
+      @content
+  @if $experimental-support-for-microsoft
+    &:-ms-input-placeholder
+      @content
