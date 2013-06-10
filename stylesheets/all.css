@@ -13640,8 +13640,8 @@ h1.center_heading {
         -o-border-radius: 2px;
         border-radius: 2px;
         cursor: pointer;
-        background: #c6d5e4;
-        color: #4f555b;
+        background: #c1d5e9;
+        color: #4d555d;
         text-shadow: rgba(255, 255, 255, 0.86824) 0 1px 0;
         text-shadow: none;
         display: -moz-inline-stack;
@@ -13660,32 +13660,32 @@ h1.center_heading {
           text-transform: none; }
         /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge:hover, .header .head.inner .perc50.right a.btn.xlarge:active, .header .head.inner .perc50.right a.btn.xlarge.active {
-          background: #b2bfcd;
-          -webkit-box-shadow: #9eaab6 0 2px 0 inset;
-          -moz-box-shadow: #9eaab6 0 2px 0 inset;
-          box-shadow: #9eaab6 0 2px 0 inset;
-          color: #4f555b;
+          background: #adbfd1;
+          -webkit-box-shadow: #9aaaba 0 2px 0 inset;
+          -moz-box-shadow: #9aaaba 0 2px 0 inset;
+          box-shadow: #9aaaba 0 2px 0 inset;
+          color: #4d555d;
           text-shadow: rgba(255, 255, 255, 0.86824) 0 1px 0;
           text-shadow: none; }
         /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge.active:hover {
-          background: #9eaab6;
-          -webkit-box-shadow: #8a959f 0 2px 0 inset;
-          -moz-box-shadow: #8a959f 0 2px 0 inset;
-          box-shadow: #8a959f 0 2px 0 inset;
-          color: #474c52;
-          text-shadow: rgba(255, 255, 255, 0.80078) 0 1px 0;
+          background: #9aaaba;
+          -webkit-box-shadow: #8795a3 0 2px 0 inset;
+          -moz-box-shadow: #8795a3 0 2px 0 inset;
+          box-shadow: #8795a3 0 2px 0 inset;
+          color: #fafbfc;
+          text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
           text-shadow: none; }
         /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge.disabled, .header .head.inner .perc50.right a.btn.xlarge.disabled:hover {
           cursor: not-allowed;
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
           opacity: 0.7;
-          background: #c6d5e4;
+          background: #c1d5e9;
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
           box-shadow: none;
-          color: #4f555b;
+          color: #4d555d;
           text-shadow: rgba(255, 255, 255, 0.86824) 0 1px 0;
           text-shadow: none; }
     /* line 157, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
@@ -13715,13 +13715,16 @@ h1.center_heading {
       .header .head.inner h2 {
         font-size: 20px; }
       /* line 181, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
-      .header .head.inner a.btn {
-        display: block; } }
-  /* line 185, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+      .header .head.inner a {
+        display: block !important;
+        width: auto !important;
+        margin-right: 0 !important;
+        text-align: center !important; } }
+  /* line 188, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   .header .exp {
     background: #f45a4f;
     padding: 30px 10px; }
-    /* line 188, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 191, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     .header .exp .inner {
       *zoom: 1;
       position: relative; }
@@ -13732,56 +13735,56 @@ h1.center_heading {
       /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .header .exp .inner:after {
         clear: both; }
-      /* line 192, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+      /* line 195, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
       .header .exp .inner .col1 {
         text-align: center;
         width: 203px; }
-        /* line 195, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+        /* line 198, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
         .header .exp .inner .col1.center {
           position: absolute;
           left: 50%;
           margin-left: -101.5px; }
-        /* line 199, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+        /* line 202, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
         .header .exp .inner .col1 img {
           height: 75px;
           width: auto;
           margin: 0 auto;
           display: block; }
-        /* line 204, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+        /* line 207, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
         .header .exp .inner .col1 h4 {
           margin: 10px 0 0;
           font-size: 17px; }
-        /* line 207, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+        /* line 210, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
         .header .exp .inner .col1 h5 {
           margin: 5px 0 0;
           font-size: 10px;
           font-weight: 300; }
-          /* line 211, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+          /* line 214, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
           .header .exp .inner .col1 h5 a {
             color: white; }
-            /* line 213, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+            /* line 216, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
             .header .exp .inner .col1 h5 a:hover {
               color: #00afd1; }
         @media screen and (min-width: 701px) {
-          /* line 216, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+          /* line 219, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
           .header .exp .inner .col1 img {
             height: 85px; } }
         @media screen and (min-width: 1200px) {
-          /* line 219, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+          /* line 222, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
           .header .exp .inner .col1 img {
             height: 100px; } }
         @media screen and (min-width: 1500px) {
-          /* line 192, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+          /* line 195, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
           .header .exp .inner .col1 {
             width: 338.33333px; }
-            /* line 223, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+            /* line 226, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
             .header .exp .inner .col1.center {
               margin-left: -169.16667px; }
-            /* line 225, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+            /* line 228, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
             .header .exp .inner .col1 img {
               height: 110px; } }
         @media screen and (max-width: 700px) {
-          /* line 192, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+          /* line 195, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
           .header .exp .inner .col1 {
             float: none !important;
             display: block !important;
@@ -13791,27 +13794,27 @@ h1.center_heading {
             left: auto !important;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             padding-bottom: 30px; }
-            /* line 236, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+            /* line 239, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
             .header .exp .inner .col1.right {
               border-bottom: 0;
               padding-bottom: 0; }
-            /* line 239, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+            /* line 242, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
             .header .exp .inner .col1 img {
               height: 110px; } }
 
-/* line 244, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 247, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #getting_started .inner .col1 {
   padding: 0 5px;
   width: 30%; }
-  /* line 247, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 250, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #getting_started .inner .col1 h4 {
     margin-bottom: 0;
     font-size: 16px; }
-  /* line 250, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 253, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #getting_started .inner .col1 p {
     color: #b2b2b2;
     margin: 8px 0; }
-  /* line 253, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 256, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #getting_started .inner .col1 pre {
     display: -moz-inline-stack;
     display: inline-block;
@@ -13825,96 +13828,96 @@ h1.center_heading {
     -o-border-radius: 3px;
     border-radius: 3px;
     margin-top: 0; }
-    /* line 258, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 261, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     #getting_started .inner .col1 pre code {
       padding: 0.3em; }
-      /* line 260, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+      /* line 263, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
       #getting_started .inner .col1 pre code p {
         margin: 0; }
 @media screen and (max-width: 700px) {
-  /* line 263, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 266, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #getting_started .inner .group {
     display: block; }
-    /* line 265, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 268, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     #getting_started .inner .group .col1 {
       width: auto;
       display: block;
       float: none;
       padding: 0; } }
 
-/* line 272, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 275, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components h1.center_heading {
   margin-top: 60px;
   margin-bottom: 0; }
-/* line 277, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 280, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner h1.heading_text {
   font-weight: 300;
   color: #b2b2b2;
   font-size: 30px;
   margin-top: 60px; }
-/* line 284, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 287, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner .perc50.left {
   padding-right: 15px; }
-/* line 286, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 289, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner .perc50.right {
   padding-left: 15px; }
 @media screen and (min-width: 701px) {
-  /* line 276, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 279, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner {
     width: auto;
     margin: 0 10px; } }
 @media screen and (min-width: 1200px) {
-  /* line 276, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 279, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner {
     width: 1000px;
     margin: 0 auto; } }
 @media screen and (min-width: 1500px) {
-  /* line 276, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 279, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner {
     width: 1200px;
     margin: 0 auto; } }
 @media screen and (max-width: 700px) {
-  /* line 276, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 279, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner {
     width: auto;
     margin: 0 10px; }
-    /* line 301, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 304, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     #components .section .inner .perc50.left, #components .section .inner .perc50.right {
       width: auto;
       float: none;
       padding: 0; } }
-/* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 308, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner .icon_font {
   text-align: center; }
-  /* line 307, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 310, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner .icon_font .icon_left {
     margin: 10px 0;
     font-size: 150%;
     color: #7f7f7f; }
-    /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 314, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     #components .section .inner .icon_font .icon_left:before {
       font-size: 180%;
       color: black;
       line-height: 1.2; }
-/* line 316, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 319, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner.helpers .code_format, #components .section .inner.variables .code_format {
   margin-top: 30px;
   font-size: 130%;
   font-weight: bold; }
-  /* line 321, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 324, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.helpers .code_format code p, #components .section .inner.variables .code_format code p {
     margin: 0; }
-/* line 323, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 326, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner.helpers .perc25, #components .section .inner.variables .perc25 {
   float: left; }
-  /* line 325, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 328, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.helpers .perc25 pre, #components .section .inner.variables .perc25 pre {
     margin-right: 10px;
     margin-left: 10px; }
-  /* line 328, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 331, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.helpers .perc25:last-child, #components .section .inner.variables .perc25:last-child {
     float: right; }
-/* line 331, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 334, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner.variables .code_format {
   width: 23%;
   display: block;
@@ -13923,7 +13926,7 @@ h1.center_heading {
   font-weight: normal;
   font-size: 100%;
   line-height: 2em; }
-  /* line 339, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 342, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.variables .code_format span.default {
     border: 1px solid #e5e5e5 !important;
     background: white;
@@ -13942,141 +13945,141 @@ h1.center_heading {
     *display: inline;
     line-height: 1.5em; }
 @media screen and (min-width: 701px) {
-  /* line 349, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 352, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.variables .code_format {
     width: 48%; } }
 @media screen and (min-width: 1200px) {
-  /* line 352, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 355, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.variables .code_format {
     width: 31.3%; } }
 @media screen and (min-width: 1500px) {
-  /* line 355, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 358, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.variables .code_format {
     width: 23%; } }
 @media screen and (max-width: 700px) {
-  /* line 358, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 361, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   #components .section .inner.variables .code_format {
     width: auto;
     float: none; } }
-/* line 362, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 365, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #components .section .inner .mixedbag_example {
   max-height: 300px;
   height: auto !important;
   height: 300px;
   overflow-y: auto; }
 
-/* line 367, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 370, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 footer {
   background: #262626;
   color: #f3f4f5;
   text-align: center; }
-  /* line 371, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 374, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   footer .inner {
     padding: 10px; }
-    /* line 373, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 376, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     footer .inner h1 {
       font-size: 24px; }
-    /* line 375, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 378, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     footer .inner h2 {
       margin: 0;
       font-size: 18px;
       font-weight: 300;
       color: #999999; }
-    /* line 380, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 383, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     footer .inner a {
       color: #f9aca7; }
-      /* line 382, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+      /* line 385, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
       footer .inner a:hover {
         color: white; }
-    /* line 384, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 387, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     footer .inner .icon {
       font-size: 400%;
       width: 100px;
       line-height: 0.9em; }
 
-/* line 389, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 392, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 #example_modal {
   width: 500px; }
 
-/* line 395, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+/* line 398, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
 pre {
   border: 1px solid #e5e5e5 !important;
   margin-top: 0; }
-  /* line 398, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 401, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre code {
     display: block;
     padding: 0.3em;
     color: #333333;
     background: ghostwhite; }
-    /* line 403, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 406, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     pre code p {
       margin: 0; }
-  /* line 405, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 408, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .comment, pre .template_comment, pre .diff .header, pre .javadoc {
     color: #999988;
     font-style: italic; }
-  /* line 408, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 411, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .nginx .title, pre .subst, pre .request, pre .status {
     color: #333333;
     font-weight: bold; }
-  /* line 411, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 414, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .number, pre .hexcolor, pre .ruby .constant {
     color: #009999; }
-  /* line 413, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 416, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula {
     color: #dd1144; }
-  /* line 415, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 418, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .title, pre .id {
     color: #990000;
     font-weight: bold; }
-  /* line 418, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 421, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .javascript .title, pre .lisp .title, pre .clojure .title, pre .subst {
     font-weight: normal; }
-  /* line 420, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 423, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .class .title, pre .haskell .type, pre .vhdl .literal, pre .tex .command {
     color: #445588;
     font-weight: bold; }
-  /* line 423, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 426, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .tag {
     color: navy;
     font-weight: normal; }
-    /* line 426, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+    /* line 429, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
     pre .tag .title {
       color: navy;
       font-weight: normal; }
-  /* line 429, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 432, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .rules .property, pre .django .tag .keyword {
     color: navy;
     font-weight: normal; }
-  /* line 432, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 435, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .attribute, pre .variable, pre .lisp .body {
     color: teal; }
-  /* line 434, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 437, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .regexp {
     color: #009926; }
-  /* line 436, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 439, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .class {
     color: #445588;
     font-weight: bold; }
-  /* line 439, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 442, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .symbol, pre .ruby .symbol .string, pre .lisp .keyword, pre .tex .special, pre .prompt {
     color: #990073; }
-  /* line 441, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 444, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .built_in, pre .lisp .title, pre .clojure .built_in {
     color: #0086b3; }
-  /* line 443, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 446, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .preprocessor, pre .pi, pre .doctype, pre .shebang, pre .cdata {
     color: #999999;
     font-weight: bold; }
-  /* line 446, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 449, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .deletion {
     background: #ffdddd; }
-  /* line 448, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 451, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .addition {
     background: #ddffdd; }
-  /* line 450, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 453, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .diff .change {
     background: #0086b3; }
-  /* line 452, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
+  /* line 455, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
   pre .chunk {
     color: #aaaaaa; }
