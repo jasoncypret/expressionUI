@@ -12,3 +12,5 @@ vendor/assets/stylesheets/.DS_Store
 .sass-cache
 
 .DS_Store
+
+*.lock
