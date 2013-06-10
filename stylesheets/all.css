@@ -1,9 +1,7 @@
 @font-face {
   font-family: "expressionui-webfont";
   src: url("../fonts/expressionui-webfont.eot");
-  src: url("../fonts/expressionui-webfont.eot?#iefix") format('eot'), url("../fonts/expressionui-webfont.woff?v=0.51") format('woff'), url("../fonts/expressionui-webfont.otf") format('opentype'), url("../fonts/expressionui-webfont.svg#expressionui-webfont") format('svg');
-  font-weight: "normal";
-  font-style: "normal"; }
+  src: url("../fonts/expressionui-webfont.eot?#iefix") format('eot'), url("../fonts/expressionui-webfont.woff") format('woff'), url("../fonts/expressionui-webfont.otf") format('opentype'), url("../fonts/expressionui-webfont.svg#expressionui-webfont") format('svg'); }
 
 @-webkit-keyframes spin {
   /* line 4, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/loading/_spinner.sass */
@@ -216,11 +214,11 @@
 .content_visible {
   position: relative;
   *zoom: 1; }
-  /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .content_visible:before, .content_visible:after {
     content: "";
     display: table; }
-  /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .content_visible:after {
     clear: both; }
 
@@ -229,11 +227,11 @@
   visibility: hidden;
   position: relative;
   *zoom: 1; }
-  /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .content_hidden:before, .content_hidden:after {
     content: "";
     display: table; }
-  /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .content_hidden:after {
     clear: both; }
 
@@ -241,11 +239,11 @@
 .content_overlay {
   position: relative;
   *zoom: 1; }
-  /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .content_overlay:before, .content_overlay:after {
     content: "";
     display: table; }
-  /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .content_overlay:after {
     clear: both; }
   /* line 18, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_notifications.sass */
@@ -6177,11 +6175,11 @@
       border-top-right-radius: 5px;
       *zoom: 1;
       background: white; }
-      /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .modal_wrapper .modal .modalBody:before, .modal_wrapper .modal .modalBody:after {
         content: "";
         display: table; }
-      /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .modal_wrapper .modal .modalBody:after {
         clear: both; }
       /* line 88, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_modals.sass */
@@ -6198,11 +6196,11 @@
       bottom: 0;
       width: 100%;
       *zoom: 1; }
-      /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .modal_wrapper .modal .modalFooter:before, .modal_wrapper .modal .modalFooter:after {
         content: "";
         display: table; }
-      /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .modal_wrapper .modal .modalFooter:after {
         clear: both; }
       /* line 102, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_modals.sass */
@@ -6241,13 +6239,13 @@
         -o-border-radius: 3px;
         border-radius: 3px;
         margin-left: 10px; }
-        /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .modal_wrapper .modal .modalFooter a.icon {
           font-family: "expressionui-webfont";
           font-weight: normal !important;
           -webkit-font-smoothing: antialiased;
           text-transform: none; }
-        /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .modal_wrapper .modal .modalFooter a:hover, .modal_wrapper .modal .modalFooter a:active, .modal_wrapper .modal .modalFooter a.active {
           border: 1px solid #cccccc;
           background: #e5e5e5;
@@ -6257,7 +6255,7 @@
           color: #666666;
           text-shadow: white 0 1px 0;
           text-shadow: none; }
-        /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .modal_wrapper .modal .modalFooter a.active:hover {
           border: 1px solid #cccccc;
           background: #cccccc;
@@ -6267,7 +6265,7 @@
           color: #5b5b5b;
           text-shadow: rgba(255, 255, 255, 0.91843) 0 1px 0;
           text-shadow: none; }
-        /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .modal_wrapper .modal .modalFooter a.disabled, .modal_wrapper .modal .modalFooter a.disabled:hover {
           cursor: not-allowed;
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -6311,13 +6309,13 @@
           float: left;
           margin-left: 0;
           margin-right: 10px; }
-          /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+          /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
           .modal_wrapper .modal .modalFooter a.defaultButton.icon {
             font-family: "expressionui-webfont";
             font-weight: normal !important;
             -webkit-font-smoothing: antialiased;
             text-transform: none; }
-          /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+          /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
           .modal_wrapper .modal .modalFooter a.defaultButton:hover, .modal_wrapper .modal .modalFooter a.defaultButton:active, .modal_wrapper .modal .modalFooter a.defaultButton.active {
             background: #009dbc;
             -webkit-box-shadow: #008ca7 0 2px 0 inset;
@@ -6326,7 +6324,7 @@
             color: #f2fbfc;
             text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
             text-shadow: none; }
-          /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+          /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
           .modal_wrapper .modal .modalFooter a.defaultButton.active:hover {
             background: #008ca7;
             -webkit-box-shadow: #007a92 0 2px 0 inset;
@@ -6335,7 +6333,7 @@
             color: #f2fafb;
             text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
             text-shadow: none; }
-          /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+          /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
           .modal_wrapper .modal .modalFooter a.defaultButton.disabled, .modal_wrapper .modal .modalFooter a.defaultButton.disabled:hover {
             cursor: not-allowed;
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -6363,7 +6361,89 @@
       height: 100%;
       overflow-y: auto; }
 
-/* line 26, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 40, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+textarea {
+  line-height: 35px;
+  padding: 0 5px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  border: 1px solid #dbdbdb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 17px;
+  color: #191919;
+  font-weight: 100;
+  resize: none;
+  line-height: 35px;
+  font-size: 17px !important;
+  font-weight: 100 !important;
+  height: 105px;
+  padding: 5px; }
+  /* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  textarea::-webkit-input-placeholder {
+    font-size: 13px; }
+  /* line 308, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  textarea:-moz-placeholder {
+    font-size: 13px; }
+  /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  textarea:-ms-input-placeholder {
+    font-size: 13px; }
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  textarea:focus {
+    outline: 0;
+    border: 1px solid #f27935; }
+
+/* line 54, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg==") #f5f6f7;
+  color: #626262;
+  border: 1px solid #f5f6f7;
+  background-position: 95% 53%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: 8px 8px, auto auto;
+  outline: 0;
+  text-decoration: none;
+  line-height: 30px;
+  font-family: "Helvetica", sans-serif;
+  width: auto;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  padding: 5px 24px 5px 11px;
+  font-size: 1em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer; }
+  /* line 75, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  select:hover, select:active {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg==") #e1e4e7;
+    border: 1px solid #e1e4e7;
+    border-top: 1px solid #7e858e;
+    color: #5a5b5c;
+    background-position: 95% 53%, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 8px 8px, auto auto;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 0 inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 0 inset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 0 inset;
+    color: #585858;
+    text-shadow: rgba(255, 255, 255, 0.8902) 0 1px 0; }
+
+/* line 92, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 input[type=checkbox], input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6374,28 +6454,17 @@ input[type=checkbox], input[type=radio] {
   zoom: 1;
   *display: inline;
   cursor: pointer; }
-/* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-input[type=radio] {
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
-  -ms-border-radius: 200px;
-  -o-border-radius: 200px;
-  border-radius: 200px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(#ffffff, #cccccc);
-  background-image: -moz-linear-gradient(#ffffff, #cccccc);
-  background-image: -o-linear-gradient(#ffffff, #cccccc);
-  background-image: linear-gradient(#ffffff, #cccccc); }
-/* line 35, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 100, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 input[type=checkbox] {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  background: #d7dcde;
-  width: 25px;
-  height: 25px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   position: relative;
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -6408,66 +6477,128 @@ input[type=checkbox] {
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in; }
-  /* line 45, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  input[type=checkbox]:hover {
-    background: #ccd1d2; }
-  /* line 47, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  transition-timing-function: ease-in;
+  cursor: pointer;
+  color: #f4f7fa;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px; }
+  /* line 112, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type=checkbox]:checked {
+    outline: 0;
+    border: 0;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1em;
+    font-family: "Helvetica", sans-serif;
+    width: auto;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+    padding: 10px 13px;
+    font-size: 1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
     background: #00afd1;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 0 0 inset;
-    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 0 0 inset;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 0 0 inset; }
-    /* line 50, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    input[type=checkbox]:checked:hover {
-      background: #00a6c6; }
-    /* line 52, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    color: #f2fbfc;
+    text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
+    text-shadow: none;
+    text-transform: none;
+    padding: 0;
+    width: 18px;
+    height: 18px; }
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    input[type=checkbox]:checked.icon {
+      font-family: "expressionui-webfont";
+      font-weight: normal !important;
+      -webkit-font-smoothing: antialiased;
+      text-transform: none; }
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    input[type=checkbox]:checked:hover, input[type=checkbox]:checked:active, input[type=checkbox]:checked.active {
+      background: #009dbc;
+      -webkit-box-shadow: #008ca7 0 2px 0 inset;
+      -moz-box-shadow: #008ca7 0 2px 0 inset;
+      box-shadow: #008ca7 0 2px 0 inset;
+      color: #f2fbfc;
+      text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
+      text-shadow: none; }
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    input[type=checkbox]:checked.active:hover {
+      background: #008ca7;
+      -webkit-box-shadow: #007a92 0 2px 0 inset;
+      -moz-box-shadow: #007a92 0 2px 0 inset;
+      box-shadow: #007a92 0 2px 0 inset;
+      color: #f2fafb;
+      text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
+      text-shadow: none; }
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    input[type=checkbox]:checked.disabled, input[type=checkbox]:checked.disabled:hover {
+      cursor: not-allowed;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7;
+      background: #00afd1;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      color: #f2fbfc;
+      text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
+      text-shadow: none; }
+    /* line 118, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     input[type=checkbox]:checked:after {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       content: "/";
-      line-height: 27px;
       width: 100%;
+      height: 100%;
       text-align: center;
-      font-size: 16px;
-      color: white;
-      position: absolute;
-      margin-top: -0.1em; }
-  /* line 63, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      line-height: 1.3em;
+      font-size: 1em;
+      position: relative;
+      top: 50%;
+      display: block;
+      margin-top: -9px; }
+  /* line 134, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type=checkbox].toggle {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     border-radius: 30px;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefcf8), color-stop(100%, #e2ddd3));
-    background-image: -webkit-linear-gradient(#fefcf8, #e2ddd3);
-    background-image: -moz-linear-gradient(#fefcf8, #e2ddd3);
-    background-image: -o-linear-gradient(#fefcf8, #e2ddd3);
-    background-image: linear-gradient(#fefcf8, #e2ddd3);
-    width: 60px;
-    height: 27px;
-    border: 1px solid #bbb9b5;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    position: relative; }
-    /* line 71, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    width: 70px;
+    height: auto;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding-right: 42.66667px;
+    text-align: center;
+    overflow: hidden; }
+    /* line 143, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     input[type=checkbox].toggle:before {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
-      content: "/  x";
-      line-height: 29px;
-      width: 100%;
+      content: "x  /";
+      line-height: 23.33333px;
+      width: 200%;
       text-align: center;
-      font-size: 16px;
-      color: #85817e;
-      text-shadow: rgba(255, 255, 255, 0.4) 0 1px 0;
-      letter-spacing: 1px;
-      position: absolute; }
-    /* line 82, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      font-size: 17.5px;
+      text-shadow: none;
+      color: rgba(0, 0, 0, 0.3);
+      letter-spacing: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: visible;
+      height: 23.33333px;
+      text-align: left;
+      padding-left: 35px; }
+    /* line 161, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     input[type=checkbox].toggle:after {
       -webkit-border-radius: 300px;
       -moz-border-radius: 300px;
@@ -6475,128 +6606,69 @@ input[type=checkbox] {
       -o-border-radius: 300px;
       border-radius: 300px;
       content: " ";
-      display: block;
-      position: absolute;
-      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefcf8), color-stop(100%, #e7e3da));
-      background-image: -webkit-linear-gradient(#fefcf8, #e7e3da);
-      background-image: -moz-linear-gradient(#fefcf8, #e7e3da);
-      background-image: -o-linear-gradient(#fefcf8, #e7e3da);
-      background-image: linear-gradient(#fefcf8, #e7e3da);
-      width: 25px;
-      height: 25px;
-      border: 1px solid #bbb9b5;
-      -webkit-box-shadow: white 0 1px 0 inset, rgba(0, 0, 0, 0.2) 0 2px 2px 0;
-      -moz-box-shadow: white 0 1px 0 inset, rgba(0, 0, 0, 0.2) 0 2px 2px 0;
-      box-shadow: white 0 1px 0 inset, rgba(0, 0, 0, 0.2) 0 2px 2px 0;
-      -webkit-transition-property: all;
-      -moz-transition-property: all;
-      -o-transition-property: all;
-      transition-property: all;
-      -webkit-transition-duration: 0.2s;
-      -moz-transition-duration: 0.2s;
-      -o-transition-duration: 0.2s;
-      transition-duration: 0.2s;
-      -webkit-transition-timing-function: ease-in;
-      -moz-transition-timing-function: ease-in;
-      -o-transition-timing-function: ease-in;
-      transition-timing-function: ease-in;
-      top: -1px;
-      left: -1px;
-      right: initial; }
-    /* line 98, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      background: white;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline;
+      width: 23.33333px;
+      height: 23.33333px;
+      position: relative; }
+    /* line 170, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     input[type=checkbox].toggle:checked {
-      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9fcf8), color-stop(100%, #c3dcae));
-      background-image: -webkit-linear-gradient(#f9fcf8, #c3dcae);
-      background-image: -moz-linear-gradient(#f9fcf8, #c3dcae);
-      background-image: -o-linear-gradient(#f9fcf8, #c3dcae);
-      background-image: linear-gradient(#f9fcf8, #c3dcae); }
-      /* line 100, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      background: #45a03b;
+      border: 2px solid #45a03b;
+      padding-left: 42.66667px;
+      padding-right: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      /* line 179, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       input[type=checkbox].toggle:checked:before {
-        color: #739953; }
-      /* line 102, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+        color: #f5faf5;
+        left: auto;
+        right: 0;
+        text-align: right;
+        padding-left: 0;
+        padding-right: 15px; }
+      /* line 188, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       input[type=checkbox].toggle:checked:after {
-        right: -1px;
-        left: initial;
-        -webkit-transition-property: all;
-        -moz-transition-property: all;
-        -o-transition-property: all;
-        transition-property: all;
-        -webkit-transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: ease-in;
-        -moz-transition-timing-function: ease-in;
-        -o-transition-timing-function: ease-in;
-        transition-timing-function: ease-in; }
-/* line 110, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+        margin: 0;
+        top: auto;
+        left: auto; }
+/* line 198, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 input[type=radio] {
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
   -ms-border-radius: 300px;
   -o-border-radius: 300px;
   border-radius: 300px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefcf8), color-stop(100%, #e7e3da));
-  background-image: -webkit-linear-gradient(#fefcf8, #e7e3da);
-  background-image: -moz-linear-gradient(#fefcf8, #e7e3da);
-  background-image: -o-linear-gradient(#fefcf8, #e7e3da);
-  background-image: linear-gradient(#fefcf8, #e7e3da);
-  width: 27px;
-  height: 27px;
-  border: 1px solid #bbb9b5;
-  -webkit-box-shadow: white 0 1px 0 inset, rgba(0, 0, 0, 0.2) 0 2px 2px 0;
-  -moz-box-shadow: white 0 1px 0 inset, rgba(0, 0, 0, 0.2) 0 2px 2px 0;
-  box-shadow: white 0 1px 0 inset, rgba(0, 0, 0, 0.2) 0 2px 2px 0;
-  position: relative;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in; }
-  /* line 121, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #b2b2b2;
+  position: relative; }
+  /* line 204, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type=radio]:after {
-    border: 1px solid #bbb9b5;
+    background: #00afd1;
     -webkit-border-radius: 300px;
     -moz-border-radius: 300px;
     -ms-border-radius: 300px;
     -o-border-radius: 300px;
     border-radius: 300px;
     content: " ";
-    display: block;
-    width: 11px;
-    height: 11px;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e2ddd3), color-stop(100%, #e2ddd3));
-    background-image: -webkit-linear-gradient(#e2ddd3, #e2ddd3);
-    background-image: -moz-linear-gradient(#e2ddd3, #e2ddd3);
-    background-image: -o-linear-gradient(#e2ddd3, #e2ddd3);
-    background-image: linear-gradient(#e2ddd3, #e2ddd3);
+    display: none;
+    width: 10px;
+    height: 10px;
     position: absolute;
-    top: 6px;
-    left: 6px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0; }
-  /* line 134, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    top: 2px;
+    left: 2px; }
+  /* line 215, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type=radio]:checked:after {
-    border: 1px solid #466923;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a6cc85), color-stop(100%, #4d722b));
-    background-image: -webkit-linear-gradient(#a6cc85, #4d722b);
-    background-image: -moz-linear-gradient(#a6cc85, #4d722b);
-    background-image: -o-linear-gradient(#a6cc85, #4d722b);
-    background-image: linear-gradient(#a6cc85, #4d722b);
-    -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0;
-    box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0 inset, rgba(255, 255, 255, 0.2) 0 1px 0 0; }
-/* line 141, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    display: block; }
+/* line 222, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 input[type="text"], input[type="password"] {
-  line-height: 40px;
+  line-height: 35px;
   padding: 0 5px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -6609,132 +6681,83 @@ input[type="text"], input[type="password"] {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  font-size: 22px;
-  color: black;
+  font-size: 17px;
+  color: #191919;
   font-weight: 100; }
-  /* line 16, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+    font-size: 13px; }
+  /* line 308, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder {
+    font-size: 13px; }
+  /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder {
+    font-size: 13px; }
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type="text"]:focus, input[type="password"]:focus {
     outline: 0;
-    border: 1px solid #6babc1; }
+    border: 1px solid #f27935; }
 
-/* line 147, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-textarea {
-  line-height: 40px;
-  padding: 0 5px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  zoom: 1;
-  *display: inline;
-  border: 1px solid #dbdbdb;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  font-size: 22px;
-  color: black;
-  font-weight: 100;
-  resize: none;
-  line-height: 24px;
-  font-size: 22px !important;
-  font-weight: 100 !important;
-  height: 105px;
-  padding: 5px; }
-  /* line 16, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  textarea:focus {
-    outline: 0;
-    border: 1px solid #6babc1; }
-
-/* line 161, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=="), #00afd1;
-  background-position: 95% 53%, 0 0;
-  background-repeat: no-repeat, repeat;
-  background-size: 8px 8px, auto auto;
-  outline: 0;
-  text-decoration: none;
-  line-height: 1em;
-  font-family: "Helvetica", sans-serif;
-  width: auto;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  zoom: 1;
-  *display: inline;
-  padding: 8px 24px 8px 11px;
-  font-size: 1em;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  color: #626262;
-  text-shadow: rgba(255, 255, 255, 0.96863) 0 1px 0;
-  cursor: pointer; }
-  /* line 186, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  select:hover, select:active {
-    background-position: 95% 53%, 0 0;
-    background-repeat: no-repeat, repeat;
-    background-size: 8px 8px, auto auto;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 2px 4px inset, rgba(255, 255, 255, 0.1) 0 1px 0 0;
-    -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 2px 4px inset, rgba(255, 255, 255, 0.1) 0 1px 0 0;
-    box-shadow: rgba(0, 0, 0, 0.6) 0 2px 4px inset, rgba(255, 255, 255, 0.1) 0 1px 0 0;
-    color: #585858;
-    text-shadow: rgba(255, 255, 255, 0.8902) 0 1px 0; }
-
-/* line 197, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-.form .btn.left {
-  margin-right: 10px; }
-/* line 199, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 237, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 .form .field {
   display: block;
   padding: 0;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: auto;
   height: auto;
   *zoom: 1; }
-  /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .form .field:before, .form .field:after {
     content: "";
     display: table; }
-  /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .form .field:after {
     clear: both; }
-  /* line 207, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field label, .form .field span.optional {
+  /* line 245, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field label {
     display: block;
     color: #999999;
-    font-size: 15px;
-    line-height: 20px; }
-  /* line 212, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field span.optional {
-    position: absolute;
-    top: 2px;
-    right: 0; }
-  /* line 216, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field input[type="text"], .form .field input[type="password"], .form .field textarea, .form .field select {
+    font-size: 14px;
+    line-height: 28px;
+    cursor: pointer; }
+    /* line 251, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field label.inline {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline; }
+  /* line 253, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field input[type="text"], .form .field input[type="textfield"], .form .field input[type="password"], .form .field textarea, .form .field select {
     display: block;
     width: 100%; }
-  /* line 219, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field.left {
-    margin: 10px 39px 3px 0; }
-  /* line 221, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field.right {
-    margin: 10px 0 3px 0; }
-  /* line 224, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field.full textarea {
-    width: 98%;
-    resize: none;
-    height: auto;
-    padding: 1%;
-    display: block;
-    line-height: 18px; }
-  /* line 231, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 256, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field input[type=checkbox], .form .field input[type=radio] {
+    margin: 10px 10px 0 0; }
+    /* line 258, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field input[type=checkbox] ~ span, .form .field input[type=radio] ~ span {
+      font-size: 17px;
+      color: #7f7f7f;
+      line-height: 35px;
+      font-weight: 100; }
+    /* line 263, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field input[type=checkbox]:checked ~ span, .form .field input[type=radio]:checked ~ span {
+      color: #00afd1; }
+  /* line 265, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field span {
+    font-size: 17px;
+    color: #7f7f7f;
+    line-height: 35px;
+    font-weight: 100; }
+    /* line 270, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field span ~ input[type=checkbox], .form .field span ~ input[type=radio] {
+      margin: 5px;
+      float: right; }
+  /* line 274, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field input[type=radio] {
+    margin: 10px -2px 10px 0 0; }
+  /* line 280, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field.outline {
     display: -moz-inline-stack;
     display: inline-block;
@@ -6776,13 +6799,13 @@ select {
     padding: 5px;
     margin: 10px 20px 3px 0;
     text-align: left; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .form .field.outline.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .form .field.outline:hover, .form .field.outline:active, .form .field.outline.active {
       border: 1px solid #cccccc;
       background: #e5e5e5;
@@ -6792,7 +6815,7 @@ select {
       color: #666666;
       text-shadow: white 0 1px 0;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .form .field.outline.active:hover {
       border: 1px solid #cccccc;
       background: #cccccc;
@@ -6802,7 +6825,7 @@ select {
       color: #5b5b5b;
       text-shadow: rgba(255, 255, 255, 0.91843) 0 1px 0;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .form .field.outline.disabled, .form .field.outline.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -6815,126 +6838,178 @@ select {
       color: #666666;
       text-shadow: white 0 1px 0;
       text-shadow: none; }
-    /* line 238, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form .field.outline input[type=checkbox] ~ span {
-      margin: 0 6.66667px 0 10px;
-      line-height: 25px;
-      color: #d7dcde; }
-      /* line 242, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-      .form .field.outline input[type=checkbox] ~ span.icon {
-        text-transform: none !important;
-        font-size: 25px;
-        position: relative; }
-    /* line 248, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 286, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field.outline input[type=checkbox] {
+      margin: 3px 0 0; }
+      /* line 288, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      .form .field.outline input[type=checkbox] ~ span {
+        margin: 0 6.66667px 0 10px;
+        line-height: 25px;
+        color: #d7dcde; }
+        /* line 292, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+        .form .field.outline input[type=checkbox] ~ span.icon {
+          text-transform: none !important;
+          font-size: 25px;
+          position: relative; }
+      /* line 296, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      .form .field.outline input[type=checkbox]:checked ~ span {
+        color: #00afd1; }
+    /* line 299, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field.outline:hover input[type=checkbox] {
       background: #666666; }
-      /* line 250, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 301, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.outline:hover input[type=checkbox]:checked {
         background: #00a6c6; }
-      /* line 252, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 303, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.outline:hover input[type=checkbox] ~ span {
         color: #666666; }
-/* line 257, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-.form.inside .field {
-  margin: 10px 0;
-  padding: 2px 10px;
-  position: relative;
-  width: 291px;
-  line-height: 40px;
-  padding: 0 5px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  zoom: 1;
-  *display: inline;
-  border: 1px solid #dbdbdb;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  font-size: 22px;
-  color: black;
-  font-weight: 100; }
-  /* line 16, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form.inside .field:focus {
-    outline: 0;
-    border: 1px solid #6babc1; }
-  /* line 263, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form.inside .field.check {
-    background: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    width: auto; }
-    /* line 269, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form.inside .field.check label {
-      line-height: 15px;
-      font-weight: normal;
-      color: white; }
-      /* line 273, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-      .form.inside .field.check label a {
-        color: #a6dffd;
-        border-bottom: 1px dashed #a6dffd; }
-        /* line 276, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-        .form.inside .field.check label a:hover {
-          color: white;
-          border-bottom: none; }
-  /* line 279, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form.inside .field label {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: top;
-    zoom: 1;
-    *display: inline;
-    font-size: 11px;
-    line-height: 21px;
-    font-weight: bold; }
-    /* line 284, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form.inside .field label .req {
-      color: #f05a4f;
-      margin-right: 5px; }
-  /* line 287, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form.inside .field input[type="text"], .form.inside .field input[type="password"] {
-    background: none;
-    border: none;
-    height: 18px;
+  /* line 309, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field.inside_left, .form .field.inside_right {
+    line-height: 35px;
     padding: 0 5px;
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: top;
     zoom: 1;
     *display: inline;
-    line-height: 20px;
+    border: 1px solid #dbdbdb;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 17px;
+    color: #191919;
+    font-weight: 100;
+    margin: 0 0 15px;
+    padding: 0;
+    position: relative;
     width: auto;
-    outline: none;
-    font-weight: bold;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-size: 11px; }
-    /* line 299, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form.inside .field input[type="text"]:focus, .form.inside .field input[type="password"]:focus {
-      outline: none; }
-/* line 301, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-.form .group {
-  margin: 10px 0; }
-  /* line 303, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .group.nopad {
-    margin: 0; }
-    /* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form .group.nopad .button {
-      margin: 0; }
-  /* line 307, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .group .field {
-    margin: 0 !important;
-    float: left;
-    width: 294px; }
-    /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form .group .field + .field {
-      float: right; }
+    background: white;
+    display: block;
+    overflow: hidden; }
+    /* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    .form .field.inside_left::-webkit-input-placeholder, .form .field.inside_right::-webkit-input-placeholder {
+      font-size: 13px; }
+    /* line 308, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    .form .field.inside_left:-moz-placeholder, .form .field.inside_right:-moz-placeholder {
+      font-size: 13px; }
+    /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    .form .field.inside_left:-ms-input-placeholder, .form .field.inside_right:-ms-input-placeholder {
+      font-size: 13px; }
+    /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field.inside_left:focus, .form .field.inside_right:focus {
+      outline: 0;
+      border: 1px solid #f27935; }
+    /* line 318, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field.inside_left label, .form .field.inside_right label {
+      margin: 0;
+      float: left;
+      line-height: 35px;
+      padding: 0 5px;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline;
+      border: 1px solid #dbdbdb;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      font-size: 17px;
+      color: #191919;
+      font-weight: 100;
+      border: none;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      text-indent: 0;
+      -moz-border-radius-topright: 0;
+      -webkit-border-top-right-radius: 0;
+      border-top-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+      -webkit-border-bottom-right-radius: 0;
+      border-bottom-right-radius: 0;
+      color: #666666;
+      font-size: 14px;
+      font-weight: bold; }
+      /* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      .form .field.inside_left label::-webkit-input-placeholder, .form .field.inside_right label::-webkit-input-placeholder {
+        font-size: 13px; }
+      /* line 308, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      .form .field.inside_left label:-moz-placeholder, .form .field.inside_right label:-moz-placeholder {
+        font-size: 13px; }
+      /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      .form .field.inside_left label:-ms-input-placeholder, .form .field.inside_right label:-ms-input-placeholder {
+        font-size: 13px; }
+      /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      .form .field.inside_left label:focus, .form .field.inside_right label:focus {
+        outline: 0;
+        border: 1px solid #f27935; }
+      /* line 330, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      .form .field.inside_left label.icon, .form .field.inside_right label.icon {
+        font-size: 22px; }
+    /* line 332, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field.inside_left .full, .form .field.inside_right .full {
+      overflow: hidden; }
+      /* line 334, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      .form .field.inside_left .full input[type="text"], .form .field.inside_left .full input[type="password"], .form .field.inside_right .full input[type="text"], .form .field.inside_right .full input[type="password"] {
+        line-height: 35px;
+        padding: 0 5px;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        *display: inline;
+        border: 1px solid #dbdbdb;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px;
+        font-size: 17px;
+        color: #191919;
+        font-weight: 100;
+        text-indent: 0;
+        width: 100%;
+        display: block;
+        border: 1px solid transparent;
+        -moz-border-radius-topleft: 0;
+        -webkit-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        -webkit-border-bottom-left-radius: 0;
+        border-bottom-left-radius: 0; }
+        /* line 305, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        .form .field.inside_left .full input[type="text"]::-webkit-input-placeholder, .form .field.inside_left .full input[type="password"]::-webkit-input-placeholder, .form .field.inside_right .full input[type="text"]::-webkit-input-placeholder, .form .field.inside_right .full input[type="password"]::-webkit-input-placeholder {
+          font-size: 13px; }
+        /* line 308, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        .form .field.inside_left .full input[type="text"]:-moz-placeholder, .form .field.inside_left .full input[type="password"]:-moz-placeholder, .form .field.inside_right .full input[type="text"]:-moz-placeholder, .form .field.inside_right .full input[type="password"]:-moz-placeholder {
+          font-size: 13px; }
+        /* line 311, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        .form .field.inside_left .full input[type="text"]:-ms-input-placeholder, .form .field.inside_left .full input[type="password"]:-ms-input-placeholder, .form .field.inside_right .full input[type="text"]:-ms-input-placeholder, .form .field.inside_right .full input[type="password"]:-ms-input-placeholder {
+          font-size: 13px; }
+        /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+        .form .field.inside_left .full input[type="text"]:focus, .form .field.inside_left .full input[type="password"]:focus, .form .field.inside_right .full input[type="text"]:focus, .form .field.inside_right .full input[type="password"]:focus {
+          outline: 0;
+          border: 1px solid #f27935; }
+  /* line 342, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .field.inside_right label {
+    float: right; }
+/* line 353, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+.form .split .field {
+  width: 48%;
+  float: left; }
+  /* line 356, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  .form .split .field + .field {
+    float: right; }
 
 /* line 1, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_popover.sass */
 .popover_container {
@@ -7419,13 +7494,13 @@ button, input, select, textarea {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px; }
-  /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .btn.icon {
     font-family: "expressionui-webfont";
     font-weight: normal !important;
     -webkit-font-smoothing: antialiased;
     text-transform: none; }
-  /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .btn:hover, .btn:active, .btn.active {
     border: 1px solid #cccccc;
     background: #e5e5e5;
@@ -7435,7 +7510,7 @@ button, input, select, textarea {
     color: #666666;
     text-shadow: white 0 1px 0;
     text-shadow: none; }
-  /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .btn.active:hover {
     border: 1px solid #cccccc;
     background: #cccccc;
@@ -7445,7 +7520,7 @@ button, input, select, textarea {
     color: #5b5b5b;
     text-shadow: rgba(255, 255, 255, 0.91843) 0 1px 0;
     text-shadow: none; }
-  /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .btn.disabled, .btn.disabled:hover {
     cursor: not-allowed;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7486,13 +7561,13 @@ button, input, select, textarea {
     color: #fef8f4;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.highlight.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.highlight:hover, .btn.highlight:active, .btn.highlight.active {
       background: #d96c2f;
       -webkit-box-shadow: #c1602a 0 2px 0 inset;
@@ -7501,7 +7576,7 @@ button, input, select, textarea {
       color: #fef8f4;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.highlight.active:hover {
       background: #c1602a;
       -webkit-box-shadow: #a95425 0 2px 0 inset;
@@ -7510,7 +7585,7 @@ button, input, select, textarea {
       color: #fdf7f4;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.highlight.disabled, .btn.highlight.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7550,13 +7625,13 @@ button, input, select, textarea {
     color: #f2fbfc;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.accent.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.accent:hover, .btn.accent:active, .btn.accent.active {
       background: #009dbc;
       -webkit-box-shadow: #008ca7 0 2px 0 inset;
@@ -7565,7 +7640,7 @@ button, input, select, textarea {
       color: #f2fbfc;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.accent.active:hover {
       background: #008ca7;
       -webkit-box-shadow: #007a92 0 2px 0 inset;
@@ -7574,7 +7649,7 @@ button, input, select, textarea {
       color: #f2fafb;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.accent.disabled, .btn.accent.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7614,13 +7689,13 @@ button, input, select, textarea {
     color: #f3fbfa;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.main.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.main:hover, .btn.main:active, .btn.main.active {
       background: #1ca895;
       -webkit-box-shadow: #199584 0 2px 0 inset;
@@ -7629,7 +7704,7 @@ button, input, select, textarea {
       color: #f3fbfa;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.main.active:hover {
       background: #199584;
       -webkit-box-shadow: #168274 0 2px 0 inset;
@@ -7638,7 +7713,7 @@ button, input, select, textarea {
       color: #f3faf9;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.main.disabled, .btn.main.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7678,13 +7753,13 @@ button, input, select, textarea {
     color: #f3f4f5;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.contrast.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.contrast:hover, .btn.contrast:active, .btn.contrast.active {
       background: #1a2b31;
       -webkit-box-shadow: #17262c 0 2px 0 inset;
@@ -7693,7 +7768,7 @@ button, input, select, textarea {
       color: #f3f4f5;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.contrast.active:hover {
       background: #17262c;
       -webkit-box-shadow: #142126 0 2px 0 inset;
@@ -7702,7 +7777,7 @@ button, input, select, textarea {
       color: #f3f4f4;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.contrast.disabled, .btn.contrast.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7742,13 +7817,13 @@ button, input, select, textarea {
     color: #fef6f3;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.error.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.error:hover, .btn.error:active, .btn.error.active {
       background: #da5016;
       -webkit-box-shadow: #c24714 0 2px 0 inset;
@@ -7757,7 +7832,7 @@ button, input, select, textarea {
       color: #fef6f3;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.error.active:hover {
       background: #c24714;
       -webkit-box-shadow: #aa3e11 0 2px 0 inset;
@@ -7766,7 +7841,7 @@ button, input, select, textarea {
       color: #fdf6f3;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.error.disabled, .btn.error.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7806,13 +7881,13 @@ button, input, select, textarea {
     color: #f5faf5;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.success.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.success:hover, .btn.success:active, .btn.success.active {
       background: #3e9035;
       -webkit-box-shadow: #37802f 0 2px 0 inset;
@@ -7821,7 +7896,7 @@ button, input, select, textarea {
       color: #f5faf5;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.success.active:hover {
       background: #37802f;
       -webkit-box-shadow: #307029 0 2px 0 inset;
@@ -7830,7 +7905,7 @@ button, input, select, textarea {
       color: #f5f9f4;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.success.disabled, .btn.success.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7870,13 +7945,13 @@ button, input, select, textarea {
     color: #f2fcfd;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.tip.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.tip:hover, .btn.tip:active, .btn.tip.active {
       background: #00b4cd;
       -webkit-box-shadow: #00a0b6 0 2px 0 inset;
@@ -7885,7 +7960,7 @@ button, input, select, textarea {
       color: #f2fcfd;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.tip.active:hover {
       background: #00a0b6;
       -webkit-box-shadow: #008c9f 0 2px 0 inset;
@@ -7894,7 +7969,7 @@ button, input, select, textarea {
       color: #f2fbfc;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.tip.disabled, .btn.tip.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -7934,13 +8009,13 @@ button, input, select, textarea {
     color: #fefdf2;
     text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
     text-shadow: none; }
-    /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.info.icon {
       font-family: "expressionui-webfont";
       font-weight: normal !important;
       -webkit-font-smoothing: antialiased;
       text-transform: none; }
-    /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.info:hover, .btn.info:active, .btn.info.active {
       background: #e3cb00;
       -webkit-box-shadow: #cab400 0 2px 0 inset;
@@ -7949,7 +8024,7 @@ button, input, select, textarea {
       color: #fefdf2;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.info.active:hover {
       background: #cab400;
       -webkit-box-shadow: #b19e00 0 2px 0 inset;
@@ -7958,7 +8033,7 @@ button, input, select, textarea {
       color: #fdfcf2;
       text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 1px;
       text-shadow: none; }
-    /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .btn.info.disabled, .btn.info.disabled:hover {
       cursor: not-allowed;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -8025,37 +8100,37 @@ button, input, select, textarea {
   -moz-box-align: stretch;
   -ms-box-align: stretch;
   box-align: stretch; }
-  /* line 288, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 289, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col1 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-box-flex: 1;
     box-flex: 1; }
-  /* line 290, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 291, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col2 {
     -webkit-box-flex: 2;
     -moz-box-flex: 2;
     -ms-box-flex: 2;
     box-flex: 2; }
-  /* line 292, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 293, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col3 {
     -webkit-box-flex: 3;
     -moz-box-flex: 3;
     -ms-box-flex: 3;
     box-flex: 3; }
-  /* line 294, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 295, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col4 {
     -webkit-box-flex: 4;
     -moz-box-flex: 4;
     -ms-box-flex: 4;
     box-flex: 4; }
-  /* line 296, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 297, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col5 {
     -webkit-box-flex: 5;
     -moz-box-flex: 5;
     -ms-box-flex: 5;
     box-flex: 5; }
-  /* line 298, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 299, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col6 {
     -webkit-box-flex: 6;
     -moz-box-flex: 6;
@@ -8154,11 +8229,11 @@ button, input, select, textarea {
   visibility: hidden;
   position: relative;
   *zoom: 1; }
-  /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .invisible:before, .invisible:after {
     content: "";
     display: table; }
-  /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .invisible:after {
     clear: both; }
 
@@ -8177,11 +8252,11 @@ button, input, select, textarea {
 /* line 95, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_class_helpers.sass */
 .group {
   *zoom: 1; }
-  /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .group:before, .group:after {
     content: "";
     display: table; }
-  /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .group:after {
     clear: both; }
 
@@ -13058,37 +13133,37 @@ h1.center_heading {
   -moz-box-align: stretch;
   -ms-box-align: stretch;
   box-align: stretch; }
-  /* line 288, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 289, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col1 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-box-flex: 1;
     box-flex: 1; }
-  /* line 290, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 291, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col2 {
     -webkit-box-flex: 2;
     -moz-box-flex: 2;
     -ms-box-flex: 2;
     box-flex: 2; }
-  /* line 292, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 293, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col3 {
     -webkit-box-flex: 3;
     -moz-box-flex: 3;
     -ms-box-flex: 3;
     box-flex: 3; }
-  /* line 294, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 295, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col4 {
     -webkit-box-flex: 4;
     -moz-box-flex: 4;
     -ms-box-flex: 4;
     box-flex: 4; }
-  /* line 296, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 297, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col5 {
     -webkit-box-flex: 5;
     -moz-box-flex: 5;
     -ms-box-flex: 5;
     box-flex: 5; }
-  /* line 298, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+  /* line 299, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .flex_me .col6 {
     -webkit-box-flex: 6;
     -moz-box-flex: 6;
@@ -13407,11 +13482,11 @@ h1.center_heading {
     padding: 10px 0;
     border-bottom: 0px solid #f45a4f;
     z-index: 4000; }
-    /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .header .nav:before, .header .nav:after {
       content: "";
       display: table; }
-    /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+    /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
     .header .nav:after {
       clear: both; }
     /* line 62, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
@@ -13577,13 +13652,13 @@ h1.center_heading {
         font-size: 130%;
         font-weight: 100;
         padding: 18px 40px; }
-        /* line 119, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 120, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge.icon {
           font-family: "expressionui-webfont";
           font-weight: normal !important;
           -webkit-font-smoothing: antialiased;
           text-transform: none; }
-        /* line 125, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 126, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge:hover, .header .head.inner .perc50.right a.btn.xlarge:active, .header .head.inner .perc50.right a.btn.xlarge.active {
           background: #b2bfcd;
           -webkit-box-shadow: #9eaab6 0 2px 0 inset;
@@ -13592,7 +13667,7 @@ h1.center_heading {
           color: #4f555b;
           text-shadow: rgba(255, 255, 255, 0.86824) 0 1px 0;
           text-shadow: none; }
-        /* line 132, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 133, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge.active:hover {
           background: #9eaab6;
           -webkit-box-shadow: #8a959f 0 2px 0 inset;
@@ -13601,7 +13676,7 @@ h1.center_heading {
           color: #474c52;
           text-shadow: rgba(255, 255, 255, 0.80078) 0 1px 0;
           text-shadow: none; }
-        /* line 139, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+        /* line 140, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
         .header .head.inner .perc50.right a.btn.xlarge.disabled, .header .head.inner .perc50.right a.btn.xlarge.disabled:hover {
           cursor: not-allowed;
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -13650,11 +13725,11 @@ h1.center_heading {
     .header .exp .inner {
       *zoom: 1;
       position: relative; }
-      /* line 28, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      /* line 29, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .header .exp .inner:before, .header .exp .inner:after {
         content: "";
         display: table; }
-      /* line 31, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
+      /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
       .header .exp .inner:after {
         clear: both; }
       /* line 191, /Users/jason/Dropbox/projects/expressionUI/github/expressionui-page/source/stylesheets/all.css.sass */
