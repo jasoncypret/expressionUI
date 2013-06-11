@@ -6598,7 +6598,7 @@ input[type=checkbox] {
       height: 23.33333px;
       text-align: left;
       padding-left: 35px; }
-    /* line 161, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 160, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     input[type=checkbox].toggle:after {
       -webkit-border-radius: 300px;
       -moz-border-radius: 300px;
@@ -6615,7 +6615,7 @@ input[type=checkbox] {
       width: 23.33333px;
       height: 23.33333px;
       position: relative; }
-    /* line 170, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 168, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     input[type=checkbox].toggle:checked {
       background: #45a03b;
       border: 2px solid #45a03b;
@@ -6624,7 +6624,7 @@ input[type=checkbox] {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-      /* line 179, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 174, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       input[type=checkbox].toggle:checked:before {
         color: #f5faf5;
         left: auto;
@@ -6632,12 +6632,12 @@ input[type=checkbox] {
         text-align: right;
         padding-left: 0;
         padding-right: 15px; }
-      /* line 188, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 181, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       input[type=checkbox].toggle:checked:after {
         margin: 0;
         top: auto;
         left: auto; }
-/* line 198, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 191, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 input[type=radio] {
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
@@ -6648,7 +6648,7 @@ input[type=radio] {
   height: 18px;
   border: 2px solid #b2b2b2;
   position: relative; }
-  /* line 204, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 197, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type=radio]:after {
     background: #00afd1;
     -webkit-border-radius: 300px;
@@ -6663,10 +6663,10 @@ input[type=radio] {
     position: absolute;
     top: 2px;
     left: 2px; }
-  /* line 215, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 208, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   input[type=radio]:checked:after {
     display: block; }
-/* line 222, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 215, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 input[type="text"], input[type="password"] {
   line-height: 35px;
   padding: 0 5px;
@@ -6698,7 +6698,7 @@ input[type="text"], input[type="password"] {
     outline: 0;
     border: 1px solid #f27935; }
 
-/* line 237, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 230, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 .form .field {
   display: block;
   padding: 0;
@@ -6714,50 +6714,46 @@ input[type="text"], input[type="password"] {
   /* line 32, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_helpers.sass */
   .form .field:after {
     clear: both; }
-  /* line 245, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 238, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field label {
     display: block;
     color: #999999;
     font-size: 14px;
     line-height: 28px;
     cursor: pointer; }
-    /* line 251, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 244, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field label.inline {
       display: -moz-inline-stack;
       display: inline-block;
       vertical-align: top;
       zoom: 1;
       *display: inline; }
-  /* line 253, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 246, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field input[type="text"], .form .field input[type="textfield"], .form .field input[type="password"], .form .field textarea, .form .field select {
     display: block;
     width: 100%; }
-  /* line 256, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 249, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field input[type=checkbox], .form .field input[type=radio] {
     margin: 10px 10px 0 0; }
-    /* line 258, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 251, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field input[type=checkbox] ~ span, .form .field input[type=radio] ~ span {
       font-size: 17px;
       color: #7f7f7f;
       line-height: 35px;
       font-weight: 100; }
-    /* line 263, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 256, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field input[type=checkbox]:checked ~ span, .form .field input[type=radio]:checked ~ span {
       color: #00afd1; }
-  /* line 265, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-  .form .field span {
-    font-size: 17px;
-    color: #7f7f7f;
-    line-height: 35px;
-    font-weight: 100; }
-    /* line 270, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
-    .form .field span ~ input[type=checkbox], .form .field span ~ input[type=radio] {
-      margin: 5px;
-      float: right; }
-  /* line 274, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 259, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    .form .field input[type=checkbox].toggle, .form .field input[type=radio].toggle {
+      margin: 5px 10px 0 0; }
+      /* line 263, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      .form .field input[type=checkbox].toggle.right, .form .field input[type=radio].toggle.right {
+        margin: 5px 0 0 10px; }
+  /* line 268, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field input[type=radio] {
     margin: 10px -2px 10px 0 0; }
-  /* line 280, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 274, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field.outline {
     display: -moz-inline-stack;
     display: inline-block;
@@ -6838,32 +6834,32 @@ input[type="text"], input[type="password"] {
       color: #666666;
       text-shadow: white 0 1px 0;
       text-shadow: none; }
-    /* line 286, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 280, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field.outline input[type=checkbox] {
       margin: 3px 0 0; }
-      /* line 288, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 282, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.outline input[type=checkbox] ~ span {
         margin: 0 6.66667px 0 10px;
         line-height: 25px;
         color: #d7dcde; }
-        /* line 292, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+        /* line 286, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
         .form .field.outline input[type=checkbox] ~ span.icon {
           text-transform: none !important;
           font-size: 25px;
           position: relative; }
-      /* line 296, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 290, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.outline input[type=checkbox]:checked ~ span {
         color: #00afd1; }
-    /* line 299, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 293, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field.outline:hover input[type=checkbox] {
       background: #666666; }
-      /* line 301, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 295, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.outline:hover input[type=checkbox]:checked {
         background: #00a6c6; }
-      /* line 303, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 297, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.outline:hover input[type=checkbox] ~ span {
         color: #666666; }
-  /* line 309, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 303, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field.inside_left, .form .field.inside_right {
     line-height: 35px;
     padding: 0 5px;
@@ -6901,7 +6897,7 @@ input[type="text"], input[type="password"] {
     .form .field.inside_left:focus, .form .field.inside_right:focus {
       outline: 0;
       border: 1px solid #f27935; }
-    /* line 318, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 312, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field.inside_left label, .form .field.inside_right label {
       margin: 0;
       float: left;
@@ -6953,13 +6949,13 @@ input[type="text"], input[type="password"] {
       .form .field.inside_left label:focus, .form .field.inside_right label:focus {
         outline: 0;
         border: 1px solid #f27935; }
-      /* line 330, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 324, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.inside_left label.icon, .form .field.inside_right label.icon {
         font-size: 22px; }
-    /* line 332, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+    /* line 326, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
     .form .field.inside_left .full, .form .field.inside_right .full {
       overflow: hidden; }
-      /* line 334, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+      /* line 328, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
       .form .field.inside_left .full input[type="text"], .form .field.inside_left .full input[type="password"], .form .field.inside_right .full input[type="text"], .form .field.inside_right .full input[type="password"] {
         line-height: 35px;
         padding: 0 5px;
@@ -7000,14 +6996,14 @@ input[type="text"], input[type="password"] {
         .form .field.inside_left .full input[type="text"]:focus, .form .field.inside_left .full input[type="password"]:focus, .form .field.inside_right .full input[type="text"]:focus, .form .field.inside_right .full input[type="password"]:focus {
           outline: 0;
           border: 1px solid #f27935; }
-  /* line 342, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 336, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .field.inside_right label {
     float: right; }
-/* line 353, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+/* line 347, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
 .form .split .field {
   width: 48%;
   float: left; }
-  /* line 356, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
+  /* line 350, /Users/jason/Dropbox/projects/expressionUI/github/expressionui/vendor/assets/stylesheets/expressionui/_forms.sass */
   .form .split .field + .field {
     float: right; }
 
