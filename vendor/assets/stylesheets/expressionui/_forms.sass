@@ -157,7 +157,6 @@ input
         height: ($field_height)/1.5
         text-align: left
         padding-left: $pad*3.5
-
       &:after
         +border-radius(300px)
         content: " "
@@ -166,16 +165,12 @@ input
         width: ($field_height)/1.5
         height: ($field_height)/1.5
         position: relative
-
       &:checked
-
-
         background: $success
         border: 2px solid $success
         padding-left: (($field_height*2)-($field_height)/1.5)-(4px)
         padding-right: 0
         +box-shadow(none)
-        
         &:before
           +text_color($success, false)
           left: auto
@@ -183,8 +178,6 @@ input
           text-align: right
           padding-left: 0
           padding-right: $pad*1.5
-
-
         &:after
           margin: 0
           top: auto
@@ -262,14 +255,15 @@ input
         font-weight: 100
       &:checked ~ span
         color: $accent
-    span
-      font-size: ($font_size)+3px
-      color: tint(black, 50%)
-      line-height: $field_height
-      font-weight: 100
-      ~ input[type=checkbox], ~ input[type=radio]
-        margin: $pad/2
-        float: right
+
+      &.toggle
+        margin: $pad/2 $pad 0 0
+        // Toggle Right
+        // -------------------------
+        &.right
+          margin: $pad/2 0 0 $pad
+          
+          
 
     input[type=radio]
       margin: ($pad)-2px $pad 0 0
