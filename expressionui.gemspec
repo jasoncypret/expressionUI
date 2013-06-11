@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jason@jasoncypret.com"]
   gem.description   = %q{A set of small JavaScript and SASS plugins that are designed to be reusable and enhance your UI. Ready to play with the Rails Asset Pipeline for faster and easier web development.}
   gem.summary       = %q{Some awesome SASS and JS shiz for your rails project}
-  gem.homepage      = "http://jasoncypret.github.io/expressionUI/"
+  gem.homepage      = "http://expressionui.com/"
   gem.license       = "MIT"
 
   
