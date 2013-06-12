@@ -2,6 +2,10 @@
   position: fixed
   +box-shadow(rgba(black, 0.2) 0 3px 2px)
   +border-radius(4px)
+  background: white
+  &.flush
+    &:before
+      content: none
   &:before
     content: '4'
     +icon_font
@@ -27,4 +31,14 @@
   &.bottomright:before
     bottom: -20px
     right: 27px
-    
+  &.topleft.tooltip, &.topright.tooltip
+    // change the color
+    &:before
+      right: auto
+      left: 50%
+      margin-left: -8px
+  &.bottomleft.tooltip, &.bottomright:before
+    &:before
+      right: auto
+      left: 50%
+      margin-left: -8px
