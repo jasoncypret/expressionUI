@@ -271,12 +271,13 @@
   font-family: $icon_font
   font-weight: normal !important
   -webkit-font-smoothing: antialiased
+  text-transform: none !important
 
 =icon_inline
   +icon_font
   position: relative
   content: attr(data-icon)
-  text-transform: none
+  text-transform: none !important
   vertical-align: baseline
   line-height: 0
   font-size: 1.4em

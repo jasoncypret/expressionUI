@@ -125,21 +125,21 @@
           }
         });
       }
+
       switch (options.close_on_click) {
         case "anywhere":
           // no block
           break;
         case "outside":
-          $(options.content).click(function(e) {
+          $(options.content).on('click.popover', function(e) {
             e.stopPropagation();
-            return false;
           });
           break;
       }
     },
     _positionArrow: function (options) {
-      var winTopMax = $(options.scroll_target).height() / 2,
-          winLeftMax = $(options.scroll_target).width() / 2,
+      var winTopMax = $(window).height() / 2,
+          winLeftMax = $(window).width() / 2,
           pos = '';
 
       (options.position_top >= 1 && options.position_top - $(options.scroll_target).scrollTop() <= winTopMax) ? pos = 'top' : pos = 'bottom';

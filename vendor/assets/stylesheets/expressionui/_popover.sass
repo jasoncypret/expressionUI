@@ -1,9 +1,11 @@
 .popover_container
-  position: fixed
-  +box-shadow(rgba(black, 0.2) 0 3px 2px)
-  +border-radius(4px)
+  position: absolute
+  +box-shadow(rgba(black, 0.1) 0 1px 20px)
+  border: 1px solid rgba(black, 0.1)
   background: white
+  +border-radius(3px)
   &.flush
+    +border-top-radius(0)
     &:before
       content: none
   &:before
@@ -13,10 +15,10 @@
     line-height: 32px
     position: absolute
     display: block
-    color: #F2F2F2
+    color: white
     +rotate(90deg)
     z-index: 1
-    +text-shadow(rgba(black, 0.5) 1px 0 0)
+    +text-shadow(rgba(black, 0.1) 1px 0 0)
   &.topleft:before
     top: -20px
     left: 27px
@@ -32,13 +34,20 @@
     bottom: -20px
     right: 27px
   &.topleft.tooltip, &.topright.tooltip
-    // change the color
+    background: tint(black, 10%)
+    padding: $pad $pad*1.5
+    color: white
     &:before
       right: auto
       left: 50%
       margin-left: -8px
-  &.bottomleft.tooltip, &.bottomright:before
+      color: tint(black, 10%)
+  &.bottomleft.tooltip, &.bottomright.tooltip
+    background: tint(black, 10%)
+    padding: $pad $pad*1.5
+    color: white
     &:before
+      color: tint(black, 10%)
       right: auto
       left: 50%
       margin-left: -8px

@@ -1,5 +1,5 @@
 .btn
-  +btn(#fff)
+  +btn(shade(white, 5%))
   &.highlight
     +btn($highlight)
   &.accent
@@ -32,6 +32,19 @@
     font-size: 125%
     &.icon
       font-size: 250%
+
+.menu
+  padding: 0 !important
+  ul
+    padding: 0 !important
+  .btn
+    +border-radius(0)
+  li, a, .btn
+    +inline_block
+  li:first-child
+    +border-left-radius(3px)
+  li:last-child
+    +border-right-radius(3px)
 
 .text_tip
   color: $tip
