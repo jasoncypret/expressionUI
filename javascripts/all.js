@@ -20447,68 +20447,158 @@ ko.exportProperty = function (owner, publicName, object) {
 
 
 (function ($) {
-  $.fn.popover = function (options) {
-    var defaults = {
-        content: $('.popover'),
-        padding: 0,
-        aOffset: 55,
-        afterOpen: $.noop,
-        afterClose: $.noop,
-        flush: false
-    };
-    options = $.extend({}, defaults, options);
-    var left = $(this).offset().left + ($(this).outerWidth() / 2),
-      top = $(this).offset().top + ($(this).outerHeight() / 2),
-      winTopMax = $(window).height() / 2,
-      winLeftMax = $(window).width() / 2,
-      pos = '',
-      num = 0,
-      tooltipHeight,
-      tooltipWidth;
+  var methods = {
+    defaults: {
+      content: $('.popover'),
+      padding: 5,
+      flush: false,
+      fixed: false,
+      close_on_scroll: false,
+      scroll_target: $(document),
+      scroll_threshold: 5,
+      close_on_click: "anywhere",
+      reposition_on_resize: false,
+      tooltip: false,
+      arrow_height: 12,
+      arrow_offset: 35,
+      arrow_position: null,
+      position_top: '',
+      position_left: '',
+      afterOpen: $.noop,
+      afterClose: $.noop
+    },
+    init: function (options) {
+      options = $.extend({}, methods.defaults, options);
 
-    pos = options.position;
-    if(!pos){
-        (top >= 1 && top - $(window).scrollTop() <= winTopMax) ? pos = 'top' : pos = 'bottom';
-        (left >= 1 && left - $(window).scrollLeft() <= winLeftMax) ? pos += 'left' : pos += 'right';
-    }
+      var outter_height, outter_width;
+      outter_height = ($(this).outerHeight() === 0) ? $(this).attr('height') : $(this).outerHeight() ;
+      outter_width = ($(this).outerWidth() === 0) ? $(this).attr('width') : $(this).outerWidth() ;
+      
+      options.position_left = $(this).offset().left + (outter_width / 2);
+      options.position_top = $(this).offset().top + (outter_height / 2);
+
+      if(!options.arrow_position) options.arrow_position = $(this).popover('_positionArrow', options);
+
+      options.content.addClass('popover_container ' + options.arrow_position).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
+      if(options.flush) options.content.addClass('flush');
+      if(options.tooltip) options.content.addClass('tooltip');
+      if (options.fixed) options.content.css({'position': 'fixed' });
+      
+      var tooltipHeight = options.content.outerHeight(),
+          tooltipWidth = options.content.outerWidth();
 
 
-    options.content.addClass('popover_container ' + pos).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
-    if(options.flush) options.content.addClass('flush');
-    tooltipHeight = options.content.outerHeight();
-    tooltipWidth = options.content.outerWidth();
-    switch (pos) {
-      case "topleft":
-        top += ($(this).height() / (options.flush ? 2 : 1)) + options.padding * 2;
-        left += -$(this).width() / 2 - options.aOffset;
-        break;
-      case "bottomleft":
-        top += -tooltipHeight - $(this).height() / 2 - options.padding;
-        left += -$(this).width() / 2 - options.aOffset;
-        break;
-      case "topright":
-        top += $(this).height() + options.padding * 2;
-        left += $(this).width() - (tooltipWidth + (options.aOffset *2));
-        break;
-      case "bottomright":
-        top += -$(this).height() / 2 - tooltipHeight - options.padding;
-        left += $(this).width() - (tooltipWidth + (options.aOffset * 2));
-        break;
-    }
-
-    options.content.css({ 'left': left + 'px', 'top': top + 'px', 'display': 'none', 'visibility': 'visible' }).show();
-
-    options.afterOpen.apply(this, [options.content])
-
-    // You could add an active_popover class to $(this)
-    $(document).bind('click.popover', function(e) {
-      num++;
-      if (num > 1) {
-        $(options.content).removeClass('popover_container topleft bottomleft topright bottomright').hide();
-        options.afterClose.apply(this, [options.content])
-        $(document).unbind('click.popover');
+      if (options.fixed) {
+        options.position_top += -$(options.scroll_target).scrollTop();
+        options.position_left += -$(options.scroll_target).scrollLeft();
       }
-    });
+
+      switch (options.arrow_position) {
+        case "topleft":
+          if (options.flush) {
+            options.position_top = outter_height;
+            options.position_left += -(outter_width/2)
+          } else {
+            options.position_top += (outter_height/2) + options.arrow_height + options.padding;
+            options.position_left += -(options.arrow_offset);
+          }
+          break;
+        case "bottomleft":
+          options.position_top += -tooltipHeight -(outter_height/2) - options.arrow_height - options.padding;
+          options.position_left += -(options.arrow_offset);
+          break;
+        case "topright":
+          options.position_top += (outter_height/2) + options.arrow_height + options.padding;
+          options.position_left += -(tooltipWidth) + (options.arrow_offset)
+          break;
+
+        case "bottomright":
+          options.position_top += -tooltipHeight -(outter_height/2) - options.arrow_height - options.padding;
+          options.position_left += -(tooltipWidth) + (options.arrow_offset)
+          break;
+      }
+
+      if (options.tooltip) {
+        options.position_left = $(this).offset().left + (outter_width / 2) -(tooltipWidth/2);
+      }
+
+      // TODO: add an active_popover class to $(this)
+      options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show();
+      options.afterOpen.apply(this, [options.content])
+
+      $(this).popover('_setupEvents', options);
+    },
+    close: function (options) {
+      options = $.extend({}, methods.defaults, options);
+      $(options.content).removeClass('popover_container topleft bottomleft topright bottomright tooltip flush').attr('style', '').hide();
+      $(this).popover('_destroyEvents', options);
+      options.afterClose.apply(this, [options.content]);
+    },
+    _destroyEvents: function (options) {
+      $(document).unbind('click.popover');
+      $(document).unbind('scroll.popover');
+      $(document).unbind('resize.popover');
+    },
+    _setupEvents: function (options) {
+      var _this = $(this),
+          click = 0;
+
+      if (options.reposition_on_resize) {
+        $(window).bind("resize.popover", function () {
+          // TODO:
+          //$(this).popover('_positionArrow', options);
+          //$(this).popover('_positionPopover', options);
+        });
+      }
+
+      $(document).bind('click.popover', function(e) {
+        click++;
+        if (click > 1) {
+          $(this).popover('close', options);
+        }
+      });
+
+      if (options.close_on_scroll) {
+        $(options.scroll_target).bind('scroll.popover', function() {
+          $(document).trigger('content.scroll')
+          if ( $(options.scroll_target).scrollTop() >= options.scroll_threshold ){
+            $(this).popover('close', options);
+          }
+        });
+      }
+
+      switch (options.close_on_click) {
+        case "anywhere":
+          // no block
+          break;
+        case "outside":
+          $(options.content).on('click.popover', function(e) {
+            e.stopPropagation();
+          });
+          break;
+      }
+    },
+    _positionArrow: function (options) {
+      var winTopMax = $(window).height() / 2,
+          winLeftMax = $(window).width() / 2,
+          pos = '';
+
+      (options.position_top >= 1 && options.position_top - $(options.scroll_target).scrollTop() <= winTopMax) ? pos = 'top' : pos = 'bottom';
+      (options.position_left >= 1 && options.position_left - $(options.scroll_target).scrollLeft() <= winLeftMax) ? pos += 'left' : pos += 'right';      
+      
+      return pos;
+    },
+    _positionPopover: function (options) {
+    }
+  };
+  $.fn.popover = function (method) {
+    if (methods[method]) {
+      return methods[ method ].apply(this, Array.prototype.slice.call(arguments, 1));
+    } else if (typeof method === 'object' || !method) {
+      return methods.init.apply(this, arguments);
+    } else {
+      $.error('Method ' + method + ' does not exist on expressionui.popover');
+    }
   }
 })(jQuery);
 /*!
@@ -21991,6 +22081,28 @@ ko.exportProperty = function (owner, publicName, object) {
     ViewModel.prototype.modal_default = function() {
       return $('#example_modal').modal();
     };
+
+    ViewModel.prototype.popover_default = function(v, e) {
+      return $(e.currentTarget).popover({
+        content: $('#example_modal'),
+        close_on_click: 'outside'
+      });
+    };
+
+    $(".section.group .menu .btn").mouseover(function() {
+      var content;
+      content = $(this).attr('rel');
+      $('#popover_tip').html(content);
+      return $(this).popover({
+        content: $('#popover_tip'),
+        tooltip: true
+      });
+    }).mouseout(function() {
+      return $(this).popover("close", {
+        content: $('#popover_tip'),
+        tooltip: true
+      });
+    });
 
     return ViewModel;
 
