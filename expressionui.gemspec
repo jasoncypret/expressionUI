@@ -22,6 +22,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency              "animate.sass-rails"
   
 
-  gem.files         = `git ls-files`.split($/)
+  gem.files         = Dir["{lib,vendor}/**/*"]
   gem.require_paths = ["lib"]
 end
