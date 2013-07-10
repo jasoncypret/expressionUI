@@ -81,13 +81,14 @@
         options.position_left = $(this).offset().left + (outter_width / 2) -(tooltipWidth/2);
       }
 
-      // TODO: add an active_popover class to $(this)
+      $(this).addClass('active popover_target');
       options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show();
       options.afterOpen.apply(this, [options.content])
 
       $(this).popover('_setupEvents', options);
     },
     close: function (options) {
+      $('.active.popover_target').removeClass('active popover_target')
       options = $.extend({}, methods.defaults, options);
       $(options.content).removeClass('popover_container topleft bottomleft topright bottomright tooltip flush').attr('style', '').hide();
       $(this).popover('_destroyEvents', options);
