@@ -122,19 +122,19 @@
     &.icon
       +icon_font
       text-transform: none
-    @if lightness($base_color) == 100%
-      border: 1px solid shade($base_color, 10%)
-      +border-radius(3px)
+    // @if lightness($base_color) == 100%
+    //   border: 1px solid shade($base_color, 10%)
+    //   +border-radius(3px)
     &:hover, &:active, &.active
-      @if lightness($base_color) == 100%
-        border: 1px solid shade($base_color, 20%)
+      // @if lightness($base_color) == 100%
+      //   border: 1px solid shade($base_color, 20%)
       background: shade($base_color, 10%)
       +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
       +text_color($base_color)
       +text-shadow(none)
     &.active:hover
-      @if lightness($base_color) == 100%
-        border: 1px solid shade($base_color, 20%)
+      // @if lightness($base_color) == 100%
+      //   border: 1px solid shade($base_color, 20%)
       background: shade($base_color, 20%)
       +box-shadow(shade($base_color, 30%) 0 2px 0 inset)
       +text_color(shade($base_color, 10%))
