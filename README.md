@@ -69,6 +69,7 @@ add this line above expressionuiin your gemfile. This is a temporary fix untill 
 
 ```ruby
 gem 'animate.sass-rails', :git => 'git://github.com/jasoncypret/animate.sass-rails.git'
+```
 
 ## Contributing
 
