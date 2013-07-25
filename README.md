@@ -63,6 +63,14 @@ If you don't need all the awesomeness just bring in what you'd like
 @import expressionui/post_style
 ```
 
+###Fix for Rails 4.0
+
+add this line above expressionuiin your gemfile. This is a temporary fix untill the [pull request](https://github.com/MikeAski/animate.sass-rails/pull/3) is complete: 
+
+```ruby
+gem 'animate.sass-rails', :git => 'git://github.com/jasoncypret/animate.sass-rails.git'
+```
+
 ## Contributing
 
 1. Fork it
