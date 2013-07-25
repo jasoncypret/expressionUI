@@ -212,9 +212,8 @@ input
 
   // Input Text
   // -------------------------
-  &[type="text"], &[type="password"]
+  &[type="text"], &[type="password"], &[type="email"]
     +form_text_input_color
-
 
 
 // NOTES:
@@ -243,7 +242,7 @@ input
       cursor: pointer
       &.inline
         +inline_block
-    input[type="text"], input[type="textfield"], input[type="password"], textarea, select
+    input[type="text"], input[type="textfield"], input[type="password"], input[type="email"], textarea, select
       display: block
       width: 100%
     input[type=checkbox], input[type=radio]
