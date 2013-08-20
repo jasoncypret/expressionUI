@@ -11,7 +11,7 @@
       content: $('.popover'),
       padding: 5,
       flush: false,
-      fixed: false,
+      fixed: true,
       close_on_scroll: false,
       scroll_target: $(document),
       scroll_threshold: 5,
@@ -21,70 +21,59 @@
       arrow_height: 12,
       arrow_offset: 35,
       arrow_position: null,
-      position_top: '',
-      position_left: '',
+      position_top: null,
+      position_left: null,
+      outter_height: null,
+      outter_width: null,
       afterOpen: $.noop,
       afterClose: $.noop
     },
     init: function (options) {
       options = $.extend({}, methods.defaults, options);
+      options.tooltipHeight = 0;
+      options.tooltipWidth = 0;
 
-      var outter_height, outter_width;
-      outter_height = ($(this).outerHeight() === 0) ? $(this).attr('height') : $(this).outerHeight() ;
-      outter_width = ($(this).outerWidth() === 0) ? $(this).attr('width') : $(this).outerWidth() ;
+      // GET HEIGHT & WIDTH
+      if (options.outter_height === null) {
+        options.outter_height = ($(this).outerHeight() === 0) ? $(this).attr('height') : $(this).outerHeight() ;  
+      }
+      if (options.outter_width === null) {
+        options.outter_width = ($(this).outerWidth() === 0) ? $(this).attr('width') : $(this).outerWidth() ;
+      }
+
+      // POSITION CENTER OF ELEMENT
+      if (options.position_left === null) {
+        options.position_left = $(this).offset().left + (options.outter_width / 2);
+      } else {
+        options.position_left += (options.outter_width / 2);
+      }
+      if (options.position_top === null) {
+        options.position_top = $(this).offset().top + (options.outter_height / 2);
+      } else {
+        options.position_top += (options.outter_height / 2);
+      }
+
+      // NOT SURE I NEED
+      if (options.fixed) {
+        // options.position_top += +$(options.scroll_target).scrollTop();
+        // options.position_left += +$(options.scroll_target).scrollLeft(); 
+      }
       
-      options.position_left = $(this).offset().left + (outter_width / 2);
-      options.position_top = $(this).offset().top + (outter_height / 2);
-
+      // POSITION ARROW
       if(!options.arrow_position) options.arrow_position = $(this).popover('_positionArrow', options);
 
-      options.content.addClass('popover_container ' + options.arrow_position).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
-      if(options.flush) options.content.addClass('flush');
-      if(options.tooltip) options.content.addClass('tooltip');
-      if (options.fixed) options.content.css({'position': 'fixed' });
-      
-      var tooltipHeight = options.content.outerHeight(),
-          tooltipWidth = options.content.outerWidth();
+      // ADD CLASSES & STYLES
+      $(this).popover('_init_class_styles', options);
 
+      options.tooltipHeight = options.content.outerHeight(),
+      options.tooltipWidth = options.content.outerWidth();
 
-      if (options.fixed) {
-        options.position_top += -$(options.scroll_target).scrollTop();
-        options.position_left += -$(options.scroll_target).scrollLeft();
-      }
+      // POSITION POPOVER
+      $(this).popover('_position_popover', options);
 
-      switch (options.arrow_position) {
-        case "topleft":
-          if (options.flush) {
-            options.position_top = outter_height;
-            options.position_left += -(outter_width/2)
-          } else {
-            options.position_top += (outter_height/2) + options.arrow_height + options.padding;
-            options.position_left += -(options.arrow_offset);
-          }
-          break;
-        case "bottomleft":
-          options.position_top += -tooltipHeight -(outter_height/2) - options.arrow_height - options.padding;
-          options.position_left += -(options.arrow_offset);
-          break;
-        case "topright":
-          options.position_top += (outter_height/2) + options.arrow_height + options.padding;
-          options.position_left += -(tooltipWidth) + (options.arrow_offset)
-          break;
-
-        case "bottomright":
-          options.position_top += -tooltipHeight -(outter_height/2) - options.arrow_height - options.padding;
-          options.position_left += -(tooltipWidth) + (options.arrow_offset)
-          break;
-      }
-
-      if (options.tooltip) {
-        options.position_left = $(this).offset().left + (outter_width / 2) -(tooltipWidth/2);
-      }
-
-      $(this).addClass('active popover_target');
+      // FINISH UP
       options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show();
       options.afterOpen.apply(this, [options.content])
-
       $(this).popover('_setupEvents', options);
     },
     close: function (options) {
@@ -106,8 +95,6 @@
       if (options.reposition_on_resize) {
         $(window).bind("resize.popover", function () {
           // TODO:
-          //$(this).popover('_positionArrow', options);
-          //$(this).popover('_positionPopover', options);
         });
       }
 
@@ -142,13 +129,57 @@
       var winTopMax = $(window).height() / 2,
           winLeftMax = $(window).width() / 2,
           pos = '';
-
-      (options.position_top >= 1 && options.position_top - $(options.scroll_target).scrollTop() <= winTopMax) ? pos = 'top' : pos = 'bottom';
-      (options.position_left >= 1 && options.position_left - $(options.scroll_target).scrollLeft() <= winLeftMax) ? pos += 'left' : pos += 'right';      
-      
+      (options.position_top >= 1 && options.position_top + $(options.scroll_target).scrollTop() <= winTopMax) ? pos = 'top' : pos = 'bottom';
+      (options.position_left >= 1 && options.position_left + $(options.scroll_target).scrollLeft() <= winLeftMax) ? pos += 'left' : pos += 'right';      
       return pos;
     },
-    _positionPopover: function (options) {
+    _reposition_popover: function (options) {
+    },
+    _position_popover: function (options) {
+    
+      console.log(options.arrow_position);
+
+      switch (options.arrow_position) {
+        case "topleft":
+          if (options.flush) {
+            options.position_top = options.outter_height;
+            options.position_left += -(options.outter_width/2)
+          } else {
+            options.position_top += (options.outter_height/2) + options.arrow_height + options.padding;
+            options.position_left += -(options.arrow_offset);
+          }
+          break;
+        case "bottomleft":
+          options.position_top += -options.tooltipHeight -(options.outter_height/2) - options.arrow_height - options.padding;
+          options.position_left += -(options.arrow_offset);
+          break;
+        case "topright":
+          options.position_top += (options.outter_height/2) + options.arrow_height + options.padding;
+          options.position_left += -(options.tooltipWidth) + (options.arrow_offset)
+          break;
+
+        case "bottomright":
+          options.position_top += -options.tooltipHeight -(options.outter_height/2) - options.arrow_height - options.padding;
+          options.position_left += -(options.tooltipWidth) + (options.arrow_offset)
+          break;
+      }
+
+      // ACCOUNT FOR SCROLL
+      // options.position_top += +($(options.scroll_target).scrollTop());
+      // options.position_left += +($(options.scroll_target).scrollLeft());
+      
+      if (options.tooltip) {
+        // RECODE FOR PASSING IN WIDTH AND HEIGHT
+        options.position_left = $(this).offset().left + (options.outter_width / 2) -(options.tooltipWidth/2);
+      }
+
+    },
+    _init_class_styles: function (options) {
+       options.content.addClass('popover_container ' + options.arrow_position).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
+      if(options.flush) options.content.addClass('flush');
+      if(options.tooltip) options.content.addClass('tooltip');
+      if (options.fixed) options.content.css({'position': 'fixed' });
+      $(this).addClass('active popover_target');
     }
   };
   $.fn.popover = function (method) {
