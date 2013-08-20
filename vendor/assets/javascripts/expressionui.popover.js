@@ -33,14 +33,28 @@
       options.tooltipHeight = 0;
       options.tooltipWidth = 0;
 
-      // GET HEIGHT & WIDTH
-      if (options.outter_height === null) {
-        options.outter_height = ($(this).outerHeight() === 0) ? $(this).attr('height') : $(this).outerHeight() ;  
-      }
-      if (options.outter_width === null) {
-        options.outter_width = ($(this).outerWidth() === 0) ? $(this).attr('width') : $(this).outerWidth() ;
-      }
+      $(this).popover('_get_width_height', options);
+      $(this).popover('_get_center_position', options);
+      if(!options.arrow_position) options.arrow_position = $(this).popover('_positionArrow', options);
+      $(this).popover('_init_class_styles', options);
 
+      options.tooltipHeight = options.content.outerHeight(),
+      options.tooltipWidth = options.content.outerWidth();
+
+      $(this).popover('_position_popover', options);
+
+      options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show('200');
+      options.afterOpen.apply(this, [options.content])
+      $(this).popover('_setupEvents', options);
+    },
+    close: function (options) {
+      $('.active.popover_target').removeClass('active popover_target')
+      options = $.extend({}, methods.defaults, options);
+      $(options.content).removeClass('popover_container topleft bottomleft topright bottomright tooltip flush').attr('style', '').hide();
+      $(this).popover('_destroyEvents', options);
+      options.afterClose.apply(this, [options.content]);
+    },
+    _get_center_position: function (options) {
       // POSITION CENTER OF ELEMENT
       if (options.position_left === null) {
         options.position_left = $(this).offset().left + (options.outter_width / 2);
@@ -52,36 +66,15 @@
       } else {
         options.position_top += (options.outter_height / 2);
       }
-
-      // NOT SURE I NEED
-      if (options.fixed) {
-        // options.position_top += +$(options.scroll_target).scrollTop();
-        // options.position_left += +$(options.scroll_target).scrollLeft(); 
-      }
-      
-      // POSITION ARROW
-      if(!options.arrow_position) options.arrow_position = $(this).popover('_positionArrow', options);
-
-      // ADD CLASSES & STYLES
-      $(this).popover('_init_class_styles', options);
-
-      options.tooltipHeight = options.content.outerHeight(),
-      options.tooltipWidth = options.content.outerWidth();
-
-      // POSITION POPOVER
-      $(this).popover('_position_popover', options);
-
-      // FINISH UP
-      options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show();
-      options.afterOpen.apply(this, [options.content])
-      $(this).popover('_setupEvents', options);
     },
-    close: function (options) {
-      $('.active.popover_target').removeClass('active popover_target')
-      options = $.extend({}, methods.defaults, options);
-      $(options.content).removeClass('popover_container topleft bottomleft topright bottomright tooltip flush').attr('style', '').hide();
-      $(this).popover('_destroyEvents', options);
-      options.afterClose.apply(this, [options.content]);
+    _get_width_height: function (options){
+      // GET HEIGHT & WIDTH
+      if (options.outter_height === null) {
+        options.outter_height = ($(this).outerHeight() === 0) ? $(this).attr('height') : $(this).outerHeight() ;  
+      }
+      if (options.outter_width === null) {
+        options.outter_width = ($(this).outerWidth() === 0) ? $(this).attr('width') : $(this).outerWidth() ;
+      }
     },
     _destroyEvents: function (options) {
       $(document).unbind('click.popover');
@@ -133,11 +126,30 @@
       (options.position_left >= 1 && options.position_left + $(options.scroll_target).scrollLeft() <= winLeftMax) ? pos += 'left' : pos += 'right';      
       return pos;
     },
-    _reposition_popover: function (options) {
+    reposition_popover: function (options) {
+      options = $.extend({}, methods.defaults, options);
+      options.tooltipHeight = 0;
+      options.tooltipWidth = 0;
+
+      $(this).popover('_get_width_height', options);
+      $(this).popover('_get_center_position', options);
+      if(!options.arrow_position) options.arrow_position = $(this).popover('_positionArrow', options);
+      $(this).popover('_move_class_styles', options);
+
+      options.tooltipHeight = options.content.outerHeight(),
+      options.tooltipWidth = options.content.outerWidth();
+
+      $(this).popover('_position_popover', options);
+
+
+      options.content.animate({
+          top: options.position_top,
+          left: options.position_left
+        }, 500, function() {
+          options.afterOpen.apply(this, [options.content]);
+        });
     },
     _position_popover: function (options) {
-    
-      console.log(options.arrow_position);
 
       switch (options.arrow_position) {
         case "topleft":
@@ -174,8 +186,12 @@
       }
 
     },
+    _move_class_styles: function (options) {
+      options.content.removeClass('topleft bottomleft topright bottomright');
+      options.content.addClass('popover_container ' + options.arrow_position);
+    },
     _init_class_styles: function (options) {
-       options.content.addClass('popover_container ' + options.arrow_position).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
+      options.content.addClass('popover_container ' + options.arrow_position).css({visibility: 'hidden', display: 'block', zIndex: '9999'});
       if(options.flush) options.content.addClass('flush');
       if(options.tooltip) options.content.addClass('tooltip');
       if (options.fixed) options.content.css({'position': 'fixed' });
