@@ -92,10 +92,16 @@
       }
 
       $(document).bind('click.popover', function(e) {
-        click++;
-        if (click > 1) {
-          $(this).popover('close', options);
-        }
+          switch (options.close_on_click) {
+              case "anywhere":
+                  // no block
+                  break;
+              case "outside":
+                  if (!$(e.target).parents('.popover_container').length) {
+                    $(this).popover('close', options);
+                  }
+                  break;
+          }
       });
 
       if (options.close_on_scroll) {
@@ -107,16 +113,6 @@
         });
       }
 
-      switch (options.close_on_click) {
-        case "anywhere":
-          // no block
-          break;
-        case "outside":
-          $(options.content).on('click.popover', function(e) {
-            e.stopPropagation();
-          });
-          break;
-      }
     },
     _positionArrow: function (options) {
       var winTopMax = $(window).height() / 2,
