@@ -92,17 +92,25 @@
       }
 
       $(document).bind('click.popover', function(e) {
-          switch (options.close_on_click) {
-              case "anywhere":
-                  // no block
-                  break;
-              case "outside":
-                  if (!$(e.target).parents('.popover_container').length) {
-                    $(this).popover('close', options);
-                  }
-                  break;
-          }
+        e.stopPropagation();
+        e.preventDefault();
+        switch (options.close_on_click) {
+          case "anywhere":
+            $(this).popover('close', options);
+            break;
+          case "outside":
+            if (!$(e.target).parents('.popover_container').length) {
+              $(this).popover('close', options);
+            }
+            break;
+        }
       });
+
+      // if (!container.is(e.target) // if the target of the click isn't the container...
+      //     && container.has(e.target).length === 0) // ... nor a descendant of the container
+      // {
+      //     container.hide();
+      // }
 
       if (options.close_on_scroll) {
         $(options.scroll_target).bind('scroll.popover', function() {
