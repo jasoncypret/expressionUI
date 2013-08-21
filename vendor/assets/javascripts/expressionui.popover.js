@@ -43,7 +43,7 @@
 
       $(this).popover('_position_popover', options);
 
-      options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show('200');
+      options.content.css({ 'left': options.position_left + 'px', 'top': options.position_top + 'px', 'display': 'none', 'visibility': 'visible' }).show();
       options.afterOpen.apply(this, [options.content])
       $(this).popover('_setupEvents', options);
     },
@@ -87,30 +87,26 @@
 
       if (options.reposition_on_resize) {
         $(window).bind("resize.popover", function () {
-          // TODO:
+          $(this).popover("reposition_popover", options);
         });
       }
 
-      $(document).bind('click.popover', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        switch (options.close_on_click) {
-          case "anywhere":
-            $(this).popover('close', options);
-            break;
-          case "outside":
-            if (!$(e.target).parents('.popover_container').length) {
+      $(document).unbind('click.popover').bind('click.popover', function(e) {
+        click++
+        if (click > 1) {
+          var container = $('.popover_container');
+          switch (options.close_on_click) {
+            case "anywhere":
               $(this).popover('close', options);
-            }
-            break;
+              break;
+            case "outside":
+              if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $(this).popover('close', options);
+              }
+              break;
+          }
         }
       });
-
-      // if (!container.is(e.target) // if the target of the click isn't the container...
-      //     && container.has(e.target).length === 0) // ... nor a descendant of the container
-      // {
-      //     container.hide();
-      // }
 
       if (options.close_on_scroll) {
         $(options.scroll_target).bind('scroll.popover', function() {
@@ -149,7 +145,10 @@
       options.content.animate({
           top: options.position_top,
           left: options.position_left
-        }, 500, function() {
+        },{
+          queue: false,
+          duration: 500
+        }, function() {
           options.afterOpen.apply(this, [options.content]);
         });
     },
