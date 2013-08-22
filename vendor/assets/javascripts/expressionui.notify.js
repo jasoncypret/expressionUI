@@ -145,9 +145,6 @@
             selector =  $(this).prev('.notify_container');
             break
         }
-        if (!$(this).hasClass("loading_null")) {
-          animate = false;
-        }
         if (animate) {
           $(this).slideUp("fast", function() {
             $(selector).removeClass('content_hidden content_overlay content_visible notify_container');
