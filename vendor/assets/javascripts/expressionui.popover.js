@@ -50,6 +50,9 @@
     close: function (options) {
       $('.active.popover_target').removeClass('active popover_target')
       options = $.extend({}, methods.defaults, options);
+      if (!$(options.content).length) {
+          options.content = this
+      }
       $(options.content).removeClass('popover_container topleft bottomleft topright bottomright tooltip flush').attr('style', '').hide();
       $(this).popover('_destroyEvents', options);
       options.afterClose.apply(this, [options.content]);
