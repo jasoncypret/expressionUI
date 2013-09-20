@@ -88,21 +88,22 @@
         $(window).bind "resize.popover", ->
           $(this).popover "reposition_popover", options
 
-      $(document).unbind("click.popover").bind "click.popover", (e) ->
+      $(document).unbind("click.popover").bind "click.popover", (event) ->
+        alert event.target.nodeName
         click++
         if click > 1
           container = $(".popover_container")
           switch options.close_on_click
             when "anywhere"
               if !!options.restrict_close_click
-                $(this).popover "close", options  unless $.inArray(e.target, options.restrict_close_click)
+                $(this).popover "close", options  if $.inArray(event.target, options.restrict_close_click)
               else
                 $(this).popover "close", options
             when "outside"
               if !!options.restrict_close_click
-                $(this).popover "close", options  if not container.is(e.target) and container.has(e.target).length is 0 and not $.inArray(e.target, options.restrict_close_click)
+                $(this).popover "close", options  if not container.is(event.target) and container.has(event.target).length is 0 and $.inArray(event.target, options.restrict_close_click)
               else
-                $(this).popover "close", options  if not container.is(e.target) and container.has(e.target).length is 0
+                $(this).popover "close", options  if not container.is(event.target) and container.has(event.target).length is 0
 
       if options.close_on_scroll
         $(options.scroll_target).bind "scroll.popover", ->
