@@ -14,10 +14,8 @@
       close_on_scroll: false
       scroll_target: $(document)
       scroll_threshold: 5
-      close_on_click:
-        where: "anywhere"
-        except: null
-
+      close_on_click: "anywhere"
+      restrict_close_click: null
       reposition_on_resize: false
       tooltip: false
       arrow_height: 12
@@ -31,7 +29,8 @@
       afterClose: $.noop
 
     init: (options) ->
-      options = $.extend(true, methods.defaults, options)
+      options = $.extend({}, methods.defaults, options)
+      console.log options
       options.tooltipHeight = 0
       options.tooltipWidth = 0
       $(this).popover "_get_width_height", options
@@ -93,16 +92,17 @@
         click++
         if click > 1
           container = $(".popover_container")
-          
-          # close_on_click: {
-          #   where: "anywhere",
-          #   except: null
-          # }
-          switch options.close_on_click.where
+          switch options.close_on_click
             when "anywhere"
-              $(this).popover "close", options  unless $.inArray(e.target, options.close_on_click.except)
+              if !!options.restrict_close_click
+                $(this).popover "close", options  unless $.inArray(e.target, options.restrict_close_click)
+              else
+                $(this).popover "close", options
             when "outside"
-              $(this).popover "close", options  if not container.is(e.target) and container.has(e.target).length is 0
+              if !!options.restrict_close_click
+                $(this).popover "close", options  if not container.is(e.target) and container.has(e.target).length is 0 and not $.inArray(e.target, options.restrict_close_click)
+              else
+                $(this).popover "close", options  if not container.is(e.target) and container.has(e.target).length is 0
 
       if options.close_on_scroll
         $(options.scroll_target).bind "scroll.popover", ->
@@ -128,7 +128,6 @@
       $(this).popover "_move_class_styles", options
       options.tooltipHeight = options.content.outerHeight()
       options.tooltipWidth = options.content.outerWidth()
-
       $(this).popover "_position_popover", options
       options.content.animate
         top: options.position_top
