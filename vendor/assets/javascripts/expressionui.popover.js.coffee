@@ -30,7 +30,6 @@
 
     init: (options) ->
       options = $.extend({}, methods.defaults, options)
-      console.log options
       options.tooltipHeight = 0
       options.tooltipWidth = 0
       $(this).popover "_get_width_height", options
@@ -89,7 +88,6 @@
           $(this).popover "reposition_popover", options
 
       $(document).unbind("click.popover").bind "click.popover", (event) ->
-        alert event.target.nodeName
         click++
         if click > 1
           container = $(".popover_container")
