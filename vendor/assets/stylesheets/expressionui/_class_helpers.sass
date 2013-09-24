@@ -1,3 +1,82 @@
++keyframes(push_in)
+  0%
+    // +translate3d
+    +translateX(100%)
+    +opacity(1)
+  100%
+    +translateX(0)
+    +opacity(1)
+
++keyframes(pull_out)
+  0%
+    +translateX(0)
+    +opacity(1)
+  50%
+    +opacity(1)
+  100%
+    +translateX(-100%)
+    +opacity(0)
+
++keyframes(pull_in)
+  0%
+    +opacity(1)
+    +translateX(-100%)
+  100%
+    +opacity(1)
+    +translateX(0)
+
++keyframes(push_out)
+  0%
+    +translateX(0)
+    +opacity(1)
+  50%
+    +opacity(1)
+  100%
+    +translateX(100%)
+    +opacity(0)
+
+.pull_out
+  +animation-name(pull_out)
+  +animation-duration(0.5s)
+  +animation-timing-function(ease)
+  +animation-fill-mode(both)
+  position: absolute
+  top: 0
+  left: 0
+  +opacity(0)
+  +translateX(0)
+  display: block !important
+
+.push_in
+  +animation-name(push_in)
+  +animation-duration(0.5s)
+  +animation-timing-function(ease)
+  +animation-fill-mode(both)
+  display: block !important
+  position: relative
+  +translateX(-100%)
+  +opacity(1)
+
+.pull_in
+  +animation-name(pull_in)
+  +animation-duration(0.5s)
+  +animation-timing-function(ease)
+  +animation-fill-mode(both)
+  +opacity(1)
+  display: block !important
+
+.push_out
+  +animation-name(push_out)
+  +animation-duration(0.5s)
+  +animation-timing-function(ease)
+  +animation-fill-mode(both)
+  position: absolute
+  top: 0
+  left: 0
+  +opacity(0)
+  display: block !important
+  +translateX(100%)
+
 .btn
   +btn(shade(white, 5%))
   &.highlight
@@ -54,6 +133,11 @@
   color: $info
 .text_success
   color: $success
+
+
+
+
+
 
 .flex_me
   +flex_me

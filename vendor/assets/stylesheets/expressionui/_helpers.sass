@@ -313,3 +313,11 @@
   @if $experimental-support-for-microsoft
     &:-ms-input-placeholder
       @content
+
+=keyframes($animation_name)
+  @-webkit-keyframes #{$animation_name}
+    @content
+  @-moz-keyframes #{$animation_name}
+    @content
+  @keyframes #{$animation_name}
+    @content
