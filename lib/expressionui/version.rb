@@ -1,3 +1,3 @@
 module Expressionui
-  VERSION = "0.1.4.9"
+  VERSION = "0.1.5.0"
 end
