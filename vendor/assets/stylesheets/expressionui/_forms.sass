@@ -4,16 +4,120 @@ $label_color: #999999
 $focus_color: $highlight
 $field_height: 35px
 $checkbox: 18px
-
-
-
-// CONSIDER STYLING ELEMENTS SEPARATE
-// -------------------------
-
+$data_image: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlVudGl0bGVkLVBhZ2VfeDI1XzIwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCgkgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjZweCIgdmlld0JveD0iMCAwIDEwIDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0ieiIvPg0KPGcgaWQ9IkxheWVyX3gyNV8yMDEiIG9wYWNpdHk9IjAuNCI+DQoJPHBhdGggaWQ9ImFycm93X3gyNV8yMGRvd25feDI1XzIwY29weSIgZD0iTTEuMTI0LDAuMTAzYzAuNDAyLDAsNy40NTYsMCw3LjczMywwYzAuMzU5LDAsMC42MjcsMC4yODIsMC40MTcsMC41Ng0KCQljLTAuMTY5LDAuMjIzLTMuNTY4LDQuNjc5LTMuODU5LDUuMDZjLTAuMTkxLDAuMjQ5LTAuNjQ3LDAuMjQ1LTAuODM4LDBDNC4zNjQsNS40NDgsMC45NDcsMC45NzUsMC43MSwwLjY1MQ0KCQlDMC41MzYsMC40MTQsMC43MjgsMC4xMDMsMS4xMjQsMC4xMDN6Ii8+DQo8L2c+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJ6Ii8+DQo8L3N2Zz4NCg=="
+$data_image_white: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlVudGl0bGVkLVBhZ2VfeDI1XzIwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCgkgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjZweCIgdmlld0JveD0iMCAwIDEwIDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0ieiIvPg0KPGcgaWQ9IkxheWVyX3gyNV8yMDEiIG9wYWNpdHk9IjAuNCI+DQoJPHBhdGggaWQ9ImFycm93X3gyNV8yMGRvd25feDI1XzIwY29weSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTEuMTI0LDAuMTAzYzAuNDAyLDAsNy40NTYsMCw3LjczMywwYzAuMzU5LDAsMC42MjcsMC4yODIsMC40MTcsMC41Ng0KCQljLTAuMTY5LDAuMjIzLTMuNTY4LDQuNjc5LTMuODU5LDUuMDZjLTAuMTkxLDAuMjQ5LTAuNjQ3LDAuMjQ1LTAuODM4LDBDNC4zNjQsNS40NDgsMC45NDcsMC45NzUsMC43MSwwLjY1MQ0KCQlDMC41MzYsMC40MTQsMC43MjgsMC4xMDMsMS4xMjQsMC4xMDN6Ii8+DQo8L2c+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJ6Ii8+DQo8L3N2Zz4NCg=="
 
 
 // MIXIN: Custom Select
 // -------------------------
+
+=data_image_settings
+  background-position: 97% 50%, 0 0
+  background-repeat: no-repeat, repeat
+  background-size: 14px 14px, auto auto
+
+=select($base_color, $show_data_image: true, $border: true, $style: flat)
+  @if $style == flat
+    outline: 0
+    border: 0
+    text-decoration: none
+    font-weight: 600
+    line-height: 1em
+    // +serif
+    font-family: $serif, serif !important
+    width: auto
+    +inline-block
+    padding: 8px 13px
+    font-size: ($font_size)+5px !important
+    +border-radius(3px)
+    cursor: pointer
+    @if $show_data_image
+      @if lightness($base_color) > 75%
+        background: url($data_image) $base_color
+      @else
+        background: url($data_image_white) $base_color
+      +data_image_settings
+    @else
+      background: $base_color
+    +text_color($base_color, false, true)
+    @if $border
+      border: 1px solid shade($base_color, 10%)
+    @else
+      +border-radius(2px)
+    &:hover, &:active, &.active
+      @if $show_data_image
+        @if lightness(shade($base_color, 10%)) > 75%
+          background: url($data_image) shade($base_color, 10%)
+        @else
+          background: url($data_image_white) shade($base_color, 10%)
+        +data_image_settings
+      @else
+        background: shade($base_color, 10%)
+      +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
+      +text_color(shade($base_color, 10%), false , true)
+      @if $border
+        border: 1px solid shade($base_color, 20%)
+    &.active:hover
+      @if $show_data_image
+        @if lightness(shade($base_color, 20%)) > 75%
+          background: url($data_image) shade($base_color, 20%)
+        @else
+          background: url($data_image_white) shade($base_color, 20%)
+        +data_image_settings
+      @else
+        background: shade($base_color, 20%)
+      +box-shadow(shade($base_color, 30%) 0 2px 0 inset)
+      +text_color(shade($base_color, 20%), false, true)
+      @if $border
+        border: 1px solid shade($base_color, 30%)
+    &.disabled, &.disabled:hover
+      cursor: not-allowed
+      +opacity(0.7)
+      @if $show_data_image
+        @if lightness($base_color) > 75%
+          background: url($data_image) $base_color
+        @else
+          background: url($data_image_white) $base_color
+        +data_image_settings
+      @else
+        background: $base_color
+      +box-shadow(none)
+      +text_color($base_color, false, true)
+  @else
+    // TODO: Build Gradient Style
+
+
+// MIXIN: Form Style
+// -------------------------
+=html_select($base_color, $arrow: $accent)
+  +select($base_color, false)
+  padding-right: 50px
+  position: relative
+  &:after
+    color: $arrow
+    font-size: 16px
+    content: '5'
+    +icon_font
+    display: block
+    right: 7px
+    top: -2px
+    padding: 0 $pad
+    line-height: ($field_height + 5px)
+    height: ($field_height + 5px)
+    position: absolute
+    +rotate(90deg)
+    border-bottom: 1px solid shade($base_color, 10%)
+  &:hover, &:active, &.active
+    &:after
+      border-bottom: 1px solid shade($base_color, 20%)
+  &.active:hover
+    &:after
+      border-bottom: 1px solid shade($base_color, 30%)
+  &.disabled, &.disabled:hover
+    &:after
+      border-bottom: 1px solid shade($base_color, 10%)
+      
+
 
 
 // MIXIN: Form Style
@@ -35,6 +139,7 @@ $checkbox: 18px
 
 
 
+
 // Textarea
 // -------------------------
 textarea
@@ -48,42 +153,15 @@ textarea
 
 
 
-
 // Selects
 // -------------------------
 select
-  $data_image: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNS4xLCBFeHBvcnQgU1ZHIEV4dGVuc2lvbiBieSBBYXJvbiBCZWFsbCAoaHR0cDovL2ZpcmV3b3Jrcy5hYmVhbGwuY29tKSAuIFZlcnNpb246IDAuNi4xICAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxMCA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwcHgiIGhlaWdodD0iNnB4Igo+Cgk8ZyBpZD0iTGF5ZXIlMjAxIj4KCQk8cGF0aCBpZD0iYXJyb3clMjBkb3duJTIwY29weSIgZD0iTSAxLjEyNDEgMC4xMDI1IEMgMS41MjYyIDAuMTAyNSA4LjU4MDIgMC4xMDI1IDguODU3NSAwLjEwMjUgQyA5LjIxNjggMC4xMDI1IDkuNDg0NCAwLjM4NDQgOS4yNzQyIDAuNjYyNiBDIDkuMTA1NyAwLjg4NTQgNS43MDYgNS4zNDE1IDUuNDE1MyA1LjcyMjEgQyA1LjIyNDIgNS45NzE4IDQuNzY4NyA1Ljk2NzUgNC41Nzc1IDUuNzIyMSBDIDQuMzY0NCA1LjQ0ODEgMC45NDczIDAuOTc1MiAwLjcwOTkgMC42NTEgQyAwLjUzNTkgMC40MTM4IDAuNzI4MiAwLjEwMjUgMS4xMjQxIDAuMTAyNSBaIiBmaWxsPSIjNzE3MTcxIi8+Cgk8L2c+Cjwvc3ZnPg=="
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
-  background: url($data_image) tint(#9ea7b2, 90%)
-  +text_color(tint(#9ea7b2, 90%), false)
-  border: 1px solid tint(#9ea7b2, 90%)
-  background-position: 95% 53%, 0 0
-  background-repeat: no-repeat, repeat
-  background-size: 8px 8px, auto auto
-  outline: 0
-  text-decoration: none
-  line-height: ($field_height)-($pad/2)
-  +font_stack
-  width: auto
-  +inline-block
-  padding: $pad/2 24px $pad/2 11px
-  font-size: 1em
-  +border-radius(2px)
-  cursor: pointer
-  &:hover, &:active
-    background: url($data_image) tint(#9ea7b2, 70%)
-    border: 1px solid tint(#9ea7b2, 70%)
-    border-top: 1px solid shade(#9ea7b2, 20%)
-    +text_color(tint(#9ea7b2, 70%), false)
-    background-position: 95% 53%, 0 0
-    background-repeat: no-repeat, repeat
-    background-size: 8px 8px, auto auto
-    +box-shadow(rgba(black, 0.2) 0 2px 0 inset)
-    +text_color(shade(#F5F5F5, 10%))
+  +appearance(none)
+  +select(shade(white, 1%))
+  
 
-
+.html_select
+  +html_select(shade(white, 1%))
 
 
 // Inputs
@@ -182,8 +260,6 @@ input
           margin: 0
           top: auto
           left: auto
-        
-
 
 
   // Radios
@@ -242,7 +318,7 @@ input
       cursor: pointer
       &.inline
         +inline_block
-    input[type="text"], input[type="textfield"], input[type="password"], input[type="email"], textarea, select
+    input[type="text"], input[type="textfield"], input[type="password"], input[type="email"], textarea, select, .html_select
       display: block
       width: 100%
     input[type=checkbox], input[type=radio]
