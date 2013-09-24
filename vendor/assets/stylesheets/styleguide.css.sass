@@ -1,0 +1,459 @@
+$font_stack: lato
+$header_background: #0E3150
+$site_color: #F45A4F
+
+@import compass
+@import expressionui.sass
+@import animate
+@import animate/shared
+@import animate/animations/fading-entrances/fadeInUp
+
+
+// Global
+body
+  height: auto !important
+
+.inner
+  +tablet-and-above
+    width: auto
+    margin: 0 $pad
+  +desktop-only
+    width: 1000px
+    margin: 0 auto
+  +desktop-large
+    width: 1200px
+    margin: 0 auto
+  +mobile-only
+    width: auto
+    margin: 0 $pad
+
+h1.center_heading
+  font-size: 50px
+  text-align: center
+  display: block
+  color: #444444
+  border-bottom: 1px solid shade(white, 10%)
+  padding-bottom: $pad*2
+
+.flex_me
+  +flex_me
+
+.post_styling
+  @import expressionui/post_style.sass
+
+
+#example_modal.popover_container
+  padding: $pad
+
+
+// Top Header
+.header
+  background: $header_background
+  +text_color($header_background)
+  +text-shadow(none)
+
+  // Navigation
+  .nav
+    background: $header_background
+    position: fixed
+    top: 0
+    width: 100%
+    +group
+    padding: $pad 0
+    border-bottom: 0px solid $site_color
+    z-index: 4000
+    .inner
+      .logo
+        font-size: 60px
+        line-height: 60px
+        width: 56px
+        text-align: left
+        position: relative
+        float: left
+        .icon
+          position: relative
+          z-index: 1
+          color: $site_color
+        .background
+          content: ''
+          display: block
+          background: white
+          width: 30px
+          height: 30px
+          position: absolute
+          top: 16px
+          left: 4px
+          z-index: 0
+      h1
+        display: block
+        float: left
+        font-size: 25px
+        line-height: 60px
+        font-weight: 300
+        margin: 0
+        +opacity(0.58)
+      ul
+        list-style: none
+        float: right
+        li
+          display: block
+          float: right
+          margin-left: $pad
+          a
+            display: block
+            float: right
+            color: white
+      +tablet-and-above
+      +desktop-only
+      +desktop-large
+      +mobile-only
+        .logo
+          font-size: 40px
+          line-height: 40px
+          width: 36px
+          .icon
+            width: 10px
+            height: 10px
+            top: 0
+            left: 0
+          .background
+            width: 21px
+            height: 19px
+            top: 11px
+            left: 3px
+        h1
+          font-size: 20px
+          line-height: 40px
+
+  // HERO
+  .head.inner
+    padding: 130px 0 $pad*3
+    .perc50.right
+      padding-left: $pad*3
+      +translateY(-2000px)
+      +animation-name(fadeInUp)
+      +animation-delay(0.5s)
+      +animation-duration(0.5s)
+      +animation-timing-function(ease)
+      +animation-fill-mode(forwards)
+      h2
+        font-weight: 300
+        text-align: left
+        font-size: 24px
+      a
+        padding-top: $pad*1.8
+        padding-bottom: $pad*1.8
+        margin-right: $pad*2
+        font-weight: 300
+        +inline_block
+        font-size: 140%
+        color: $site_color
+        &:hover
+          color: tint($site_color, 50%)
+      a.btn.xlarge
+        +btn(saturate(tint($header_background, 80%), 30%))
+        +inline_block
+        font-size: 130%
+        font-weight: 300
+        padding: $pad*1.8 $pad*4
+    .perc50.left
+      img
+        width: 100%
+        height: auto
+    +tablet-and-above
+    +desktop-only
+    +desktop-large
+    +mobile-only
+      .perc50.left, .perc50.right
+        display: block !important
+        width: auto !important
+        float: none !important
+        padding: 0 !important
+      .perc50.left
+        img
+          width: 80%
+          margin: 0 auto
+          display: block
+      .logo
+        line-height: 50px
+        font-size: 100px
+      h1
+        font-size: 30px
+      h2
+        font-size: 20px
+      a
+        display: block !important
+        width: auto !important
+        margin-right: 0 !important
+        text-align: center !important
+
+  // Red Example Section
+  .exp
+    background: $site_color
+    padding: $pad*3 $pad
+    .inner
+      $col: 203px
+      +group
+      position: relative
+      .col1
+        text-align: center
+        width: $col
+        &.center
+          position: absolute
+          left: 50%
+          margin-left: -($col/2)
+        img
+          height: 75px
+          width: auto
+          margin: 0 auto
+          display: block
+        h4
+          margin: 10px 0 0
+          font-size: 17px
+        h5
+          margin: 5px 0 0
+          font-size: 10px
+          font-weight: 300
+          a
+            color: white
+            &:hover
+              color: $accent
+        +tablet-and-above
+          img
+            height: 85px
+        +desktop-only
+          img
+            height: 100px
+        +desktop-large
+          width: ($col)+($col/1.5)
+          &.center
+            margin-left: -(($col)+($col/1.5))/2
+          img
+            height: 110px
+        +mobile-only
+          float: none !important
+          display: block !important
+          width: auto !important
+          position: relative !important
+          margin: 0 0 30px !important
+          left: auto !important
+          border-bottom: 1px solid rgba(black, 0.2)
+          padding-bottom: 30px
+          &.right
+            border-bottom: 0
+            padding-bottom: 0
+          img
+            height: 110px
+
+#getting_started
+  .inner
+    .col1
+      padding: 0 5px
+      width: 30%
+      h4
+        margin-bottom: 0
+        font-size: 16px
+      p
+        color: shade(white, 30%)
+        margin: 8px 0
+      pre
+        +inline_block
+        border: 1px solid shade(white, 10%)
+        +border-radius(3px)
+        margin-top: 0
+        code
+          padding: 0.3em
+          p
+            margin: 0
+    +mobile-only
+      .group
+        display: block
+        .col1
+          width: auto
+          display: block
+          float: none
+          padding: 0
+      
+#components
+  h1.center_heading
+    margin-top: $pad*6
+    margin-bottom: 0
+  .section
+    .inner
+      h1.heading_text
+        //text-transform: uppercase
+        font-weight: 300
+        color: shade(white, 30%)
+        font-size: 30px
+        margin-top: $pad*6
+      .perc50
+        &.left
+          padding-right: $pad*1.5
+        &.right
+          padding-left: $pad*1.5
+      +tablet-and-above
+        width: auto
+        margin: 0 $pad
+      +desktop-only
+        width: 1000px
+        margin: 0 auto
+      +desktop-large
+        width: 1200px
+        margin: 0 auto
+      +mobile-only
+        width: auto
+        margin: 0 $pad
+        .perc50
+          &.left, &.right
+            width: auto
+            float: none
+            padding: 0
+      .icon_font
+        text-align: center
+        .icon_left
+          margin: $pad 0
+          font-size: 150%
+          color: tint(black, 50%)
+          &:before
+            font-size: 180%
+            color: black
+            line-height: 1.2
+      &.helpers, &.variables
+        .code_format
+          margin-top: $pad*3
+          font-size: 130%
+          font-weight: bold
+          code
+            p
+              margin: 0
+        .perc25
+          float: left
+          pre
+            margin-right: $pad
+            margin-left: $pad
+          &:last-child
+            float: right
+      &.variables
+        .code_format
+          width: 23%
+          display: block
+          float: left
+          margin: 1%
+          font-weight: normal
+          font-size: 100%
+          line-height: 2em
+          span.default
+            border: 1px solid shade(white, 10%) !important
+            background: white
+            margin-left: 4px
+            padding: 3px 8px
+            +border-radius(3px)
+            font-style: italic
+            +inline_block
+            line-height: 1.5em
+        +tablet-and-above
+          .code_format
+            width: 48%
+        +desktop-only
+          .code_format
+            width: 31.3%
+        +desktop-large
+          .code_format
+            width: 23%
+        +mobile-only
+          .code_format
+            width: auto
+            float: none
+
+      .mixedbag_example
+        +max_height(300px)
+        overflow-y: auto
+
+
+footer
+  background: tint(black, 15%)
+  +text_color($contrast, false)
+  text-align: center
+  .inner
+    padding: $pad
+    h1
+      font-size: 24px
+    h2
+      margin: 0
+      font-size: 18px
+      font-weight: 300
+      color: shade(white, 40%)
+    a
+      color: tint($site_color, 50%)
+      &:hover
+        color: white
+    .icon
+      font-size: 400%
+      width: 100px
+      line-height: 0.9em
+
+#example_modal
+  width: 500px
+
+
+
+// Code stylings
+pre
+  border: 1px solid shade(white, 10%) !important
+  margin-top: 0
+  code
+    display: block
+    padding: 0.3em
+    color: #333
+    background: ghostwhite
+    p
+      margin: 0
+  .comment, .template_comment, .diff .header, .javadoc
+    color: #998
+    font-style: italic
+  .keyword, .css .rule .keyword, .winutils, .javascript .title, .nginx .title, .subst, .request, .status
+    color: #333
+    font-weight: bold
+  .number, .hexcolor, .ruby .constant
+    color: #099
+  .string, .tag .value, .phpdoc, .tex .formula
+    color: #dd1144
+  .title, .id
+    color: #900
+    font-weight: bold
+  .javascript .title, .lisp .title, .clojure .title, .subst
+    font-weight: normal
+  .class .title, .haskell .type, .vhdl .literal, .tex .command
+    color: #458
+    font-weight: bold
+  .tag
+    color: #000080
+    font-weight: normal
+    .title
+      color: #000080
+      font-weight: normal
+  .rules .property, .django .tag .keyword
+    color: #000080
+    font-weight: normal
+  .attribute, .variable, .lisp .body
+    color: teal
+  .regexp
+    color: #009926
+  .class
+    color: #458
+    font-weight: bold
+  .symbol, .ruby .symbol .string, .lisp .keyword, .tex .special, .prompt
+    color: #990073
+  .built_in, .lisp .title, .clojure .built_in
+    color: #0086b3
+  .preprocessor, .pi, .doctype, .shebang, .cdata
+    color: #999
+    font-weight: bold
+  .deletion
+    background: #ffdddd
+  .addition
+    background: #ddffdd
+  .diff .change
+    background: #0086b3
+  .chunk
+    color: #aaaaaa
