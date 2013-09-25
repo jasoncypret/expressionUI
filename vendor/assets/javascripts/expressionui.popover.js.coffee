@@ -175,6 +175,7 @@
       options.content.addClass "flush"  if options.flush
       options.content.addClass "tooltip"  if options.tooltip
       options.content.css position: "fixed"  if options.fixed
+      options.content.css position: "absolute"  unless options.fixed
       $(this).addClass "active popover_target"
 
   $.fn.popover = (method) ->

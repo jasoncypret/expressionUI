@@ -16,6 +16,7 @@ class ViewModel
     $(e.currentTarget).popover(
       content: $('#example_modal')
       close_on_click: 'outside'
+      fixed: false
     )
 
   $(".section.group .menu .btn").mouseover(->
@@ -24,6 +25,7 @@ class ViewModel
     $("#popover_tip").html content
     $(this).popover
       content: $("#popover_tip")
+      fixed: false
       tooltip: true
 
   ).mouseout ->
