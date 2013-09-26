@@ -11,7 +11,7 @@
       padding: 5
       flush: false
       fixed: true
-      close_on_scroll: false
+      close_on_scroll: true
       scroll_target: $(document)
       scroll_threshold: 5
       close_on_click: "anywhere"
@@ -77,7 +77,7 @@
 
     _destroyEvents: (options) ->
       $(document).unbind "click.popover"
-      $(document).unbind "scroll.popover"
+      $(options.scroll_target).unbind "scroll.popover"
       $(document).unbind "resize.popover"
 
     _setupEvents: (options) ->
