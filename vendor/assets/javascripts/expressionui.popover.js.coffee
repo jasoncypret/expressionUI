@@ -11,7 +11,7 @@
       padding: 5
       flush: false
       fixed: true
-      close_on_scroll: true
+      close_on_scroll: false
       scroll_target: $(document)
       scroll_threshold: 5
       close_on_click: "anywhere"
@@ -27,6 +27,7 @@
       outter_width: null
       afterOpen: $.noop
       afterClose: $.noop
+      afterReposition: $.noop
 
     init: (options) ->
       options = $.extend({}, methods.defaults, options)
@@ -38,7 +39,6 @@
       $(this).popover "_init_class_styles", options
       options.tooltipHeight = options.content.outerHeight()
       options.tooltipWidth = options.content.outerWidth()
-
       $(this).popover "_position_popover", options
       options.content.css(
         left: options.position_left + "px"
@@ -58,8 +58,6 @@
       options.afterClose.apply this, [options.content]
 
     _get_center_position: (options) ->
-      
-      # POSITION CENTER OF ELEMENT
       if options.position_left is null
         options.position_left = $(this).offset().left + (options.outter_width / 2)
       else
@@ -70,44 +68,44 @@
         options.position_top += (options.outter_height / 2)
 
     _get_width_height: (options) ->
-      
-      # GET HEIGHT & WIDTH
       options.outter_height = (if ($(this).outerHeight() is 0) then $(this).attr("height") else $(this).outerHeight())  if options.outter_height is null
       options.outter_width = (if ($(this).outerWidth() is 0) then $(this).attr("width") else $(this).outerWidth())  if options.outter_width is null
 
     _destroyEvents: (options) ->
       $(document).unbind "click.popover"
       $(options.scroll_target).unbind "scroll.popover"
-      $(document).unbind "resize.popover"
+      $(window).unbind "resize.popover"
 
     _setupEvents: (options) ->
-      _this = $(this)
-      click = 0
-      if options.reposition_on_resize
-        $(window).bind "resize.popover", ->
-          $(this).popover "reposition_popover", options
+      if event?
+        event.stopPropagation()
 
-      $(document).unbind("click.popover").bind "click.popover", (event) ->
-        click++
-        if click > 1
-          container = $(".popover_container")
-          switch options.close_on_click
-            when "anywhere"
-              if !!options.restrict_close_click
-                $(this).popover "close", options  if $.inArray(event.target, options.restrict_close_click)
-              else
-                $(this).popover "close", options
-            when "outside"
-              if !!options.restrict_close_click
-                $(this).popover "close", options  if not container.is(event.target) and container.has(event.target).length is 0 and $.inArray(event.target, options.restrict_close_click)
-              else
-                $(this).popover "close", options  if not container.is(event.target) and container.has(event.target).length is 0
+      if options.reposition_on_resize
+        $(window).bind "resize.popover", =>
+          options.position_left = null
+          options.position_top = null
+          options.outter_height = null
+          options.outter_width = null
+          @popover "reposition_popover", options
+
+      $(document).unbind("click.popover").bind "click.popover", (event) =>  
+        container = $(".popover_container")
+        switch options.close_on_click
+          when "anywhere"
+            if !!options.restrict_close_click
+              $(this).popover "close", options  if $.inArray(event.target, options.restrict_close_click)
+            else
+              $(this).popover "close", options
+          when "outside"
+            if !!options.restrict_close_click
+              $(this).popover "close", options  if not container.is(event.target) and container.has(event.target).length is 0 and $.inArray(event.target, options.restrict_close_click)
+            else
+              $(this).popover "close", options  if not container.is(event.target) and container.has(event.target).length is 0
 
       if options.close_on_scroll
-        $(options.scroll_target).bind "scroll.popover", ->
+        $(options.scroll_target).bind "scroll.popover", =>
           $(document).trigger "content.scroll"
           $(this).popover "close", options  if $(options.scroll_target).scrollTop() >= options.scroll_threshold
-
 
     _positionArrow: (options) ->
       winTopMax = $(window).height() / 2
@@ -119,12 +117,14 @@
 
     reposition_popover: (options) ->
       options = $.extend({}, methods.defaults, options)
+      $(this).popover "_remove_class_styles", options
+      options.arrow_position = null
       options.tooltipHeight = 0
       options.tooltipWidth = 0
       $(this).popover "_get_width_height", options
       $(this).popover "_get_center_position", options
       options.arrow_position = $(this).popover("_positionArrow", options)  unless options.arrow_position
-      $(this).popover "_move_class_styles", options
+      $(this).popover "_add_class_styles", options
       options.tooltipHeight = options.content.outerHeight()
       options.tooltipWidth = options.content.outerWidth()
       $(this).popover "_position_popover", options
@@ -135,7 +135,7 @@
         queue: false
         duration: 500
       , ->
-        options.afterOpen.apply this, [options.content]
+        options.afterReposition.apply this, [options.content]
 
 
     _position_popover: (options) ->
@@ -156,14 +156,12 @@
         when "bottomright"
           options.position_top += -options.tooltipHeight - (options.outter_height / 2) - options.arrow_height - options.padding
           options.position_left += -(options.tooltipWidth) + (options.arrow_offset)
-      
-      # ACCOUNT FOR SCROLL
-      # options.position_top += +($(options.scroll_target).scrollTop());
-      # options.position_left += +($(options.scroll_target).scrollLeft());
       options.position_left = $(this).offset().left + (options.outter_width / 2) - (options.tooltipWidth / 2)  if options.tooltip
 
-    _move_class_styles: (options) ->
+    _remove_class_styles: (options) ->
       options.content.removeClass "topleft bottomleft topright bottomright"
+    
+    _add_class_styles: (options) ->
       options.content.addClass "popover_container " + options.arrow_position
 
     _init_class_styles: (options) ->
