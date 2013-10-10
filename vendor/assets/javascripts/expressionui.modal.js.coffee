@@ -76,7 +76,7 @@
       _this = $(this)
       options.ajax = options.ajax + " " + options.ajaxTarget  if options.ajaxTarget
       if options.notify
-        _this.parents(".modalBody").notify
+        $(_this).parents(".modalBody").notify
           style: "none"
           position: "middle"
           loading: "circles"
@@ -84,7 +84,7 @@
           content: "hidden"
 
       _this.load options.ajax, (response, status, xhr) ->
-        _this.parents(".modalBody").find(".notify").notify "close"
+        $(_this).parents(".modalBody").find(".notify").notify "close"
         setTimeout =>
           options.afterAjax.call()
         , 100
