@@ -85,7 +85,9 @@
 
       _this.load options.ajax, (response, status, xhr) ->
         _this.parents(".modalBody").find(".notify").notify "close"
-        options.afterAjax.call()
+        setTimeout =>
+          options.afterAjax.call()
+        , 100
         if status is "error"
           msg = "Sorry but there was an error: "
           alert msg + xhr.status + " " + xhr.statusText
