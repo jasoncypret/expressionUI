@@ -1,4 +1,3 @@
-# expressionUI modal v1.0
 # * https://github.com/jasoncypret/expressionUI
 # *
 # * Copyright (c) 2013 Jason Cypret (http://jasoncypret.com/)
@@ -35,6 +34,7 @@
       afterOpen: $.noop
       beforeClose: $.noop
       afterClose: $.noop
+      afterAjax: $.noop
 
     init: (options) ->
       options = $.extend({}, methods.defaults, options)
@@ -70,13 +70,13 @@
       $("#" + options.id + " .modal").modal "position", options
       $("#" + options.id).modal "_setupEvents", options
       $(options.appendTo).addClass "modal_open"
-      options.afterOpen.call()  unless options.ajaxTarget
+      options.afterOpen.call()
 
     ajax: (options) ->
       _this = $(this)
       options.ajax = options.ajax + " " + options.ajaxTarget  if options.ajaxTarget
       if options.notify
-        _this.parents(".modalBody").notify
+        $(_this).parents(".modalBody").notify
           style: "none"
           position: "middle"
           loading: "circles"
@@ -84,8 +84,10 @@
           content: "hidden"
 
       _this.load options.ajax, (response, status, xhr) ->
-        _this.parents(".modalBody").find(".notify").notify "close"
-        options.afterOpen.call()
+        $(_this).parents(".modalBody").find(".notify").notify "close"
+        setTimeout =>
+          options.afterAjax.call()
+        , 100
         if status is "error"
           msg = "Sorry but there was an error: "
           alert msg + xhr.status + " " + xhr.statusText

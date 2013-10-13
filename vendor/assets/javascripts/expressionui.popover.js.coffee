@@ -1,4 +1,3 @@
-# expressionUI popover v2.0
 # * https://github.com/jasoncypret/expressionUI
 # *
 # * Copyright (c) 2013 Jason Cypret (http://jasoncypret.com/)
