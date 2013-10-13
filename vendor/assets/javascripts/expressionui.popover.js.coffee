@@ -111,7 +111,7 @@
       winTopMax = $(window).height() / 2
       winLeftMax = $(window).width() / 2
       pos = ""
-      (if (options.position_top >= 1 and options.position_top + $(options.scroll_target).scrollTop() <= winTopMax) then pos = "top" else pos = "bottom")
+      (if (options.position_top >= 1 and options.position_top <= winTopMax) then pos = "top" else pos = "bottom")
       (if (options.position_left >= 1 and options.position_left + $(options.scroll_target).scrollLeft() <= winLeftMax) then pos += "left" else pos += "right")
       pos
 

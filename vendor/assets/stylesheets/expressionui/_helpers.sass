@@ -17,6 +17,10 @@
 =font_stack
   font-family: $font_stack, sans-serif
 
+=background_cover
+  +background-size(cover)
+  background-position: center
+
 =serif
   font-family: $serif, serif
 
@@ -259,12 +263,12 @@
   font-weight: normal !important
   -webkit-font-smoothing: antialiased
   text-transform: none !important
+  vertical-align: baseline
 
 =icon_inline
   +icon_font
   position: relative
   content: attr(data-icon)
-  text-transform: none !important
   vertical-align: baseline
   line-height: 0
   font-size: 1.4em
