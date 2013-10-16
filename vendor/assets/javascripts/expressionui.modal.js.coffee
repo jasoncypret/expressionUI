@@ -93,7 +93,8 @@
           alert msg + xhr.status + " " + xhr.statusText
 
 
-    close: (options) ->
+    close: (options={}) ->
+      # TODO: This is not extending!
       options = $.extend({}, methods.defaults, options)
       if $(".modal")[1]
         amount = $(".modal").length - 1
