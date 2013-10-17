@@ -32,7 +32,7 @@
       if typeof options.content is "string"
         $('.popover').remove()
         $('body').append '<div class="popover">' + options.content + '</div>'
-        methods.defaults.content = $('.popover')
+        options.content = methods.defaults.content = $('.popover')
       options = $.extend({}, methods.defaults, options)
       options.tooltipHeight = 0
       options.tooltipWidth = 0
