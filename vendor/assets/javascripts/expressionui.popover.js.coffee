@@ -32,6 +32,10 @@
       options = $.extend({}, methods.defaults, options)
       options.tooltipHeight = 0
       options.tooltipWidth = 0
+      if typeof options.content is "string"
+        $('.popover').remove()
+        $('body').append '<div class="popover">' + options.content + '</div>'
+        options.content = $('.popover')
       $(this).popover "_get_width_height", options
       $(this).popover "_get_center_position", options
       options.arrow_position = $(this).popover("_positionArrow", options)  unless options.arrow_position
