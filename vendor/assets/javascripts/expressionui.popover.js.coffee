@@ -134,9 +134,9 @@
       options.content.animate
         top: options.position_top
         left: options.position_left
-      ,
         queue: false
-        duration: 500
+      ,
+        500
       , ->
         options.afterReposition.apply this, [options.content]
 
