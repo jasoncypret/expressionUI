@@ -1,98 +1,85 @@
-// iOS 7-like panel animation using Zepto
-// this is a bit simplified, but it's a good start
-
-// var PANEL_SPEED = ,
-//    PANEL_EASING = 'cubic-bezier(0.23,1,0.32,1)'
-
-// $('#panel_to_slide_out').animate({ 
-//   translateX: '-50%', opacity: 1 }, PANEL_SPEED, PANEL_EASING)
-// $('#panel_to_slide_in').animate({ 
-//   translateX: '0%', opacity: 1 }, PANEL_SPEED, PANEL_EASING)
-
-
-+keyframes(push_in)
-  0%
-    +transform( translate3d(50%, 0, 0) )
-    // left: 100%
-    +opacity(1)
-  100%
-    +transform( translate3d(0, 0, 0) )
-    // left: 0
-    +opacity(1)
-
-
 +keyframes(pull_out)
   0%
-    // +translateX(0)
     +transform( translate3d(0, 0, 0) )
     +opacity(1)
-  50%
-    +opacity(1)
   100%
-    +transform( translate3d(-50%, 0, 0) )
-    +opacity(0)
-
-+keyframes(pull_in)
-  0%
-    +opacity(1)
-    +transform( translate3d(-50%, 0, 0) )
-  100%
-    +opacity(1)
-    +transform( translate3d(0, 0, 0) )
+    +transform( translate3d(-25%, 0, 0) )
+    +opacity(0.9)
 
 +keyframes(push_out)
   0%
     +transform( translate3d(0, 0, 0) )
-    +opacity(1)
-  50%
-    +opacity(1)
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+  90%
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
   100%
-    +transform( translate3d(50%, 0, 0) )
-    +opacity(0)
+    +transform( translate3d(100%, 0, 0) )
+    +box-shadow(rgba(black, 0) -10px 0 10px -5px)
 
++keyframes(push_in)
+  0%
+    +transform( translate3d(100%, 0, 0) )
+    +opacity(1)
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+  100%
+    +transform( translate3d(0, 0, 0) )
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+    +opacity(1)
 
++keyframes(pull_in)
+  0%
+    +opacity(1)
+    +transform( translate3d(-25%, 0, 0) )
+  100%
+    +opacity(1)
+    +transform( translate3d(0, 0, 0) )
 
 .pull_out
   +animation-name(pull_out)
-  +animation-duration(650)
-  +animation-timing-function(cubic-bezier(0.23,1,0.32,1))
+  +animation-duration(400ms)
+  +animation-timing-function(cubic-bezier(0.1, 0.7, 0.1, 1))
   +animation-fill-mode(both)
   position: absolute
   top: 0
   left: 0
   +opacity(0)
-  +translateX(0)
   display: block !important
-
-.push_in
-  +animation-name(push_in)
-  +animation-duration(650)
-  +animation-timing-function(cubic-bezier(0.23,1,0.32,1))
-  +animation-fill-mode(both)
-  display: block !important
-  position: relative
-  +translateX(-100%)
-  +opacity(1)
-
-.pull_in
-  +animation-name(pull_in)
-  +animation-duration(650)
-  +animation-timing-function(cubic-bezier(0.23,1,0.32,1))
-  +animation-fill-mode(both)
-  +opacity(1)
-  display: block !important
+  z-index: 2
+  +backface-visibility(hidden)
+  -webkit-overflow-scrolling: touch
 
 .push_out
   +animation-name(push_out)
-  +animation-duration(650)
-  +animation-timing-function(cubic-bezier(0.23,1,0.32,1))
+  +animation-duration(400ms)
+  +animation-timing-function(cubic-bezier(0.6, 0.1, 0.3, 1))
   +animation-fill-mode(both)
   position: absolute
   top: 0
   left: 0
-  +opacity(0)
+  // +opacity(0)
   display: block !important
-  +translateX(100%)
+  // +translateX(100%)
+  z-index: 1
+
+.push_in
+  +animation-name(push_in)
+  +animation-duration(400ms)
+  +animation-timing-function(cubic-bezier(0.6, 0.1, 0.3, 1))
+  +animation-fill-mode(both)
+  display: block !important
+  position: relative
+  // +opacity(1)
+  z-index: 2
+
+.pull_in
+  +animation-name(pull_in)
+  +animation-duration(400ms)
+  +animation-timing-function(cubic-bezier(0.6, 0.1, 0.3, 1))
+  +animation-fill-mode(both)
+  display: block !important
+  position: relative
+  +opacity(1)
+
 
 .btn
   +btn(shade(white, 5%))
