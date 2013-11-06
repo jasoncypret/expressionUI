@@ -132,9 +132,12 @@
           _this.find(".modal").modal "position", options
 
       $(this).find(".modalFooter a:not(.closeDialog)").each (i) ->
-        $(this).click (if options.buttons[i].context then ->
-          options.buttons[i].callback.apply options.buttons[i].context
-         else options.buttons[i].callback)
+        $(this).click (
+          if options.buttons[i].context
+            options.buttons[i].callback.apply options.buttons[i].context
+          else
+            options.buttons[i].callback
+        )
 
       $(this).find(".closeDialog").click ->
         (if (typeof options.closeCallback is "undefined") then $("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
