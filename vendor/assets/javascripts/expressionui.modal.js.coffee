@@ -131,13 +131,14 @@
         $(window).bind "resize.modal", ->
           _this.find(".modal").modal "position", options
 
-      $(this).find(".modalFooter a:not(.closeDialog)").each (i) ->
-        $(this).click (
-          if options.buttons[i].context
+      $(this).find(".modalFooter a:not(.closeDialog)").each( (i, e) =>
+        $(e).click( =>
+          if (options.buttons[i].context)
             options.buttons[i].callback.apply options.buttons[i].context
           else
             options.buttons[i].callback
         )
+      ) 
 
       $(this).find(".closeDialog").click ->
         (if (typeof options.closeCallback is "undefined") then $("#" + options.id + " .modal").modal("close", options) else options.closeCallback())

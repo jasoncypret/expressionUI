@@ -18,7 +18,7 @@
       icon_character: null
       loading: null
       position: "top"
-      duration: "7000"
+      duration: 5000
       content: "visible"
       text_align: "bottom"
       beforeOpen: $.noop
