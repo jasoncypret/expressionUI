@@ -83,10 +83,11 @@
           sticky: true
           content: "hidden"
 
-      _this.load options.ajax, (response, status, xhr) ->
+      _this.load options.ajax, (response, status, xhr) =>
         $(_this).parents(".modalBody").find(".notify").notify "close"
         setTimeout =>
           options.afterAjax.call()
+          _this.parents(".modal:first").modal "position", options
         , 100
         if status is "error"
           msg = "Sorry but there was an error: "
@@ -136,7 +137,7 @@
           if (options.buttons[i].context)
             options.buttons[i].callback.apply options.buttons[i].context
           else
-            options.buttons[i].callback
+            options.buttons[i].callback()
         )
       ) 
 
