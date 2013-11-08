@@ -10,8 +10,10 @@
       id: "modal"
       closeID: "closeDialog"
       overlay: true
-      overlayMrk: "<div class=\"pageOverlay\"></div>"
+      overlayMrk: "<div class='pageOverlay'></div>"
+      close_on_overlay: false
       appendTo: "body"
+      animation: ""
       threshold: 15
       ajax: ""
       ajaxTarget: ""
@@ -95,42 +97,50 @@
 
 
     close: (options={}) ->
-      # TODO: This is not extending!
-      options = $.extend({}, methods.defaults, options)
-      if $(".modal")[1]
-        amount = $(".modal").length - 1
-        $.each $(".modal"), (i, v) ->
-          $(v).parents(".modal_wrapper").fadeOut "fast"  if i is amount
-
-      else
-        $(options.appendTo).removeClass("modal_open").addClass "modal_close"
-      options.beforeClose()
+      options = $.extend({}, methods.defaults, options) # TODO: This is not extending!
       modal_content = $(this).find(".d_content").children()
       parent = $(this).parents(".modal_wrapper")
-      body = $(this).find(".modalBody")
-      b_width = body.outerWidth()
-      b_height = body.outerHeight()
-      body.css
-        width: b_width
-        height: b_height
+      remove_and_clean = ->
+        unless options.removeContent
+          modal_content.appendTo(options.appendTo).css "display", "none"
+          $(options.headerContent).appendTo(options.appendTo).css "display", "none"  if options.headerContent and options.header
+        else
+          modal_content.remove()
 
-      unless options.removeContent
-        modal_content.appendTo(options.appendTo).css "display", "none"
-        $(options.headerContent).appendTo(options.appendTo).css "display", "none"  if options.headerContent and options.header
-      else
-        modal_content.remove()
-      setTimeout (->
-        $(options.appendTo).removeClass "modal_close"  unless $(".modal")[1]
+        unless $(".modal")[1]
+          $(options.appendTo).removeClass "modal_close"
+          $(window).unbind "resize.modal"
         parent.remove()
-        $(window).unbind "resize.modal"
-      ), 1000
-      options.afterClose()
+        $(this).unbind 'oanimationend animationend webkitAnimationEnd'
+        options.afterClose()
+
+      options.beforeClose()
+      if $(".modal")[1]
+        # Not needed after recode the way animations happen
+        amount = $(".modal").length - 1
+        $.each $(".modal"), (i, v) ->
+          if i is amount
+            $(v).parents(".modal").fadeOut "fast", ->
+              remove_and_clean()
+      else
+        $(this).bind 'oanimationend animationend webkitAnimationEnd',  =>
+          remove_and_clean()
+        $(options.appendTo).removeClass("modal_open").addClass "modal_close"
 
     _setupEvents: (options) ->
       _this = $(this)
+      
       if options.autoresize
         $(window).bind "resize.modal", ->
           _this.find(".modal").modal "position", options
+
+      if options.overlay and options.close_on_overlay
+        parser = new DOMParser()
+        over = parser.parseFromString(options.overlayMrk, "text/xml");
+        klass = $(over.firstChild).attr('class')
+        $("." + klass).click( =>
+          (if (typeof options.closeCallback is "undefined") then $("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
+        )
 
       $(this).find(".modalFooter a:not(.closeDialog)").each( (i, e) =>
         $(e).click( =>
@@ -142,6 +152,7 @@
       ) 
 
       $(this).find(".closeDialog").click ->
+        # TODO: Should prob make this a default for easier reading
         (if (typeof options.closeCallback is "undefined") then $("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
 
 
