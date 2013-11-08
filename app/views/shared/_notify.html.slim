@@ -7,6 +7,7 @@
 - invert      ||= false
 - icon        ||= true
 - position    ||= "top"
+- animation   ||= ""
 - text_align  ||= "bottom"
 - iconType    ||= "R"
 - iconType = 'X' if style == "error" 
@@ -17,7 +18,7 @@
 - style = 'error' if style == "alert"
 
 
-.notify class="init loading_#{loading} text_align_#{text_align} style_#{style} position_#{position} width_#{width} invert_#{invert} icon_#{icon}"
+.notify class="init loading_#{loading} text_align_#{text_align} style_#{style} position_#{position} width_#{width} invert_#{invert} icon_#{icon} #{animation}"
   .notify_wrap
     - if icon
       .icon = iconType
