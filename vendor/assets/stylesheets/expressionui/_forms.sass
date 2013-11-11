@@ -14,7 +14,7 @@ $data_image_white: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZG
 =data_image_settings
   background-position: 97% 50%, 0 0
   background-repeat: no-repeat, repeat
-  background-size: 14px 14px, auto auto
+  background-size: 14px, auto
 
 =select($base_color, $show_data_image: true, $border: true, $style: flat)
   @if $style == flat
@@ -22,12 +22,12 @@ $data_image_white: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZG
     border: 0
     text-decoration: none
     font-weight: 600
-    line-height: 1em
-    // +serif
+    height: 1me
+    line-height: $field_height
     font-family: $serif, serif !important
     width: auto
     +inline-block
-    padding: 8px 13px
+    padding: 0 $pad*3 0 $pad
     font-size: ($font_size)+5px !important
     +border-radius(3px)
     cursor: pointer
@@ -160,6 +160,8 @@ textarea
 // -------------------------
 select
   +appearance(none)
+  text-indent: 0.01px
+  text-overflow: ''
   +select(shade(white, 1%))
   
 
