@@ -178,7 +178,7 @@
 
   $.fn.popover = (method, evt) ->
     if evt?
-      evt.stopPropagation()
+      evt.stopPropagation() if evt.stopPropagation?
     if methods[method]
       methods[method].apply this, Array::slice.call(arguments, 1)
     else if typeof method is "object" or not method
