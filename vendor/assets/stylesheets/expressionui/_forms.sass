@@ -124,8 +124,11 @@ $data_image_white: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZG
 // -------------------------
 =form_text_input_color
   line-height: $field_height
-  padding: 0 $pad/2
+  height: ($field_height + 2px)
+  // padding: ($field_height - ($font_size + 8px))/2 $pad // Fix for if want to remove line height
+  padding: 0 $pad
   +inline_block
+  vertical-align: middle
   border: 1px solid $form_border_color
   +border-radius(4px)
   font-size: ($font_size)+3px
