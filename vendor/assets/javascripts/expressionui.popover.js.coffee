@@ -80,9 +80,6 @@
       $(window).unbind "resize.popover"
 
     _setupEvents: (options) ->
-      if event?
-        event.stopPropagation()
-
       if options.reposition_on_resize
         $(window).bind "resize.popover", =>
           options.position_left = null
@@ -179,7 +176,9 @@
       options.content.css position: "absolute"  unless options.fixed
       $(this).addClass "active popover_target"
 
-  $.fn.popover = (method) ->
+  $.fn.popover = (method, evt) ->
+    if evt?
+      evt.stopPropagation()
     if methods[method]
       methods[method].apply this, Array::slice.call(arguments, 1)
     else if typeof method is "object" or not method
