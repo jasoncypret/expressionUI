@@ -100,6 +100,7 @@
       options = $.extend({}, methods.defaults, options) # TODO: This is not extending!
       modal_content = $(this).find(".d_content").children()
       parent = $(this).parents(".modal_wrapper")
+      m  = $(".modal")
       remove_and_clean = ->
         unless options.removeContent
           modal_content.appendTo(options.appendTo).css "display", "none"
@@ -107,7 +108,7 @@
         else
           modal_content.remove()
 
-        unless $(".modal")[1]
+        unless m[1]
           $(options.appendTo).removeClass "modal_close"
           $(window).unbind "resize.modal"
         parent.remove()
@@ -115,13 +116,11 @@
         options.afterClose()
 
       options.beforeClose()
-      if $(".modal")[1]
-        # Not needed after recode the way animations happen
-        amount = $(".modal").length - 1
-        $.each $(".modal"), (i, v) ->
-          if i is amount
-            $(v).parents(".modal").fadeOut "fast", ->
-              remove_and_clean()
+
+      # Checking for multiple open
+      if m[1]
+        $(m[m.length - 1]).fadeOut "fast", =>
+          remove_and_clean()
       else
         $(this).bind 'oanimationend animationend webkitAnimationEnd',  =>
           remove_and_clean()
