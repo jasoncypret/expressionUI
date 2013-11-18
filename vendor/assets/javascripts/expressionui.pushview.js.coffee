@@ -8,6 +8,7 @@
     defaults:
       views: null
       view: null
+      first_view: null
       before_push: $.noop
       before_back: $.noop
       after_push: $.noop
@@ -16,12 +17,16 @@
     _init: (options) ->
       options = $.extend({}, methods.defaults, options)
       $(this).data history: []
-      if options.views is null
-        $(this).children().each( (i, e) =>
+      options.views = $(this).children() if options.views is null
+      if options.first_view is null
+        options.views.each( (i, e) =>
           e = $(e)
           if e.is(':visible')
             e.addClass('p_active')
         )
+      else
+        options.first_view.addClass('p_active')
+
 
     push: (options) ->
       options = $.extend({}, methods.defaults, options)
@@ -30,7 +35,7 @@
       history.push $(this).find('.p_active')
       $(this).pushview("_bind_push_events", options)
       $(this).find('.p_active').addClass('pull_out')
-      options.view.addClass('push_in').show()
+      options.view.addClass('push_in').css('display': 'block')
 
     back: (options) ->
       options = $.extend({}, methods.defaults, options)
@@ -39,12 +44,12 @@
       options.view = back_element
       $(this).pushview("_bind_back_events", options)
       $(this).find('.p_active').addClass('push_out')
-      back_element.addClass('pull_in').show()
+      back_element.addClass('pull_in').css('display': 'block')
     
     _after_push_animate: (options) ->
       container = $(this)
       container.find('.p_active').hide().removeClass('p_active push_out pull_out push_in pull_in')
-      options.view.show().addClass('p_active').removeClass('push_in')      
+      options.view.css('display': 'block').addClass('p_active').removeClass('push_in')      
       container.pushview("_unbind_events", options)
       options.after_push()
 
