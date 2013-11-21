@@ -12,6 +12,7 @@
       overlay: true
       overlayMrk: "<div class='pageOverlay'></div>"
       close_on_overlay: false
+      enter_to_submit: false
       appendTo: "body"
       animation: ""
       threshold: 15
@@ -132,6 +133,15 @@
       if options.autoresize
         $(window).bind "resize.modal", ->
           _this.find(".modal").modal "position", options
+      
+      if options.enter_to_submit
+        form = $(this).find 'form'
+        $(document).bind('keypress', (e) =>
+          code = e.keyCode || e.which
+          if code == 13
+            form.submit()
+            options.submit_callback() if (typeof options.submit_callback is not "undefined") 
+        )
 
       if options.overlay and options.close_on_overlay
         parser = new DOMParser()
