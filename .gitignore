@@ -5,6 +5,8 @@
 pkg/
 pkg/*
 
+.idea/
+
 .ruby-version
 
 *.lock
