@@ -1,0 +1,14 @@
+{
+    "name": "",
+    "version": "v0.0.1",
+    "description": "",
+    "keywords": [],
+    "repository": { "type": "git", "url": "" },
+    "author": "",
+    "engines": {
+	"node" : "~0.8",
+	"npm": "1"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
