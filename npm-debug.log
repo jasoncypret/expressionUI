@@ -1,0 +1,200 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '.', '-g' ]
+2 info using npm@1.3.20
+3 info using node@v0.8.18
+4 verbose cache add [ '.', null ]
+5 verbose cache add name=undefined spec="." args=[".",null]
+6 verbose parsed url { pathname: '.', path: '.', href: '.' }
+7 silly lockFile 3a52ce78- .
+8 verbose lock . /Users/thatjsguy/.npm/3a52ce78-.lock
+9 verbose tar pack [ '/var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz',
+9 verbose tar pack   '.' ]
+10 verbose tarball /var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+11 verbose folder .
+12 info prepublish expressionUI@0.1.1
+13 silly lockFile 1f1177db-tar tar://.
+14 verbose lock tar://. /Users/thatjsguy/.npm/1f1177db-tar.lock
+15 silly lockFile 32d8c884-25962-0-7437569426838309-tmp-tgz tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+16 verbose lock tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz /Users/thatjsguy/.npm/32d8c884-25962-0-7437569426838309-tmp-tgz.lock
+17 silly lockFile 1f1177db-tar tar://.
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 32d8c884-25962-0-7437569426838309-tmp-tgz tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+20 silly lockFile 32d8c884-25962-0-7437569426838309-tmp-tgz tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+21 verbose tar unpack /var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+22 silly lockFile 666384ad-25962-0-7437569426838309-package tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+23 verbose lock tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package /Users/thatjsguy/.npm/666384ad-25962-0-7437569426838309-package.lock
+24 silly lockFile 32d8c884-25962-0-7437569426838309-tmp-tgz tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+25 verbose lock tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz /Users/thatjsguy/.npm/32d8c884-25962-0-7437569426838309-tmp-tgz.lock
+26 silly gunzTarPerm modes [ '755', '644' ]
+27 silly gunzTarPerm extractEntry package.json
+28 silly gunzTarPerm extractEntry .npmignore
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm extractEntry LICENSE
+31 silly gunzTarPerm extractEntry lib/main.js
+32 silly gunzTarPerm extractEntry lib/.gitkeep
+33 silly gunzTarPerm extractEntry .idea/.name
+34 silly gunzTarPerm extractEntry .idea/.rakeTasks
+35 silly gunzTarPerm extractEntry .idea/encodings.xml
+36 silly gunzTarPerm extractEntry .idea/expressionUI.iml
+37 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+38 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+39 silly gunzTarPerm extractEntry .idea/misc.xml
+40 silly gunzTarPerm extractEntry .idea/modules.xml
+41 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+42 silly gunzTarPerm extractEntry .idea/vcs.xml
+43 silly gunzTarPerm extractEntry .idea/workspace.xml
+44 silly gunzTarPerm extractEntry Makefile
+45 silly gunzTarPerm extractEntry bin/expressionUI.js
+46 silly gunzTarPerm extractEntry bin/.gitkeep
+47 silly gunzTarPerm extractEntry Gemfile.lock
+48 silly gunzTarPerm extractEntry scripts/.gitkeep
+49 silly gunzTarPerm extractEntry test/.gitkeep
+50 silly lockFile 666384ad-25962-0-7437569426838309-package tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+51 silly lockFile 666384ad-25962-0-7437569426838309-package tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+52 silly lockFile 32d8c884-25962-0-7437569426838309-tmp-tgz tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+53 silly lockFile 32d8c884-25962-0-7437569426838309-tmp-tgz tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/tmp.tgz
+54 verbose tar pack [ '/Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz',
+54 verbose tar pack   '/var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package' ]
+55 verbose tarball /Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+56 verbose folder /var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+57 silly lockFile 666384ad-25962-0-7437569426838309-package tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+58 verbose lock tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package /Users/thatjsguy/.npm/666384ad-25962-0-7437569426838309-package.lock
+59 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+60 verbose lock tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz /Users/thatjsguy/.npm/1b291bce-m-expressionUI-0-1-1-package-tgz.lock
+61 silly lockFile 666384ad-25962-0-7437569426838309-package tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+62 silly lockFile 666384ad-25962-0-7437569426838309-package tar:///var/folders/wf/99psgjj91w5dhd26gtrlh64w0000gn/T/npm-4150-c3hUI8Jl/1389045125962-0.7437569426838309/package
+63 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+64 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+65 silly lockFile 9753a862-y-npm-expressionUI-0-1-1-package /Users/thatjsguy/.npm/expressionUI/0.1.1/package
+66 verbose lock /Users/thatjsguy/.npm/expressionUI/0.1.1/package /Users/thatjsguy/.npm/9753a862-y-npm-expressionUI-0-1-1-package.lock
+67 silly lockFile 9753a862-y-npm-expressionUI-0-1-1-package /Users/thatjsguy/.npm/expressionUI/0.1.1/package
+68 silly lockFile 9753a862-y-npm-expressionUI-0-1-1-package /Users/thatjsguy/.npm/expressionUI/0.1.1/package
+69 verbose tar unpack /Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+70 silly lockFile c1e79138-y-npm-expressionUI-0-1-1-package tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package
+71 verbose lock tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package /Users/thatjsguy/.npm/c1e79138-y-npm-expressionUI-0-1-1-package.lock
+72 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+73 verbose lock tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz /Users/thatjsguy/.npm/1b291bce-m-expressionUI-0-1-1-package-tgz.lock
+74 silly gunzTarPerm modes [ '755', '644' ]
+75 silly gunzTarPerm extractEntry package.json
+76 silly gunzTarPerm extractEntry .npmignore
+77 silly gunzTarPerm extractEntry README.md
+78 silly gunzTarPerm extractEntry LICENSE
+79 silly gunzTarPerm extractEntry lib/main.js
+80 silly gunzTarPerm extractEntry lib/.gitkeep
+81 silly gunzTarPerm extractEntry .idea/.name
+82 silly gunzTarPerm extractEntry .idea/.rakeTasks
+83 silly gunzTarPerm extractEntry .idea/encodings.xml
+84 silly gunzTarPerm extractEntry .idea/expressionUI.iml
+85 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+86 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+87 silly gunzTarPerm extractEntry .idea/misc.xml
+88 silly gunzTarPerm extractEntry .idea/modules.xml
+89 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+90 silly gunzTarPerm extractEntry .idea/vcs.xml
+91 silly gunzTarPerm extractEntry .idea/workspace.xml
+92 silly gunzTarPerm extractEntry Makefile
+93 silly gunzTarPerm extractEntry bin/expressionUI.js
+94 silly gunzTarPerm extractEntry bin/.gitkeep
+95 silly gunzTarPerm extractEntry Gemfile.lock
+96 silly gunzTarPerm extractEntry scripts/.gitkeep
+97 silly gunzTarPerm extractEntry test/.gitkeep
+98 silly lockFile c1e79138-y-npm-expressionUI-0-1-1-package tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package
+99 silly lockFile c1e79138-y-npm-expressionUI-0-1-1-package tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package
+100 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+101 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+102 verbose chmod /Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz 644
+103 verbose chown /Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz [ 501, 20 ]
+104 silly lockFile 3a52ce78- .
+105 silly lockFile 3a52ce78- .
+106 silly resolved [ { author: { name: 'Jason Cypret' },
+106 silly resolved     name: 'expressionUI',
+106 silly resolved     description: 'A set of small JavaScript and SASS plugins that are designed to be reusable and enhance your UI. Ready to play with the Rails Asset Pipeline for faster and easier web development.',
+106 silly resolved     version: '0.1.1',
+106 silly resolved     repository:
+106 silly resolved      { type: 'git',
+106 silly resolved        url: 'git://github.com/jasoncypret/expressionUI.git' },
+106 silly resolved     bugs: { url: 'https://github.com/jasoncypret/expressionUI/issues' },
+106 silly resolved     main: './lib/main',
+106 silly resolved     bin: { expressionUI: './bin/expressionUI' },
+106 silly resolved     dependencies: {},
+106 silly resolved     devDependencies: {},
+106 silly resolved     optionalDependencies: {},
+106 silly resolved     engines: { node: '*' },
+106 silly resolved     readme: '# Node.js Package Boilerplate\n\nThis is a set of common files and directories that I always use for starting a Node.js project. Just git clone and change the files as needed.\n\n\nblah\n',
+106 silly resolved     readmeFilename: 'README.md',
+106 silly resolved     homepage: 'https://github.com/jasoncypret/expressionUI',
+106 silly resolved     _id: 'expressionUI@0.1.1',
+106 silly resolved     dist: { shasum: '00461e2b89244aae91cc8a3a6773bf1168e8c305' },
+106 silly resolved     _from: '.' } ]
+107 info install expressionUI@0.1.1 into /usr/local/lib
+108 info installOne expressionUI@0.1.1
+109 info /usr/local/lib/node_modules/expressionUI unbuild
+110 verbose tar unpack /Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+111 silly lockFile 2902730f-al-lib-node-modules-expressionUI tar:///usr/local/lib/node_modules/expressionUI
+112 verbose lock tar:///usr/local/lib/node_modules/expressionUI /Users/thatjsguy/.npm/2902730f-al-lib-node-modules-expressionUI.lock
+113 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+114 verbose lock tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz /Users/thatjsguy/.npm/1b291bce-m-expressionUI-0-1-1-package-tgz.lock
+115 silly gunzTarPerm modes [ '755', '644' ]
+116 silly gunzTarPerm extractEntry package.json
+117 silly gunzTarPerm extractEntry .npmignore
+118 silly gunzTarPerm extractEntry README.md
+119 silly gunzTarPerm extractEntry LICENSE
+120 silly gunzTarPerm extractEntry lib/main.js
+121 silly gunzTarPerm extractEntry lib/.gitkeep
+122 silly gunzTarPerm extractEntry .idea/.name
+123 silly gunzTarPerm extractEntry .idea/.rakeTasks
+124 silly gunzTarPerm extractEntry .idea/encodings.xml
+125 silly gunzTarPerm extractEntry .idea/expressionUI.iml
+126 silly gunzTarPerm extractEntry .idea/inspectionProfiles/profiles_settings.xml
+127 silly gunzTarPerm extractEntry .idea/inspectionProfiles/Project_Default.xml
+128 silly gunzTarPerm extractEntry .idea/misc.xml
+129 silly gunzTarPerm extractEntry .idea/modules.xml
+130 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+131 silly gunzTarPerm extractEntry .idea/vcs.xml
+132 silly gunzTarPerm extractEntry .idea/workspace.xml
+133 silly gunzTarPerm extractEntry Makefile
+134 silly gunzTarPerm extractEntry bin/expressionUI.js
+135 silly gunzTarPerm extractEntry bin/.gitkeep
+136 silly gunzTarPerm extractEntry Gemfile.lock
+137 silly gunzTarPerm extractEntry scripts/.gitkeep
+138 silly gunzTarPerm extractEntry test/.gitkeep
+139 silly lockFile 2902730f-al-lib-node-modules-expressionUI tar:///usr/local/lib/node_modules/expressionUI
+140 silly lockFile 2902730f-al-lib-node-modules-expressionUI tar:///usr/local/lib/node_modules/expressionUI
+141 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+142 silly lockFile 1b291bce-m-expressionUI-0-1-1-package-tgz tar:///Users/thatjsguy/.npm/expressionUI/0.1.1/package.tgz
+143 info preinstall expressionUI@0.1.1
+144 verbose readDependencies using package.json deps
+145 verbose readDependencies using package.json deps
+146 silly resolved []
+147 verbose about to build /usr/local/lib/node_modules/expressionUI
+148 info build /usr/local/lib/node_modules/expressionUI
+149 verbose linkStuff [ true,
+149 verbose linkStuff   '/usr/local/lib/node_modules',
+149 verbose linkStuff   true,
+149 verbose linkStuff   '/usr/local/lib/node_modules' ]
+150 info linkStuff expressionUI@0.1.1
+151 verbose linkBins expressionUI@0.1.1
+152 verbose link bins [ { expressionUI: './bin/expressionUI' },
+152 verbose link bins   '/usr/local/bin',
+152 verbose link bins   true ]
+153 verbose linkMans expressionUI@0.1.1
+154 verbose rebuildBundles expressionUI@0.1.1
+155 info /usr/local/lib/node_modules/expressionUI unbuild
+156 info preuninstall expressionUI@0.1.1
+157 info uninstall expressionUI@0.1.1
+158 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild expressionUI@0.1.1
+159 verbose /usr/local/bin,[object Object] binRoot
+160 info postuninstall expressionUI@0.1.1
+161 error Error: ENOENT, chmod '/usr/local/lib/node_modules/expressionUI/bin/expressionUI'
+162 error If you need help, you may report this *entire* log,
+162 error including the npm and node versions, at:
+162 error     <http://github.com/isaacs/npm/issues>
+163 error System Darwin 13.0.0
+164 error command "node" "/usr/local/bin/npm" "install" "." "-g"
+165 error cwd /Volumes/Bubba/Users/thatjsguy/Work/expressionUI
+166 error node -v v0.8.18
+167 error npm -v 1.3.20
+168 error path /usr/local/lib/node_modules/expressionUI/bin/expressionUI
+169 error code ENOENT
+170 error errno 34
+171 verbose exit [ 34, true ]

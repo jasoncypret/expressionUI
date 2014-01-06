@@ -6,6 +6,7 @@ pkg/
 pkg/*
 
 .idea/
+/.idea/
 
 .ruby-version
 
