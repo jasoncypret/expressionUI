@@ -1,0 +1,29 @@
+// Dots Round
+$dot_deg: 45
+$dot_offset: -25px
+$dot_color: rgba($highlight, 0.5)
+=dot_end
+  background-color: $dot_color
+=dot_begin
+  background-color: tint($dot_color, 50%)
+
+@-webkit-keyframes fade
+  0%
+    +dot_end
+  100%
+    +dot_begin
+@-moz-keyframes fade
+  0%
+    +dot_end
+  100%
+    +dot_begin
+@-o-keyframes fade
+  0%
+    +dot_end
+  100%
+    +dot_begin
+@-ms-keyframes fade
+  0%
+    +dot_end
+  100%
+    +dot_begin

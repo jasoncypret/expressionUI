@@ -1,0 +1,121 @@
+@import animate/shared
+@import animate/animations/bouncing-entrances/bounceIn
+@import animate/animations/bouncing-exits/bounceOut
+
+$modal_button_size: 36px
+$modal_footer_height: ($modal_button_size)+($pad*2)
+$borderColor: #cacaca
+$modal_border_radius: 5px
+
+.modal_open .modal_wrapper
+  .pageOverlay
+    +transition
+    +opacity(0.5)
+  .modal
+    +opacity(1)
+    +animation-name(bounceIn)
+    +animation-duration(0.5s)
+    +animation-timing-function(ease)
+.modal_close .modal_wrapper
+  .modal
+    +animation-name(bounceOut)
+    +animation-duration(0.5s)
+    +animation-timing-function(ease)
+
+.modal_wrapper
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 5000
+  .pageOverlay
+    +transition
+    background: black
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 99
+    height: 100%
+    width: 100%
+    +opacity(0)
+  .modal
+    width: auto
+    +opacity(0)
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 100
+    background: #fff
+    border: 1px solid #464646
+    +box-shadow(rgba(black, 0.4) 0 2px 12px)
+    +border-radius($modal_border_radius)
+    padding-bottom: $modal_footer_height
+    .content
+      background: #fff
+    > h1
+      background: shade(white, 5%)
+      +border-top-radius($modal_border_radius)
+      color: shade(white, 30%)
+      position: relative
+      text-transform: uppercase
+      padding: $pad
+      font-weight: 100
+      letter-spacing: 1px
+      font-size: ($font-size)+5px
+      margin: 0
+      span
+        .closeDialog
+          position: absolute
+          right: 0
+          top: 50%
+          margin-top: -($font-size)
+          display: block
+          padding: 0 $pad*2
+          +icon_font
+          font-size: ($font-size)+10px
+          text-transform: none
+          color: shade(white, 20%)
+          &:hover
+            color: $accent
+    .modalBody
+      padding: $pad $pad $pad $pad
+      margin-top: -1px
+      height: 100%
+      overflow-y: auto
+      -webkit-overflow-scrolling: touch
+      +border-top-radius(5px)
+      +group
+      background: #fff
+      .wrapper
+        width: auto
+        overflow: initial
+        //width: auto
+        //height: auto
+    .modalFooter
+      padding: $pad
+      border-top: 1px solid shade(white, 6%)
+      font-size: ($font_size)+6px
+      line-height: $modal_button_size
+      position: absolute
+      bottom: 0
+      width: 100%
+      +group
+      a
+        float: right
+        +btn(#fff)
+        margin-left: $pad
+        &.defaultButton
+          +btn($accent)
+          float: left
+          margin-left: 0
+          margin-right: $pad
+  &.full
+    .modal
+      position: fixed
+      +media_max_width(900px)
+        width: 85% !important
+      +mobile_only
+        width: 95% !important
+      .modalBody
+        height: 100%
+        overflow-y: auto
+        -webkit-overflow-scrolling: touch

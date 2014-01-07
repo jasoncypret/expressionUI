@@ -1,0 +1,200 @@
++keyframes(pull_out)
+  0%
+    +transform( translate3d(0, 0, 0) )
+    +opacity(1)
+  100%
+    +transform( translate3d(-25%, 0, 0) )
+    +opacity(0.9)
+
++keyframes(push_out)
+  0%
+    +transform( translate3d(0, 0, 0) )
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+  90%
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+  100%
+    +transform( translate3d(100%, 0, 0) )
+    +box-shadow(rgba(black, 0) -10px 0 10px -5px)
+
++keyframes(push_in)
+  0%
+    +transform( translate3d(100%, 0, 0) )
+    +opacity(1)
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+  100%
+    +transform( translate3d(0, 0, 0) )
+    +box-shadow(rgba(black, 0.2) -10px 0 10px -5px)
+    +opacity(1)
+
++keyframes(pull_in)
+  0%
+    +opacity(0.9)
+    +transform( translate3d(-25%, 0, 0) )
+  100%
+    +opacity(1)
+    +transform( translate3d(0, 0, 0) )
+
+.pull_out
+  +animation-name(pull_out)
+  +animation-duration(0.4s)
+  +animation-timing-function(cubic-bezier(0.1, 0.7, 0.1, 1))
+  +animation-fill-mode(both)
+  position: absolute !important
+  top: 0 !important
+  left: 0 !important
+  +opacity(0)
+  display: block !important
+  z-index: 2 !important
+
+.push_out
+  +animation-name(push_out)
+  +animation-duration(0.4s)
+  +animation-timing-function(cubic-bezier(0.6, 0.1, 0.3, 1))
+  +animation-fill-mode(both)
+  position: absolute !important
+  top: 0 !important
+  left: 0 !important
+  display: block !important
+  z-index: 1 !important
+
+.push_in
+  +animation-name(push_in)
+  +animation-duration(0.4s)
+  +animation-timing-function(cubic-bezier(0.6, 0.1, 0.3, 1))
+  +animation-fill-mode(both)
+  display: block !important
+  position: relative !important
+  z-index: 2 !important
+
+.pull_in
+  +animation-name(pull_in)
+  +animation-duration(0.4s)
+  +animation-timing-function(cubic-bezier(0.6, 0.1, 0.3, 1))
+  +animation-fill-mode(both)
+  display: block !important
+  position: relative !important
+  +opacity(1)
+  z-index: 1 !important
+
+
+
+.btn
+  +btn(shade(white, 5%))
+  &.highlight
+    +btn($highlight)
+  &.accent
+    +btn($accent)
+  &.main
+    +btn($main)
+  &.contrast
+    +btn($contrast)
+  &.error
+    +btn($error)
+  &.success
+    +btn($success)
+  &.tip
+    +btn($tip)
+  &.info
+    +btn($info)
+  &.xsmall
+    font-size: 70%
+    &.icon
+      font-size: 100%
+  &.small
+    font-size: 85%
+    &.icon
+      font-size: 125%
+  &.large
+    font-size: 110%
+    &.icon
+      font-size: 175%
+  &.xlarge
+    font-size: 125%
+    &.icon
+      font-size: 250%
+
+.menu
+  padding: 0 !important
+  ul
+    padding: 0 !important
+  .btn
+    +border-radius(0)
+  li, a, .btn
+    +inline_block
+  li:first-child
+    +border-left-radius(3px)
+  li:last-child
+    +border-right-radius(3px)
+
+.text_tip
+  color: $tip
+.text_error
+  color: $error
+.text_info
+  color: $info
+.text_success
+  color: $success
+
+
+.flex_me
+  +flex_me
+
+.collumns2
+  +column-count(2)
+.collumns3
+  +column-count(3)
+.collumns4
+  +column-count(4)
+
+.rotate
+  +rotate(90deg)
+.rotate_left
+  +rotate(-90deg)
+.flip
+  +rotate(180deg)
+
+.perc25
+  width: 25%
+.perc50
+  width: 50%
+.perc75
+  width: 75%
+.perc100
+  width: 100%
+
+.amp
+  +amp
+
+.offscreen
+  +offscreen
+
+.icon
+  +icon_font
+
+.icon_left:before
+  +icon_inline
+  padding-right: $pad/1.5
+
+.icon_right:after
+  +icon_inline
+  padding-left: $pad/1.5
+
+.invisible
+  visibility: hidden
+  position: relative
+  +group
+
+.left
+  float: left
+
+.middle
+  display: block
+
+.right
+  float: right
+
+.group
+  +group
+
+.inline
+  +inline_block

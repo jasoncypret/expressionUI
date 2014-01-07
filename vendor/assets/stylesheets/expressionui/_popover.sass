@@ -1,0 +1,64 @@
+@import animate/shared
+@import animate/animations/fading-entrances/fadeInUp
+
+.popover
+  min-width: 75px
+  max-width: 300px
+  padding: $pad
+  text-align: center
+.popover_container
+  position: fixed
+  +box-shadow(rgba(black, 0.1) 0 1px 20px)
+  border: 1px solid rgba(black, 0.1)
+  background: white
+  +border-radius(3px)
+  +animation-name(fadeInUp)
+  +animation-duration(0.2s)
+  +animation-timing-function(ease)
+  &.flush
+    +border-top-radius(0)
+    &:before
+      content: none
+  &:before
+    content: '4'
+    +icon_font
+    font-size: 32px
+    line-height: 32px
+    position: absolute
+    display: block
+    color: white
+    +rotate(90deg)
+    z-index: 1
+    +text-shadow(rgba(black, 0.1) 1px 0 0)
+  &.topleft:before
+    top: -20px
+    left: 27px
+    +rotate(270deg)
+  &.bottomleft:before
+    bottom: -20px
+    left: 27px
+  &.topright:before
+    top: -20px
+    right: 27px
+    +rotate(270deg)
+  &.bottomright:before
+    bottom: -20px
+    right: 27px
+  &.topleft.tooltip, &.topright.tooltip
+    background: tint(black, 10%)
+    padding: $pad $pad*1.5
+    color: white
+    &:before
+      right: auto
+      left: 50%
+      margin-left: -8px
+      color: tint(black, 10%)
+  &.bottomleft.tooltip, &.bottomright.tooltip
+    background: tint(black, 10%)
+    padding: $pad $pad*1.5
+    color: white
+    &:before
+      color: tint(black, 10%)
+      right: auto
+      left: 50%
+      margin-left: -8px
