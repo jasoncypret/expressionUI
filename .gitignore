@@ -13,3 +13,5 @@ pkg/*
 *.lock
 
 Gemfile.lock
+
+npm-debug.log
