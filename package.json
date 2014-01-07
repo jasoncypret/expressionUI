@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/jasoncypret/expressionUI/issues"
   },
-  "main": "./lib/expressionUI",
+  "main": "./npmlib/expressionUI",
   "bin": {
     "expressionUI": "./bin/expressionUI"
   },

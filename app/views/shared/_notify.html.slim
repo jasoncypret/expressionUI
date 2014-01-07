@@ -1,0 +1,77 @@
+/ Add the class "notify_container" & one of the following "content_hidden", "content_visible", "content_overlay" to the loading container
+
+- loading     ||= "" 
+- message     ||= ""
+- width       ||= "full"
+- style       ||= "success"
+- invert      ||= false
+- icon        ||= true
+- position    ||= "top"
+- animation   ||= ""
+- text_align  ||= "bottom"
+- iconType    ||= "R"
+- iconType = 'X' if style == "error" 
+- iconType = 'R' if style == "success"
+- iconType = '!' if style == "tip"
+- iconType = '"' if style == "info" 
+- style = 'success' if style == "notice"
+- style = 'error' if style == "alert"
+
+
+.notify class="init loading_#{loading} text_align_#{text_align} style_#{style} position_#{position} width_#{width} invert_#{invert} icon_#{icon} #{animation}"
+  .notify_wrap
+    - if icon
+      .icon = iconType
+
+    - case loading
+      - when "circles"
+      .indicator
+        .circle1
+        .circle2
+        .circle3
+      .msg
+        = message
+      - when "spinner"
+      .indicator
+      .msg
+        = message
+      - when "dots"
+      .indicator
+        .dot1
+        .dot2
+        .dot3
+        .dot4
+        .dot5
+        .dot6
+        .dot7
+        .dot8
+      .msg
+        = message
+      - when "bars"
+      .indicator
+        .progress
+      .msg
+        = message
+      - else
+      - if style == "loading"
+        .progress
+        .msg
+          = message
+      - else 
+        .msg
+          = message
+      a.notify_close href="javascript:;"
+        span x
+          
+
+
+
+
+
+
+
+
+
+
+
+

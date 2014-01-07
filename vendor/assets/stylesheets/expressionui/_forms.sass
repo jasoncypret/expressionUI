@@ -1,0 +1,426 @@
+$field_margin: $pad*1.5
+$form_border_color: tint(#B8B8B8, 50%)
+$label_color: #999999
+$focus_color: $highlight
+$field_height: 35px
+$checkbox: 18px
+$data_image: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlVudGl0bGVkLVBhZ2VfeDI1XzIwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCgkgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjZweCIgdmlld0JveD0iMCAwIDEwIDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0ieiIvPg0KPGcgaWQ9IkxheWVyX3gyNV8yMDEiIG9wYWNpdHk9IjAuNCI+DQoJPHBhdGggaWQ9ImFycm93X3gyNV8yMGRvd25feDI1XzIwY29weSIgZD0iTTEuMTI0LDAuMTAzYzAuNDAyLDAsNy40NTYsMCw3LjczMywwYzAuMzU5LDAsMC42MjcsMC4yODIsMC40MTcsMC41Ng0KCQljLTAuMTY5LDAuMjIzLTMuNTY4LDQuNjc5LTMuODU5LDUuMDZjLTAuMTkxLDAuMjQ5LTAuNjQ3LDAuMjQ1LTAuODM4LDBDNC4zNjQsNS40NDgsMC45NDcsMC45NzUsMC43MSwwLjY1MQ0KCQlDMC41MzYsMC40MTQsMC43MjgsMC4xMDMsMS4xMjQsMC4xMDN6Ii8+DQo8L2c+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJ6Ii8+DQo8L3N2Zz4NCg=="
+$data_image_white: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlVudGl0bGVkLVBhZ2VfeDI1XzIwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCgkgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjZweCIgdmlld0JveD0iMCAwIDEwIDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0ieiIvPg0KPGcgaWQ9IkxheWVyX3gyNV8yMDEiIG9wYWNpdHk9IjAuNCI+DQoJPHBhdGggaWQ9ImFycm93X3gyNV8yMGRvd25feDI1XzIwY29weSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTEuMTI0LDAuMTAzYzAuNDAyLDAsNy40NTYsMCw3LjczMywwYzAuMzU5LDAsMC42MjcsMC4yODIsMC40MTcsMC41Ng0KCQljLTAuMTY5LDAuMjIzLTMuNTY4LDQuNjc5LTMuODU5LDUuMDZjLTAuMTkxLDAuMjQ5LTAuNjQ3LDAuMjQ1LTAuODM4LDBDNC4zNjQsNS40NDgsMC45NDcsMC45NzUsMC43MSwwLjY1MQ0KCQlDMC41MzYsMC40MTQsMC43MjgsMC4xMDMsMS4xMjQsMC4xMDN6Ii8+DQo8L2c+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJ6Ii8+DQo8L3N2Zz4NCg=="
+
+
+// MIXIN: Custom Select
+// -------------------------
+
+=data_image_settings
+  background-position: 97% 50%, 0 0
+  background-repeat: no-repeat, repeat
+  background-size: 14px, auto
+
+=select($base_color, $show_data_image: true, $border: true, $style: flat)
+  @if $style == flat
+    outline: 0
+    border: 0
+    text-decoration: none
+    font-weight: 600
+    height: 1me
+    line-height: $field_height
+    font-family: $serif, serif !important
+    width: auto
+    +inline-block
+    padding: 0 $pad*3 0 $pad
+    font-size: ($font_size)+5px !important
+    +border-radius(3px)
+    cursor: pointer
+    @if $show_data_image
+      @if lightness($base_color) > 75%
+        background: url($data_image) $base_color
+      @else
+        background: url($data_image_white) $base_color
+      +data_image_settings
+    @else
+      background: $base_color
+    +text_color($base_color, false, true)
+    @if $border
+      border: 1px solid shade($base_color, 10%)
+    @else
+      +border-radius(2px)
+    &:hover, &:active, &.active
+      @if $show_data_image
+        @if lightness(shade($base_color, 10%)) > 75%
+          background: url($data_image) shade($base_color, 10%)
+        @else
+          background: url($data_image_white) shade($base_color, 10%)
+        +data_image_settings
+      @else
+        background: shade($base_color, 10%)
+      +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
+      +text_color(shade($base_color, 10%), false , true)
+      @if $border
+        border: 1px solid shade($base_color, 20%)
+    &.active:hover
+      @if $show_data_image
+        @if lightness(shade($base_color, 20%)) > 75%
+          background: url($data_image) shade($base_color, 20%)
+        @else
+          background: url($data_image_white) shade($base_color, 20%)
+        +data_image_settings
+      @else
+        background: shade($base_color, 20%)
+      +box-shadow(shade($base_color, 30%) 0 2px 0 inset)
+      +text_color(shade($base_color, 20%), false, true)
+      @if $border
+        border: 1px solid shade($base_color, 30%)
+    &.disabled, &.disabled:hover
+      cursor: not-allowed
+      +opacity(0.7)
+      @if $show_data_image
+        @if lightness($base_color) > 75%
+          background: url($data_image) $base_color
+        @else
+          background: url($data_image_white) $base_color
+        +data_image_settings
+      @else
+        background: $base_color
+      +box-shadow(none)
+      +text_color($base_color, false, true)
+  @else
+    // TODO: Build Gradient Style
+
+
+// MIXIN: Form Style
+// -------------------------
+=html_select($base_color, $arrow: $accent)
+  +select($base_color, false)
+  padding-right: 50px
+  position: relative
+  &:after
+    color: $arrow
+    font-size: 16px
+    content: '5'
+    +icon_font
+    display: block
+    right: 7px
+    top: -2px
+    padding: 0 $pad
+    line-height: ($field_height + 5px)
+    height: ($field_height + 5px)
+    position: absolute
+    +rotate(90deg)
+    border-bottom: 1px solid shade($base_color, 10%)
+  &:hover, &:active, &.active
+    &:after
+      border-bottom: 1px solid shade($base_color, 20%)
+  &.active:hover
+    &:after
+      border-bottom: 1px solid shade($base_color, 30%)
+  &.disabled, &.disabled:hover
+    &:after
+      border-bottom: 1px solid shade($base_color, 10%)
+      
+
+
+
+// MIXIN: Form Style
+// -------------------------
+=form_text_input_color
+  line-height: $field_height
+  height: ($field_height + 2px)
+  // padding: ($field_height - ($font_size + 8px))/2 $pad // Fix for if want to remove line height
+  padding: 0 $pad
+  +inline_block
+  vertical-align: middle
+  border: 1px solid $form_border_color
+  +border-radius(4px)
+  font-size: ($font_size)+3px
+  color: tint(black, 10%)
+  font-weight: 100
+  +placeholder
+    font-size: ($font_size)-(1px)
+  &:focus
+    outline: 0
+    border: 1px solid $focus_color
+
+
+
+
+// Textarea
+// -------------------------
+textarea
+  +form_text_input_color
+  resize: none
+  line-height: $field_height
+  font-size: ($font_size)+3px !important
+  font-weight: 100 !important
+  height: $field_height*3
+  padding: $pad/2
+
+
+
+// Selects
+// -------------------------
+select
+  +appearance(none)
+  text-indent: 0.01px
+  text-overflow: ''
+  +select(shade(white, 1%))
+  
+
+.html_select
+  +html_select(shade(white, 1%))
+
+
+// Inputs
+// -------------------------
+input
+  &[type=checkbox], &[type=radio]
+    +appearance(none)
+    +inline_block
+    cursor: pointer
+  
+
+  // Checkbox
+  // -------------------------
+  &[type=checkbox]
+    +border-radius(2px)
+    background: rgba(black, 0.10)
+    width: $checkbox
+    height: $checkbox
+    border: 1px solid rgba(black, 0.15)
+    position: relative
+    +transition-property(all)
+    +transition-duration(0.2s)
+    +transition-timing-function(ease-in)
+    cursor: pointer
+    +text_color(#2765A8)
+    &:checked
+      +btn($accent)
+      text-transform: none
+      padding: 0
+      width: $checkbox
+      height: $checkbox
+      &:after
+        +icon_font
+        content: "/"
+        width: 100%
+        height: 100%
+        text-align: center
+        line-height: 1.3em
+        font-size: 1em
+        position: relative
+        top: 50%
+        display: block
+        margin-top: -($checkbox/2)
+
+
+    // Checkbox Toggle
+    // -------------------------
+    &.toggle
+      +border-radius(30px)
+      width: $field_height*2
+      height: auto
+      position: relative
+      border: 2px solid rgba(black, 0.10)
+      padding-right: (($field_height*2)-($field_height)/1.5)-(4px)
+      text-align: center
+      overflow: hidden
+      &:before
+        +icon_font
+        content: "x  /"
+        line-height: ($field_height)/1.5
+        width: 200%
+        text-align: center
+        font-size: $field_height/2
+        +text-shadow(none)
+        color: rgba(black, 0.30)
+        letter-spacing: 20px
+        position: absolute
+        top: 0
+        left: 0
+        overflow: visible
+        height: ($field_height)/1.5
+        text-align: left
+        padding-left: $pad*3.5
+      &:after
+        +border-radius(300px)
+        content: " "
+        background: white
+        +inline_block
+        width: ($field_height)/1.5
+        height: ($field_height)/1.5
+        position: relative
+      &:checked
+        background: $success
+        border: 2px solid $success
+        padding-left: (($field_height*2)-($field_height)/1.5)-(4px)
+        padding-right: 0
+        +box-shadow(none)
+        &:before
+          +text_color($success, false)
+          left: auto
+          right: 0
+          text-align: right
+          padding-left: 0
+          padding-right: $pad*1.5
+        &:after
+          margin: 0
+          top: auto
+          left: auto
+
+
+  // Radios
+  // -------------------------
+  &[type=radio]
+    +border-radius(300px)
+    width: $checkbox
+    height: $checkbox
+    border: 2px solid shade(white, 30%)
+    position: relative
+    &:after
+      background: $accent
+      +border-radius(300px)
+      content: " "
+      display: none
+      width: ($checkbox)-(4px*2) // border - offset
+      height: ($checkbox)-(4px*2) // border - offset
+      position: absolute
+      top: 2px
+      left: 2px
+    &:checked
+      &:after
+        display: block
+        
+
+
+  // Input Text
+  // -------------------------
+  &[type="text"], &[type="password"], &[type="email"]
+    +form_text_input_color
+
+
+// NOTES:
+
+// Need to style up placeholders
+
+// Group does nothing but contain
+
+
+// Form Styling
+// -------------------------
+.form, form
+  .field
+    display: block
+    padding: 0
+    position: relative
+    margin-bottom: $field_margin
+    width: auto
+    height: auto
+    +group
+    label
+      display: block
+      color: $label_color
+      font-size: $font_size
+      line-height: $font_size*2
+      cursor: pointer
+      &.inline
+        +inline_block
+    input[type="text"], input[type="textfield"], input[type="password"], input[type="email"], input[type="email"], textarea, select, .html_select
+      display: block
+      width: 100%
+    input[type=checkbox], input[type=radio]
+      margin: $pad $pad 0 0
+      ~ span
+        font-size: ($font_size)+3px
+        color: tint(black, 50%)
+        line-height: $field_height
+        font-weight: 100
+      &:checked ~ span
+        color: $accent
+
+      &.toggle
+        margin: $pad/2 $pad 0 0
+        // Toggle Right
+        // -------------------------
+        &.right
+          margin: $pad/2 0 0 $pad
+          
+          
+
+    input[type=radio]
+      margin: ($pad)-2px $pad 0 0
+
+    
+    // Outline Forms
+    // -------------------------
+    &.outline
+      +inline_block
+      +btn(white)
+      padding: 5px
+      margin: 10px $pad*2 3px 0
+      text-align: left
+      input[type=checkbox]
+        margin: 3px 0 0 
+        ~ span
+          margin: 0 $pad/1.5 0 $pad
+          line-height: 25px
+          color: #D7DCDE
+          &.icon
+            text-transform: none !important
+            font-size: 25px
+            position: relative
+        &:checked ~ span
+          color: $accent
+      &:hover
+        input[type=checkbox]
+          background: tint(black, 40%)
+          &:checked
+            background: shade($accent, 5%)
+          ~ span
+            color: tint(black, 40%)
+
+    // Inside forms
+    // -------------------------
+    &.inside_left, &.inside_right
+      +form_text_input_color
+      margin: 0 0 $field_margin
+      padding: 0
+      position: relative
+      width: auto
+      background: white
+      display: block
+      overflow: hidden
+      label
+        margin: 0
+        float: left
+        +form_text_input_color
+        border: none
+        +inline_block        
+        +box-shadow(none)
+        text-indent: 0
+        +border-right-radius(0)
+        color: tint(black, 40%)
+        font-size: $font_size
+        font-weight: bold
+        &.icon
+          font-size: ($font_size)+8px
+      .full
+        overflow: hidden
+        input[type="text"], input[type="password"], input[type="email"]
+          +form_text_input_color
+          text-indent: 0
+          width: 100%
+          display: block
+          border: 1px solid transparent
+          +border-left-radius(0)
+    &.inside_right label
+      float: right
+        
+            
+
+  // Split Forms
+  // -------------------------
+  .split
+    .field
+      width: 48%
+      float: left
+      & + .field
+        float: right

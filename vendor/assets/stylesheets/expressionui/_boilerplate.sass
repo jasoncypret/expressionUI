@@ -1,0 +1,29 @@
+@import normalize
+
+*
+  +box-sizing(border-box)
+  -webkit-font-smoothing: antialiased
+
+a
+  text-decoration: none
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section
+  display: block
+
+html
+  font-size: 100%
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+body
+  margin: 0
+  overflow-y: scroll
+  font-size: $font_size
+  line-height: 1.231
+  +font_stack
+  font-weight: normal
+
+button, input, textarea
+  +font_stack
+  font-weight: normal
