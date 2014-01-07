@@ -1,0 +1,11 @@
+.DS_Store
+.gitignore
+
+.git/
+
+LICENSE
+Makefile
+*.md
+
+scripts/
+test/
