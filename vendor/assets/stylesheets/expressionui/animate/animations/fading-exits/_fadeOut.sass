@@ -1,0 +1,32 @@
+=fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes fadeOut
+    +fadeOut
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes fadeOut
+    +fadeOut
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes fadeOut
+    +fadeOut
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes fadeOut
+    +fadeOut
+
+@if $experimental-support-for-opera
+  @-o-keyframes fadeOut
+    +fadeOut
+
+@keyframes fadeOut
+  +fadeOut
+
+
+.fadeOut
+  +animation-name(fadeOut)

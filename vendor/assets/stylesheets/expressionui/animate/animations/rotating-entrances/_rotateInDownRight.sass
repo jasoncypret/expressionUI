@@ -1,0 +1,36 @@
+=rotateInDownRight($prefix)
+  0%
+    +transform-origin(right bottom, $prefix)
+    +transform(rotate(90deg), $prefix)
+    opacity: 0
+  100%
+    +transform-origin(right bottom, $prefix)
+    +transform(rotate(0), $prefix)
+    opacity: 1
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes rotateInDownRight
+    +rotateInDownRight(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes rotateInDownRight
+    +rotateInDownRight(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes rotateInDownRight
+    +rotateInDownRight(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes rotateInDownRight
+    +rotateInDownRight(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes rotateInDownRight
+    +rotateInDownRight(o)
+
+@keyframes rotateInDownRight
+  +rotateInDownRight(none)
+
+
+.rotateInDownRight
+  +animation-name(rotateInDownRight)

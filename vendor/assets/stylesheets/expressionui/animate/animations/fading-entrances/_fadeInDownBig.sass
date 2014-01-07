@@ -1,0 +1,34 @@
+=fadeInDownBig($prefix)
+  0%
+    opacity: 0
+    +transform(translateY(-2000px), $prefix)
+  100%
+    opacity: 1
+    +transform(translateY(0), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes fadeInDownBig
+    +fadeInDownBig(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes fadeInDownBig
+    +fadeInDownBig(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes fadeInDownBig
+    +fadeInDownBig(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes fadeInDownBig
+    +fadeInDownBig(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes fadeInDownBig
+    +fadeInDownBig(o)
+
+@keyframes fadeInDownBig
+  +fadeInDownBig(none)
+
+
+.fadeInDownBig
+  +animation-name(fadeInDownBig)

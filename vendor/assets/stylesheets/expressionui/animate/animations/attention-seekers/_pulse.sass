@@ -1,0 +1,36 @@
+// Originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+=pulse($prefix)
+  0%
+    +transform(scale(1), $prefix)
+  50%
+    +transform(scale(1.1), $prefix)
+  100%
+    +transform(scale(1), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes pulse
+    +pulse(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes pulse
+    +pulse(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes pulse
+    +pulse(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes pulse
+    +pulse(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes pulse
+    +pulse(o)
+
+@keyframes pulse
+  +pulse(none)
+
+
+.pulse
+  +animation-name(pulse)

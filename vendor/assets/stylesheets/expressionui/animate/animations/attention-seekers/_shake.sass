@@ -1,0 +1,50 @@
+=shake($prefix)
+  0%
+    +transform(translateX(0), $prefix)
+  10%
+    +transform(translateX(-10px), $prefix)
+  20%
+    +transform(translateX(10px), $prefix)
+  30%
+    +transform(translateX(-10px), $prefix)
+  40%
+    +transform(translateX(10px), $prefix)
+  50%
+    +transform(translateX(-10px), $prefix)
+  60%
+    +transform(translateX(10px), $prefix)
+  70%
+    +transform(translateX(-10px), $prefix)
+  80%
+    +transform(translateX(10px), $prefix)
+  90%
+    +transform(translateX(-10px), $prefix)
+  100%
+    +transform(translateX(0), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes shake
+    +shake(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes shake
+    +shake(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes shake
+    +shake(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes shake
+    +shake(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes shake
+    +shake(o)
+
+@keyframes shake
+  +shake(none)
+
+
+.shake
+  +animation-name(shake)

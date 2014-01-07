@@ -1,0 +1,36 @@
+// Originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+=rollIn($prefix)
+  0%
+    opacity: 0
+    +transform(translateX(-100%) rotate(-120deg), $prefix)
+  100%
+    opacity: 1
+    +transform(translateX(0px) rotate(0deg), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes rollIn
+    +rollIn(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes rollIn
+    +rollIn(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes rollIn
+    +rollIn(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes rollIn
+    +rollIn(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes rollIn
+    +rollIn(o)
+
+@keyframes rollIn
+  +rollIn(none)
+
+
+.rollIn
+  +animation-name(rollIn)

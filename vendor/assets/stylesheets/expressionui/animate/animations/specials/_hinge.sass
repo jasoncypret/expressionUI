@@ -1,0 +1,48 @@
+=hinge($prefix)
+  0%
+    +animation-timing-function(ease-in-out, $prefix)
+    +transform(rotate(0), $prefix)
+    +transform-origin(top left, $prefix)
+  20%, 60%
+    +animation-timing-function(ease-in-out, $prefix)
+    +transform(rotate(80deg), $prefix)
+    +transform-origin(top left, $prefix)
+  40%
+    +transform(rotate(60deg), $prefix)
+    +transform-origin(top left, $prefix)
+    +animation-timing-function(ease-in-out, $prefix)
+  80%
+    opacity: 1
+    +animation-timing-function(ease-in-out, $prefix)
+    +transform(rotate(60deg) translateY(0), $prefix)
+    +transform-origin(top left, $prefix)
+  100%
+    +transform(translateY(700px), $prefix)
+    opacity: 0
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes hinge
+    +hinge(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes hinge
+    +hinge(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes hinge
+    +hinge(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes hinge
+    +hinge(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes hinge
+    +hinge(o)
+
+@keyframes hinge
+  +hinge(none)
+
+
+.hinge
+  +animation-name(hinge)

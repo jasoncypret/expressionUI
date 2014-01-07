@@ -2,8 +2,8 @@
 
 console.log("ExpressionUI loaded!");
 
-go = function() {
+function go() {
 
-}
+};
 
-exports.go = go
+exports.go = go;

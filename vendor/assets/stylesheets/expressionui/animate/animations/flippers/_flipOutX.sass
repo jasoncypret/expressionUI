@@ -1,0 +1,35 @@
+=flipOutX($prefix)
+  0%
+    +transform(perspective(400px) rotateX(0deg), $prefix)
+    opacity: 1
+  100%
+    +transform(perspective(400px) rotateX(90deg), $prefix)
+    opacity: 0
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes flipOutX
+    +flipOutX(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes flipOutX
+    +flipOutX(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes flipOutX
+    +flipOutX(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes flipOutX
+    +flipOutX(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes flipOutX
+    +flipOutX(o)
+
+@keyframes flipOutX
+  +flipOutX(none)
+
+
+.flipOutX
+  +animation-name(flipOutX)
+  +backface-visibility(visible !important)

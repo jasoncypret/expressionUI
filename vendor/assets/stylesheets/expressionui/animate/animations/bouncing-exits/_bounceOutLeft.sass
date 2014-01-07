@@ -1,0 +1,36 @@
+=bounceOutLeft($prefix)
+  0%
+    +transform(translateX(0), $prefix)
+  20%
+    opacity: 1
+    +transform(translateX(20px), $prefix)
+  100%
+    opacity: 0
+    +transform(translateX(-2000px), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes bounceOutLeft
+    +bounceOutLeft(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes bounceOutLeft
+    +bounceOutLeft(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes bounceOutLeft
+    +bounceOutLeft(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes bounceOutLeft
+    +bounceOutLeft(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes bounceOutLeft
+    +bounceOutLeft(o)
+
+@keyframes bounceOutLeft
+  +bounceOutLeft(none)
+
+
+.bounceOutLeft
+  +animation-name(bounceOutLeft)

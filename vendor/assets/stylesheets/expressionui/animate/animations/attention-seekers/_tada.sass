@@ -1,0 +1,50 @@
+=tada($prefix)
+  0%
+    +transform(scale(1), $prefix)
+  10%
+    +transform(scale(0.9) rotate(-3deg), $prefix)
+  20%
+    +transform(scale(0.9) rotate(-3deg), $prefix)
+  30%
+    +transform(scale(1.1) rotate(3deg), $prefix)
+  40%
+    +transform(scale(1.1) rotate(-3deg), $prefix)
+  50%
+    +transform(scale(1.1) rotate(3deg), $prefix)
+  60%
+    +transform(scale(1.1) rotate(-3deg), $prefix)
+  70%
+    +transform(scale(1.1) rotate(3deg), $prefix)
+  80%
+    +transform(scale(1.1) rotate(-3deg), $prefix)
+  90%
+    +transform(scale(1.1) rotate(3deg), $prefix)
+  100%
+    +transform(scale(1) rotate(0), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes tada
+    +tada(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes tada
+    +tada(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes tada
+    +tada(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes tada
+    +tada(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes tada
+    +tada(o)
+
+@keyframes tada
+  +tada(none)
+
+
+.tada
+  +animation-name(tada)

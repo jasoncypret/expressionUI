@@ -1,0 +1,44 @@
+// Originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
+=wobble($prefix)
+  0%
+    +transform(translateX(0%), $prefix)
+  15%
+    +transform(translateX(-25%) rotate(-5deg), $prefix)
+  30%
+    +transform(translateX(20%) rotate(3deg), $prefix)
+  45%
+    +transform(translateX(-15%) rotate(-3deg), $prefix)
+  60%
+    +transform(translateX(10%) rotate(2deg), $prefix)
+  75%
+    +transform(translateX(-5%) rotate(-1deg), $prefix)
+  100%
+    +transform(translateX(0%), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes wobble
+    +wobble(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes wobble
+    +wobble(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes wobble
+    +wobble(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes wobble
+    +wobble(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes wobble
+    +wobble(o)
+
+@keyframes wobble
+  +wobble(none)
+
+
+.wobble
+  +animation-name(wobble)

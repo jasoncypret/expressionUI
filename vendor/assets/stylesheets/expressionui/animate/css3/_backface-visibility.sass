@@ -1,0 +1,8 @@
+// animation-delay - http://www.w3.org/TR/css3-animations/#the-animation-delay-property-
+
+=backface-visibility($value: visible, $prefix: false)
+  // <time>
+  @if $prefix
+    +declaration(backface-visibility, $value, $prefix)
+  @else
+    +experimental(backface-visibility, $value)
