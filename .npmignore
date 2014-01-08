@@ -1,5 +1,15 @@
+.idea/
 .DS_Store
 .gitignore
+
+**/*.gitkeep
+
+*.gemspec
+
+Rakefile
+Gemfile
+
+**/*.rb
 
 .git/
 
@@ -9,3 +19,4 @@ Makefile
 
 scripts/
 test/
+lib/
