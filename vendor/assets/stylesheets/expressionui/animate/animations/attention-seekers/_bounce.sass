@@ -1,0 +1,42 @@
+=bounce($prefix)
+  0%
+    +transform(translateY(0), $prefix)
+  20%
+    +transform(translateY(0), $prefix)
+  40%
+    +transform(translateY(-30px), $prefix)
+  50%
+    +transform(translateY(0), $prefix)
+  60%
+    +transform(translateY(-15px), $prefix)
+  80%
+    +transform(translateY(0), $prefix)
+  100%
+    +transform(translateY(0), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes bounce
+    +bounce(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes bounce
+    +bounce(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes bounce
+    +bounce(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes bounce
+    +bounce(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes bounce
+    +bounce(o)
+
+@keyframes bounce
+  +bounce(none)
+
+
+.bounce
+  +animation-name(bounce)

@@ -270,7 +270,9 @@
               node.textContent = val
             else
               node.innerText = val
-          (node.textContent or node.innerText).trim()
+          
+          return (node.textContent).trim()
+          # removed (node.textContent or node.innerText).trim() for now
 
         changeTag: (oldNode, newTag) ->
           newNode = d.createElement(newTag)

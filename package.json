@@ -1,0 +1,23 @@
+{
+  "author": "Jason Cypret",
+  "name": "expressionUI",
+  "description": "A set of small JavaScript and SASS plugins that are designed to be reusable and enhance your UI. Ready to play with the Rails Asset Pipeline for faster and easier web development.",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jasoncypret/expressionUI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jasoncypret/expressionUI/issues"
+  },
+  "main": "./npmlib/expressionUI",
+  "bin": {
+    "expressionUI": "./bin/expressionUI"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

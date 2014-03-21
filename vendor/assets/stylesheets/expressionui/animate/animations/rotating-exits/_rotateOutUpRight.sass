@@ -1,0 +1,36 @@
+=rotateOutUpRight($prefix)
+  0%
+    +transform-origin(right bottom, $prefix)
+    +transform(rotate(0), $prefix)
+    opacity: 1
+  100%
+    +transform-origin(right bottom, $prefix)
+    +transform(rotate(90deg), $prefix)
+    opacity: 0
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes rotateOutUpRight
+    +rotateOutUpRight(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes rotateOutUpRight
+    +rotateOutUpRight(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes rotateOutUpRight
+    +rotateOutUpRight(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes rotateOutUpRight
+    +rotateOutUpRight(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes rotateOutUpRight
+    +rotateOutUpRight(o)
+
+@keyframes rotateOutUpRight
+  +rotateOutUpRight(none)
+
+
+.rotateOutUpRight
+  +animation-name(rotateOutUpRight)

@@ -1,0 +1,39 @@
+=flipInY($prefix)
+  0%
+    +transform(perspective(400px) rotateY(90deg), $prefix)
+    opacity: 0
+  40%
+    +transform(perspective(400px) rotateY(-10deg), $prefix)
+  70%
+    +transform(perspective(400px) rotateY(10deg), $prefix)
+  100%
+    +transform(perspective(400px) rotateY(0deg), $prefix)
+    opacity: 1
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes flipInY
+    +flipInY(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes flipInY
+    +flipInY(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes flipInY
+    +flipInY(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes flipInY
+    +flipInY(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes flipInY
+    +flipInY(o)
+
+@keyframes flipInY
+  +flipInY(none)
+
+
+.flipInY
+  +animation-name(flipInY)
+  +backface-visibility(visible !important)

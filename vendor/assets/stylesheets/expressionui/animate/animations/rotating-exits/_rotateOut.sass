@@ -1,0 +1,36 @@
+=rotateOut($prefix)
+  0%
+    +transform-origin(center center, $prefix)
+    +transform(rotate(0), $prefix)
+    opacity: 1
+  100%
+    +transform-origin(center center, $prefix)
+    +transform(rotate(200deg), $prefix)
+    opacity: 0
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes rotateOut
+    +rotateOut(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes rotateOut
+    +rotateOut(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes rotateOut
+    +rotateOut(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes rotateOut
+    +rotateOut(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes rotateOut
+    +rotateOut(o)
+
+@keyframes rotateOut
+  +rotateOut(none)
+
+
+.rotateOut
+  +animation-name(rotateOut)

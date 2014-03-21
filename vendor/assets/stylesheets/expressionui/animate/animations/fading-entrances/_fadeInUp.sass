@@ -1,0 +1,34 @@
+=fadeInUp($prefix)
+  0%
+    opacity: 0
+    +transform(translateY(20px), $prefix)
+  100%
+    opacity: 1
+    +transform(translateY(0), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes fadeInUp
+    +fadeInUp(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes fadeInUp
+    +fadeInUp(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes fadeInUp
+    +fadeInUp(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes fadeInUp
+    +fadeInUp(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes fadeInUp
+    +fadeInUp(o)
+
+@keyframes fadeInUp
+  +fadeInUp(none)
+
+
+.fadeInUp
+  +animation-name(fadeInUp)

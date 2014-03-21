@@ -1,0 +1,19 @@
+// transform - https://developer.mozilla.org/en/CSS/transform
+// none | <transform-function>
+
+=transform($value: none, $prefix: false)
+  @if $prefix
+    +declaration(transform, $value, $prefix)
+  @else
+    +experimental(transform, $value)
+
+// transform-origin - https://developer.mozilla.org/en/CSS/transform-origin
+// x-axis - left | center | right  | length | %
+// y-axis - top  | center | bottom | length | %
+// z-axis -                          length
+
+=transform-origin($value: 50%, $prefix: false)
+  @if $prefix
+    +declaration(transform-origin, $value, $prefix)
+  @else
+    +experimental(transform-origin, $value)

@@ -5,8 +5,13 @@
 pkg/
 pkg/*
 
+.idea/
+/.idea/
+
 .ruby-version
 
 *.lock
 
 Gemfile.lock
+
+npm-debug.log

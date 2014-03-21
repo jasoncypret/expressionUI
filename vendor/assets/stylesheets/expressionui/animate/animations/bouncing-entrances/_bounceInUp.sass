@@ -1,0 +1,38 @@
+=bounceInUp($prefix)
+  0%
+    opacity: 0
+    +transform(translateY(2000px), $prefix)
+  60%
+    opacity: 1
+    +transform(translateY(-30px), $prefix)
+  80%
+    +transform(translateY(10px), $prefix)
+  100%
+    +transform(translateY(0), $prefix)
+
+@if $experimental-support-for-webkit
+  @-webkit-keyframes bounceInUp
+    +bounceInUp(webkit)
+
+@if $experimental-support-for-khtml
+  @-khtml-keyframes bounceInUp
+    +bounceInUp(khtml)
+
+@if $experimental-support-for-mozilla
+  @-moz-keyframes bounceInUp
+    +bounceInUp(moz)
+
+@if $experimental-support-for-microsoft
+  @-ms-keyframes bounceInUp
+    +bounceInUp(ms)
+
+@if $experimental-support-for-opera
+  @-o-keyframes bounceInUp
+    +bounceInUp(o)
+
+@keyframes bounceInUp
+  +bounceInUp(none)
+
+
+.bounceInUp
+  +animation-name(bounceInUp)
