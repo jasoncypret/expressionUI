@@ -311,3 +311,144 @@
     @content
   @keyframes #{$animation_name}
     @content
+
+// MIXIN: Custom Select
+// -------------------------
+
+=data_image_settings
+  background-position: 97% 50%, 0 0
+  background-repeat: no-repeat, repeat
+  background-size: 14px, auto
+
+=select($base_color, $show_data_image: true, $border: true, $style: flat)
+  @if $style == flat
+    outline: 0
+    border: 0
+    text-decoration: none
+    font-weight: 600
+    height: $field_height
+    line-height: $field_height
+    font-family: $serif, serif !important
+    width: auto
+    +inline-block
+    padding: 0 $pad*3 0 $pad
+    font-size: ($font_size)+5px !important
+    +border-radius(3px)
+    cursor: pointer
+    @if $show_data_image
+      @if lightness($base_color) > 75%
+        background: url($data_image) $base_color
+      @else
+        background: url($data_image_white) $base_color
+      +data_image_settings
+    @else
+      background: $base_color
+    +text_color($base_color, false, true)
+    @if $border
+      border: 1px solid shade($base_color, 10%)
+      height: ($field_height + 2px)
+      line-height: ($field_height + 2px)
+    @else
+      +border-radius(2px)
+    &:hover, &:active, &.active
+      @if $show_data_image
+        @if lightness(shade($base_color, 10%)) > 75%
+          background: url($data_image) shade($base_color, 10%)
+        @else
+          background: url($data_image_white) shade($base_color, 10%)
+        +data_image_settings
+      @else
+        background: shade($base_color, 10%)
+      +box-shadow(shade($base_color, 20%) 0 2px 0 inset)
+      +text_color(shade($base_color, 10%), false , true)
+      @if $border
+        border: 1px solid shade($base_color, 20%)
+    &.active:hover
+      @if $show_data_image
+        @if lightness(shade($base_color, 20%)) > 75%
+          background: url($data_image) shade($base_color, 20%)
+        @else
+          background: url($data_image_white) shade($base_color, 20%)
+        +data_image_settings
+      @else
+        background: shade($base_color, 20%)
+      +box-shadow(shade($base_color, 30%) 0 2px 0 inset)
+      +text_color(shade($base_color, 20%), false, true)
+      @if $border
+        border: 1px solid shade($base_color, 30%)
+    &.disabled, &.disabled:hover
+      cursor: not-allowed
+      +opacity(0.7)
+      @if $show_data_image
+        @if lightness($base_color) > 75%
+          background: url($data_image) $base_color
+        @else
+          background: url($data_image_white) $base_color
+        +data_image_settings
+      @else
+        background: $base_color
+      +box-shadow(none)
+      +text_color($base_color, false, true)
+  @else
+    // TODO: Build Gradient Style
+
+
+// MIXIN: Form Style
+// -------------------------
+=html_select($base_color, $arrow: $accent)
+  +select($base_color, false)
+  padding-right: 50px
+  position: relative
+  &:after
+    color: $arrow
+    font-size: 16px
+    content: '5'
+    +icon_font
+    display: block
+    right: 7px
+    top: -2px
+    padding: 0 $pad
+    line-height: ($field_height + 5px)
+    height: ($field_height + 5px)
+    position: absolute
+    +rotate(90deg)
+    border-bottom: 1px solid shade($base_color, 10%)
+  &:hover, &:active, &.active
+    &:after
+      border-bottom: 1px solid shade($base_color, 20%)
+  &.active:hover
+    &:after
+      border-bottom: 1px solid shade($base_color, 30%)
+  &.disabled, &.disabled:hover
+    &:after
+      border-bottom: 1px solid shade($base_color, 10%)
+      
+
+
+
+// MIXIN: Form Style
+// -------------------------
+=form_text_input_color($background: white)
+  line-height: $field_height
+  height: ($field_height + 2px)
+  padding: 0 $pad
+  +inline_block
+  vertical-align: middle
+  background: $background
+  border: 1px solid shade($background, 10%)
+  +border-radius(4px)
+  font-size: ($font_size)+3px
+  font-weight: 100
+  @if lightness($background) > 75%
+    color: tint(black, 10%)
+    +placeholder
+      font-size: ($font_size)-(1px)
+      color: tint(black, 15%)
+  @else
+    color: white
+    +placeholder
+      font-size: ($font_size)-(1px)
+      color: white
+  &:focus
+    outline: 0
+    border: 1px solid $focus_color

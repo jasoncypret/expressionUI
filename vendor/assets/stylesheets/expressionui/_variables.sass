@@ -4,7 +4,6 @@ $pad: 10px !default
 $ver: "?v=0.51" !default
 $npm_path: "../node_modules/expressionUI/vendor/assets/stylesheets/expressionui" !default
 
-
 // Responsive breakpoints
 // -------------------------
 $mobile: 700px !default
@@ -27,6 +26,15 @@ $success: #45A03B !default
 $tip: #01C8E4 !default
 $info: #FDE200 !default
 
+// Form Elements
+// -------------------------
+$field_height: 35px !default
+$field_margin: $pad*1.5 !default
+$field_color: white !default
+$label_color: #999999 !default
+$focus_color: $highlight !default
+$checkbox: 18px !default
+
 
 // Text
 // -------------------------
@@ -37,3 +45,8 @@ $text_color: #141414 !default
 $font_stack: "Helvetica" !default
 $serif: "Georgia" !default
 $icon_font: "expressionui" !default
+
+// Images
+// -------------------------
+$data_image: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlVudGl0bGVkLVBhZ2VfeDI1XzIwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCgkgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjZweCIgdmlld0JveD0iMCAwIDEwIDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0ieiIvPg0KPGcgaWQ9IkxheWVyX3gyNV8yMDEiIG9wYWNpdHk9IjAuNCI+DQoJPHBhdGggaWQ9ImFycm93X3gyNV8yMGRvd25feDI1XzIwY29weSIgZD0iTTEuMTI0LDAuMTAzYzAuNDAyLDAsNy40NTYsMCw3LjczMywwYzAuMzU5LDAsMC42MjcsMC4yODIsMC40MTcsMC41Ng0KCQljLTAuMTY5LDAuMjIzLTMuNTY4LDQuNjc5LTMuODU5LDUuMDZjLTAuMTkxLDAuMjQ5LTAuNjQ3LDAuMjQ1LTAuODM4LDBDNC4zNjQsNS40NDgsMC45NDcsMC45NzUsMC43MSwwLjY1MQ0KCQlDMC41MzYsMC40MTQsMC43MjgsMC4xMDMsMS4xMjQsMC4xMDN6Ii8+DQo8L2c+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJ6Ii8+DQo8L3N2Zz4NCg==" !default
+$data_image_white: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlVudGl0bGVkLVBhZ2VfeDI1XzIwMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayINCgkgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjZweCIgdmlld0JveD0iMCAwIDEwIDYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0ibm9uZSIgZD0ieiIvPg0KPGcgaWQ9IkxheWVyX3gyNV8yMDEiIG9wYWNpdHk9IjAuNCI+DQoJPHBhdGggaWQ9ImFycm93X3gyNV8yMGRvd25feDI1XzIwY29weSIgZmlsbD0iI0ZGRkZGRiIgZD0iTTEuMTI0LDAuMTAzYzAuNDAyLDAsNy40NTYsMCw3LjczMywwYzAuMzU5LDAsMC42MjcsMC4yODIsMC40MTcsMC41Ng0KCQljLTAuMTY5LDAuMjIzLTMuNTY4LDQuNjc5LTMuODU5LDUuMDZjLTAuMTkxLDAuMjQ5LTAuNjQ3LDAuMjQ1LTAuODM4LDBDNC4zNjQsNS40NDgsMC45NDcsMC45NzUsMC43MSwwLjY1MQ0KCQlDMC41MzYsMC40MTQsMC43MjgsMC4xMDMsMS4xMjQsMC4xMDN6Ii8+DQo8L2c+DQo8cGF0aCBmaWxsPSJub25lIiBkPSJ6Ii8+DQo8L3N2Zz4NCg==" !default
