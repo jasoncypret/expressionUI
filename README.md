@@ -71,6 +71,12 @@ add this line above expressionuiin your gemfile. This is a temporary fix untill 
 gem 'animate.sass-rails', :git => 'git://github.com/jasoncypret/animate.sass-rails.git'
 ```
 
+####Node Support
+We've starting playing around with node. We've made it so you can use this gem in your node projects. Just include the github repo and path to the sass files in you application. If there's greater interest we will make a standalone node package.
+```
+"expressionUI": "git://github.com/jasoncypret/expressionUI.git",
+```
+
 ## Contributing
 
 1. Fork it
