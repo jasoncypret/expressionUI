@@ -21,7 +21,7 @@ $ bundle
 Or install it yourself as:
 
 ```
-$ gem install gem 'https://github.com/jasoncypret/expressionUI.git'
+$ gem install 'https://github.com/jasoncypret/expressionUI.git'
 ```
 
 
