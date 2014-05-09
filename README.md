@@ -7,10 +7,12 @@ A set of small JavaScript and SASS plugins that are designed to be reusable and 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'expressionui'
+gem 'expressionui', :git => 'https://github.com/jasoncypret/expressionUI.git'
 ```
 
-And then execute:
+NOTE: We're updating constantnly and rarely do releases. 
+
+Next execute:
 
 ```
 $ bundle
@@ -19,7 +21,7 @@ $ bundle
 Or install it yourself as:
 
 ```
-$ gem install expressionui
+$ gem install gem 'https://github.com/jasoncypret/expressionUI.git'
 ```
 
 
