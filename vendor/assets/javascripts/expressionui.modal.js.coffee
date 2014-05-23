@@ -161,7 +161,7 @@
           over = parser.parseFromString(options.overlayMrk, "text/xml");
           klass = jQuery(over.firstChild).attr('class')
           jQuery("." + klass).click( =>
-            (if (typeof options.closeCallback is "undefined") then jQuery("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
+            (if (options.closeCallback == $.noop) then jQuery("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
           )
 
         jQuery(this).find(".modalFooter a:not(.closeDialog)").each( (i, e) =>
@@ -175,7 +175,7 @@
 
         jQuery(this).find(".closeDialog").click ->
           # TODO: Should prob make this a default for easier reading
-          (if (typeof options.closeCallback is "undefined") then jQuery("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
+          (if (options.closeCallback == $.noop) then jQuery("#" + options.id + " .modal").modal("close", options) else options.closeCallback())
 
 
       position: (options) ->
