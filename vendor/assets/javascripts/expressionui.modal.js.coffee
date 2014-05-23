@@ -33,6 +33,7 @@
 
         defaultButton: true
       ]
+      closeCallback: $.noop
       beforeOpen: $.noop
       afterOpen: $.noop
       beforeClose: $.noop
