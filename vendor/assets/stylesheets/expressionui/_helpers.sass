@@ -1,3 +1,5 @@
+@import animate/shared
+
 // Need to remove and place somewhere else...maybe include separate
 
 +font-face("#{$icon_font}", font-files("#{$icon_font}.woff", "#{$icon_font}.otf", "#{$icon_font}.svg##{$icon_font}"), "#{$icon_font}.eot")
@@ -291,6 +293,11 @@
     +box-flex(5)
   .col6
     +box-flex(6)
+
+=vertical
+  position: relative
+  top: 50%
+  +transform( translateY(-50%) )
 
 // Depricated with compass Version: 0.13.alpha.0
 =placeholder
