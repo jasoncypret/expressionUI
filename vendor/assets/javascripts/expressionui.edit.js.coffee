@@ -413,7 +413,7 @@
             if cache.cmd
               return  if ((settings.mode is "inline") or (settings.mode is "partial")) and cmd isnt "paste"
               intercept.command[cmd].call null, e
-              _log command
+              # _log command
 
           # CHECKS MAX LENGTH
           if settings.maxLength isnt -1
