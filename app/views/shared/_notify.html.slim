@@ -25,33 +25,33 @@
 
     - case loading
       - when "circles"
-      .indicator
-        .circle1
-        .circle2
-        .circle3
-      .msg
-        = message
+        .indicator
+          .circle1
+          .circle2
+          .circle3
+        .msg
+          = message
       - when "spinner"
-      .indicator
-      .msg
-        = message
+        .indicator
+        .msg
+          = message
       - when "dots"
-      .indicator
-        .dot1
-        .dot2
-        .dot3
-        .dot4
-        .dot5
-        .dot6
-        .dot7
-        .dot8
-      .msg
-        = message
+        .indicator
+          .dot1
+          .dot2
+          .dot3
+          .dot4
+          .dot5
+          .dot6
+          .dot7
+          .dot8
+        .msg
+          = message
       - when "bars"
-      .indicator
-        .progress
-      .msg
-        = message
+        .indicator
+          .progress
+        .msg
+          = message
       - else
       - if style == "loading"
         .progress
@@ -63,7 +63,6 @@
       a.notify_close href="javascript:;"
         span x
           
-
 
 
 
