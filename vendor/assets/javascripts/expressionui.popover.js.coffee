@@ -78,7 +78,7 @@
         else
           options.position_left += (options.outter_width / 2)
         if options.position_top is null
-          options.position_top = jQuery(this).offset().top + (options.outter_height / 2)
+          options.position_top = jQuery(this).offset().top + (options.outter_height / 2) - jQuery(options.scroll_target).scrollTop()
         else
           options.position_top += (options.outter_height / 2)
 
